@@ -1,0 +1,33 @@
+/* var.css */
+:root {
+    /* font weight */
+    --pc-font-weight-200:200;
+    --pc-font-weight-300:300;
+    --pc-font-weight-400:400;
+    --pc-font-weight-500:500;
+    --pc-font-weight-600:600;
+    --pc-font-weight-700:700;
+    /* fonts */
+    --pc-optima-fonts:'optima',serif;
+    --pc-pretendard-fonts:'pretendard',san-serif;
+
+    /* font size */
+    /* 대형사이즈 */
+    --pc-font-display-48:3rem;
+    --pc-font-title-32:2rem;
+    --pc-font-title-26:1.625rem;
+    --pc-font-title-24:1.5rem;
+    --pc-font-title-22:1.375rem;
+    --pc-font-title-20:1.25rem;
+
+    /* 내용사이즈 */
+    --pc-font-body-18:1.125rem;
+    --pc-font-body-16:1rem;
+    --pc-font-body-14:0.875rem;
+    --pc-font-body-12:0.75rem;
+    --pc-font-micro-10:0.625rem;
+
+    /* 색상 */
+    --estee-black:#000;
+    --estee-white:#fff;
+}
