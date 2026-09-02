@@ -43,7 +43,10 @@ body {width:100%; height:100vh;}
     font-family: var(--pc-pretendard-fonts); font-size:var(--pc-font-body-16); color:var(--estee-white);
     font-weight:var(--pc-font-weight-400);
 }
-.every_wrap nav .menu > a {display:inline-block; width:150px; line-height:60px;}
+.every_wrap nav .menu > a {display:inline-block; width:150px; line-height:60px; text-align:center;}
 .every_wrap nav .user_func {display:flex; flex-flow:row nowrap; gap:12px;}
 .every_wrap nav .user_func > a {}
 .every_wrap nav .user_func > a img {}
+
+/* 내비게이션 호버 시 */
+
