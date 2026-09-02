@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./script/index.js" defer></script>
@@ -15,11 +16,16 @@
 <body>
     <div class="every_wrap"> <!-- 전체묶음 -->
         <div class="hero"> <!-- 1행 시작 -->
-            <p class="swiper hero_wrap">
-                <p class="swiper_wrapper">
-                    <a href="#" class="hero_banner swiper-slide"><!-- hero배너 영역 --></a>
-                </p>
-            </p>
+            <div class="swiper hero_wrap">
+                <div class="swiper-wrapper">
+                    <a href="#" class="hero_banner1 swiper-slide"><!-- hero배너 영역 --></a>
+                    <a href="#" class="hero_banner2 swiper-slide"><!-- hero배너 영역 --></a>
+                    <a href="#" class="hero_banner3 swiper-slide"><!-- hero배너 영역 --></a>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
             <header>
                 <div class="banner"> <!-- 띠배너 -->
                     <span><a href="#" class="new_user">신규 회원 첫 구매 15% OFF (할인 코드: WELCOME*)</a></span>

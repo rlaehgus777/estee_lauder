@@ -4,17 +4,59 @@ body * {box-sizing:border-box;}
 body {width:100%; height:100vh;}
 /* 띠배너 */
 .every_wrap {width:100%;}
-.every_wrap .hero{
+.every_wrap .hero {
     width:100%; height:100vh; position:relative;}
-.every_wrap .hero .hero_banner {
-    display:inline-block;
-    width:100%; height:100vh;
-    background-image:url(../images/banner_hero.jpg);
-    background-size:cover; position:absolute; left:0; top:0;
-    z-index:20;
+/* 히어로배너 */ 
+.every_wrap .hero .hero_wrap {
+    width:100%; height:100%; position:absolute;
+    top:0; left:0;
 }
+.every_wrap .hero .hero_wrap .swiper-wrapper {
+    width:100%; height:100%;
+}
+.every_wrap .hero .hero_wrap .hero_banner1 {
+    width:100%; height:100%;
+    background-image:url(../images/banner_hero.jpg);
+    background-size:cover;
+}
+.every_wrap .hero .hero_wrap .hero_banner2 {
+    width:100%; height:100%;
+    background-image:url(../images/favi_esteelauer.jpg);
+    background-size:cover;
+}
+.every_wrap .hero .hero_wrap .hero_banner3 {
+    width:100%; height:100%;
+    background-image:url(../images/banner_hero.jpg);
+    background-size:cover;
+}
+/* 스와이퍼 설정 */
+.every_wrap .hero .hero_wrap .swiper-pagination{
+    position:absolute; right:138px; bottom:114px;
+}
+.every_wrap .hero .swiper-pagination, .swiper-pagination-total {
+    color:var(--estee-gray); font-size:var(--pc-font-body-16);
+}
+.every_wrap .hero .swiper-pagination-current {
+    color:var(--estee-white); font-size:var(--pc-font-body-16);
+}
+.every_wrap .hero .swiper-button-next {
+    background-image:url(../images/next_prev_icon.svg);
+    width:36px; height:72px; position:absolute;
+    top:414px; right:40px;
+}
+.every_wrap .hero .swiper-button-next svg {display:none;}
+.every_wrap .hero .swiper-button-prev {
+    background-image:url(../images/next_prev_icon.svg);
+    transform:scaleX(-1);
+    width:36px; height:72px; position:absolute;
+    left:40px;
+}
+.every_wrap .hero .swiper-button-prev svg {display:none;}
+/* 스외이퍼 설정 종료 */
+/* 히어로배너 종료 */
 .every_wrap .hero header {
-    width:100%; height:30px; position:relative; z-index:30;
+    width:100%; height:30px; position:absolute; z-index:30;
+    left:0; top:0;
 }
 .every_wrap .hero header .banner {
     display:flex; flex-flow:row nowrap; align-items: center;
@@ -49,4 +91,4 @@ body {width:100%; height:100vh;}
 .every_wrap nav .user_func > a img {}
 
 /* 내비게이션 호버 시 */
-
+.every_wrap nav .menu::after {}
