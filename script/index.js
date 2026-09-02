@@ -17,7 +17,7 @@ const swiper = new Swiper('.hero_wrap',{
 /* 변수모음 */
 /* 띠배너 변수 */
 const tapeBanner = document.querySelector('.banner');
-const tapeBannerClose = document.querySelector('.banner > span:nth-child(2) > button > img');
+const tapeBannerClose = document.querySelector('.banner .content #close img');
 
 console.log(tapeBanner, tapeBannerClose);
 
@@ -43,34 +43,3 @@ tapeBannerClose.addEventListener('click',()=>{
     tapeBanner.style.display = 'none';
 })
 
-
-
-/* 내비게이션 make up호버 시 변경되는 기능 */
-navMakeup.addEventListener('mouseenter',()=>{
-    navArea.style.backgroundColor = '#fff';
-    logo.style.color = '#111';
-    navBest.style.color = '#000';
-    navSkin.style.color = '#000';
-    navMakeup.style.color = '#242A4F';
-    navMakeup.style.fontWeight = '600';
-    navPerfume.style.color = '#000';
-    navRenutriv.style.color = '#000';
-    navSetGift.style.color = '#000';
-    navBrand.style.color = '#000';
-    userInfo.style.filter = 'invert(1)'
-    search.style.filter = 'invert(1)'
-    cart.style.filter = 'invert(1)'
-});
-
-navMakeup.addEventListener('mouseleave',()=>{
-    navArea.style.backgroundColor = 'transparent';
-    logo.style.color = '#fff';
-    navBest.style.color = '#fff';
-    navSkin.style.color = '#fff';
-    navMakeup.style.color = '#fff';
-    navMakeup.style.fontWeight = '400';
-    navPerfume.style.color = '#fff';
-    navRenutriv.style.color = '#fff';
-    navSetGift.style.color = '#fff';
-    navBrand.style.color = '#fff';
-});
