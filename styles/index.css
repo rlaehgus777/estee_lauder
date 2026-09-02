@@ -21,7 +21,7 @@ body {width:100%; height:100vh;}
 }
 .every_wrap .hero .hero_wrap .hero_banner2 {
     width:100%; height:100%;
-    background-image:url(../images/favi_esteelauer.jpg);
+    background-image:url(../images/banner_hero.jpg);
     background-size:cover;
 }
 .every_wrap .hero .hero_wrap .hero_banner3 {
@@ -30,8 +30,10 @@ body {width:100%; height:100vh;}
     background-size:cover;
 }
 /* 스와이퍼 설정 */
-.every_wrap .hero .hero_wrap .swiper-pagination{
-    position:absolute; right:138px; bottom:114px;
+.every_wrap .hero .hero_wrap .swiper-pagination{}
+.every_wrap .hero .hero_wrap .swiper-pagination-fraction{
+    position:absolute; width:auto;
+    left:auto; right:138px; bottom:114px;
 }
 .every_wrap .hero .swiper-pagination, .swiper-pagination-total {
     color:var(--estee-gray); font-size:var(--pc-font-body-16);
@@ -91,4 +93,11 @@ body {width:100%; height:100vh;}
 .every_wrap nav .user_func > a img {}
 
 /* 내비게이션 호버 시 */
-.every_wrap nav .menu::after {}
+.every_wrap nav .menu_hover {
+    width:100vw; height:840px; position:absolute; display:none;
+    /* top:0; left:0; background-color:aqua; */
+}
+.every_wrap nav .menu_hover .menu_hover_wrap  {}
+.every_wrap nav .menu_hover .menu_hover_wrap ul {}
+.every_wrap nav .menu_hover .menu_hover_wrap ul li {color:#fff;}
+.every_wrap nav .menu_hover .menu_hover_wrap ul .menu_hover_title {color:#ff0}
