@@ -44,6 +44,7 @@ console.log(navArea, navMakeup);
 /* 띠배너 닫기 기능 */
 tapeBannerClose.addEventListener('click',()=>{
     tapeBanner.style.display = 'none';
+    mainHeader.style.top = '0';
 })
 
 /* 마우스호버 시 메뉴 열기 */

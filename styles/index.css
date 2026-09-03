@@ -6,10 +6,11 @@ body {width:100%; height:100vh;}
 .every_wrap {width:100%; position:relative;}
 .every_wrap .banner {
     width:100%; background-color:var(--estee-black); height:40px; display:flex; align-items: center;
-    position:relative; z-index:var(--z-index-500)
+    position:absolute; z-index:var(--z-index-500);
+    left:0; top:0;
 }
 .every_wrap .banner .content {
-    width:1680px; text-align:center; position:relative; background-color:brown; margin:0 auto;
+    width:1680px; text-align:center; position:relative; margin:0 auto;
 }
 .every_wrap .banner .content .new_user {color:var(--estee-white); font-size:var(--pc-font-body-12);}
 .every_wrap .banner .content #close {width:24px; height:24px; position:absolute; top:-4px; right:0px;}
@@ -20,18 +21,39 @@ body {width:100%; height:100vh;}
 
 /* 로고 */
 .every_wrap header {
-    width:100%; height:60px; background-color:#ff0;
+    width:100%; height:60px;
     display:flex; align-items:center; padding:0 120px;
     justify-content: space-between; position:absolute; z-index:500;
+    top:40px;
 }
-.every_wrap header .active::after{
-    display:none; content:''; position:absolute; left:0; top:-60px;
+
+
+/* 메뉴 호버 시 변경되는 구간 */
+/* 1. 메뉴 호버 시 백그라운드 */
+.every_wrap header.active::after{
+    display:block;
+    content:''; position:absolute; left:0; top:-60px;
     width:100%; height:100vh; background:linear-gradient(180deg, #fff 55%, transparent);
     z-index:-1;
 }
+/* 2. 메뉴 호버 시 메뉴 글자 색상,굵기 변경 */
+.every_wrap header.active > nav > .menu > li > a {
+    color:var(--estee-black); 
+}
+.every_wrap header.active > nav > .menu > li:nth-child(3) > a {
+    color:var(--estee-primary); font-weight:var(--pc-font-weight-600);
+}
+/* 3. 메뉴 호버 시 로고, 아이콘 색상 반전   */
+.every_wrap header.active h1 > a > img {filter:invert(0);}
+.every_wrap header.active .user_func > a > img {filter:invert(1);}
+
+
+/* 메뉴 호버 시 변경되는 구간 종료 */
+
+
 .every_wrap header h1 {width:150px; height:160px;}
 .every_wrap header h1 a {width:100%; height:100%;}
-.every_wrap header h1 a img {width:100%; height:100%;}
+.every_wrap header h1 a img {width:100%; height:100%; filter:invert(1);}
 
 /* 로고 종료 */
 /* 내비게이션 부분 */
@@ -43,10 +65,10 @@ body {width:100%; height:100vh;}
 .every_wrap header nav .menu > li {
     width:150px; line-height:60px; text-align:center;
 }
-.every_wrap header nav .menu > li > a {}
+.every_wrap header nav .menu > li > a {color:#fff;}
 .every_wrap header nav .menu > li .hover_menu_wrap {
-    width:100%; position:absolute; left:0; top:100px;
-    display:none;
+    width:100%; position:absolute; left:0; top:50px;
+    display:none; padding:50px;
 }
 .every_wrap header nav .menu > li .hover_menu_wrap::after{}
 .every_wrap header nav .menu > li .hover_menu_wrap .hover_menu_group {
@@ -80,7 +102,7 @@ body {width:100%; height:100vh;}
 
 .every_wrap header .user_func {display:flex; gap:12px;}
 .every_wrap header .user_func a {}
-.every_wrap header .user_func a img {filter:invert(1);}
+.every_wrap header .user_func a img {filter:invert(0);}
 /* 히어로배너 */ 
 .every_wrap .hero {
     width:100%; height:100vh; position:relative;}
