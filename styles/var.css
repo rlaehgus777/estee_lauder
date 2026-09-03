@@ -27,6 +27,10 @@
     --pc-font-body-12:0.75rem;
     --pc-font-micro-10:0.625rem;
 
+    /* 행간, 자간 */
+    --estee-line-height-150:1.5;
+    --estee-letter-spacing-2:-0.02rem;
+
     /* 색상 */
     --estee-black:#000;
     --estee-white:#fff;
