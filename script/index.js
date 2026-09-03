@@ -53,7 +53,7 @@ navMakeup.addEventListener('mouseenter',()=>{
 })
 
 navMakeup.addEventListener('mouseleave',()=>{
-    mainHeader.classList.add('active');
+    mainHeader.classList.remove('active');
     hoverMenu.style.display = 'none';
 })
 
