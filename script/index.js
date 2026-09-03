@@ -22,7 +22,7 @@ const tapeBannerClose = document.querySelector('.banner .content #close img');
 console.log(tapeBanner, tapeBannerClose);
 
 /* 내비게이션 변수 */
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('header > h1 > .logo');
 const navArea = document.querySelector('nav');
 const navBest = document.querySelector('.best');
 const navSkin = document.querySelector('.skin');
@@ -63,7 +63,7 @@ console.log(mainHeader, hoverMenu);
 
 /* 베스트 상품목록 반복문 */
 /* 변수 */
-const productWrap = document.querySelector('#best_product .swiper-wrapper');
+const productWrap = document.querySelector('#best_product_id .swiper-wrapper');
 
 console.log(productWrap);
 
@@ -76,13 +76,49 @@ for(let i=1;i<10;i++){
     productWrap.appendChild(bestProductDiv);
 }
 /* 베스트 상품 부분 스와이퍼 */
-const bestSwiper = new Swiper('#best_product',{
+const bestSwiper = new Swiper('#best_product_id',{
     direction:'horizontal',
     slidesPerView:4,
     allowTouchMove : true,
     spaceBetween : 20,
     pagination :{
-        el:'.swiper-pagination',
+        el:'.best_product .swiper-pagination',
         type :'progressbar',
     }
 })
+
+
+// !!베스트 부분에 버튼들 클릭 시 색상변경!!
+//변수
+const skinCareBtn = document.querySelector('.btn_group > .skincare');
+const makeupBtn = document.querySelector('.btn_group > .makeup');
+const perfumeBtn = document.querySelector('.btn_group >.perfume');
+const setandgiftBtn = document.querySelector('.btn_group > .setandgift');
+
+/* 메이크업 버튼 이벤트 */
+skinCareBtn.addEventListener('click',()=>{
+    skinCareBtn.classList.add('active');
+    perfumeBtn.classList.remove('active');
+    setandgiftBtn.classList.remove('active');
+    makeupBtn.classList.remove('active');
+})
+makeupBtn.addEventListener('click',()=>{
+    skinCareBtn.classList.remove('active');
+    perfumeBtn.classList.remove('active');
+    setandgiftBtn.classList.remove('active');
+    makeupBtn.classList.add('active');
+})
+perfumeBtn.addEventListener('click',()=>{
+    skinCareBtn.classList.remove('active');
+    perfumeBtn.classList.add('active');
+    setandgiftBtn.classList.remove('active');
+    makeupBtn.classList.remove('active');
+})
+setandgiftBtn.addEventListener('click',()=>{
+    skinCareBtn.classList.remove('active');
+    perfumeBtn.classList.remove('active');
+    setandgiftBtn.classList.add('active');
+    makeupBtn.classList.remove('active');
+})
+console.log(skinCareBtn, makeupBtn, perfumeBtn, setandgiftBtn );
+

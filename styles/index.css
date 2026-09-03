@@ -5,7 +5,7 @@ body {width:100%; height:100vh;}
 /* 띠배너 */
 .every_wrap {width:100%; position:relative;}
 .every_wrap .banner {
-    width:100%; background-color:var(--estee-black); height:40px; display:flex; align-items: center;
+    width:100%; background-color:var(--estee-black); height:45px; display:flex; align-items: center;
     position:absolute; z-index:var(--z-index-500);
     left:0; top:0;
 }
@@ -24,7 +24,7 @@ body {width:100%; height:100vh;}
     width:100%; height:60px;
     display:flex; align-items:center; padding:0 120px;
     justify-content: space-between; position:absolute; z-index:500;
-    top:40px;
+    top:45px;
 }
 
 
@@ -33,7 +33,7 @@ body {width:100%; height:100vh;}
 .every_wrap header.active::after{
     display:block;
     content:''; position:absolute; left:0; top:0px;
-    width:100%; height:95vh; background:linear-gradient(180deg, #fff 55%, transparent);
+    width:100%; height:100vh; background:linear-gradient(180deg, #fff 55%, transparent);
     z-index:-1;
 }
 /* 2. 메뉴 호버 시 메뉴 글자 색상,굵기 변경 */
@@ -83,11 +83,11 @@ body {width:100%; height:100vh;}
     text-align:left;
 }
 .every_wrap header nav .menu li > .hover_menu_wrap .hover_menu_group .makeup_hover > li .menu_title {
-    font-size:var(--pc-font-body-18);
+    font-size:var(--pc-font-body-16);
     font-weight:var(--pc-font-weight-500); color:var(--estee-black);
 }
 .every_wrap header nav .menu li > .hover_menu_wrap .hover_menu_group .makeup_hover > li > ul[class*="_menu"] {
-    display:flex; flex-flow:column nowrap; gap:10px; 
+    display:flex; flex-flow:column nowrap; gap:15px;
 }
 .every_wrap header nav .menu li > .hover_menu_wrap .hover_menu_group .makeup_hover > li > ul[class*="_menu"] a {
     color:var(--estee-gray); font-size:var(--pc-font-weight-400); 
@@ -127,7 +127,7 @@ body {width:100%; height:100vh;}
     background-image:url(../images/banner_hero.jpg);
     background-size:cover;
 }
-/* 스와이퍼 설정 */
+/* 스와이퍼(히어로) 설정 */
 .every_wrap main .hero .hero_wrap .swiper-pagination{}
 .every_wrap main .hero .hero_wrap .swiper-pagination-fraction{
     position:absolute; width:auto;
@@ -153,17 +153,17 @@ body {width:100%; height:100vh;}
     left:40px;
 }
 .every_wrap main .hero .swiper-button-prev svg {display:none;}
-/* 스외이퍼 설정 종료 */
+/* 스와이퍼(히어로) 설정 종료 */
 /* 1행 히어로배너 종료 */
 
 /* 2행 베스트 상품부분 시작 */
 
 
 /* 제목부분 */
-.every_wrap main .best_product {padding:120px 0; position:relative;}
+.every_wrap main .best_product {padding:120px 0; width:1680px; margin:0 auto; position:relative;}
 .every_wrap main .best_product .top {
     display:flex; flex-flow:row nowrap; align-items:center;
-    padding:0 100px; justify-content: space-between; position:relative;
+    justify-content: space-between; position:relative;
     margin-bottom:40px;
 }
 .every_wrap main .best_product .top .title {}
@@ -200,12 +200,35 @@ body {width:100%; height:100vh;}
 
 
 /* 상품목록 시작 */
-.every_wrap main .best_product .product_wrap .swiper-pagination {
-    position:absolute; bottom:30px; left:0;
+
+/* 상품목록 페이지네이션 설정 */
+.every_wrap main .best_product .swiper-pagination {
+    position:absolute; top:auto; bottom:71px; left:0;
+    width:1680px; height:1px;
 }
-.every_wrap main .best_product .product_wrap {
-    width:1680px;
+.every_wrap main .best_product .swiper-pagination .swiper-pagination-progressbar-fill{
+    background-color:var(--estee-black); height:1px;
 }
-.every_wrap main .best_product .product_wrap .product_group {
-    
+/* 상품목록 페이지네이션 종료 */
+
+
+/* 상품영역 디자인 */
+.every_wrap main .best_product .product_wrap {}
+.every_wrap main .best_product .product_wrap .product_group {}
+.every_wrap main .best_product .product_wrap .product_group .swiper-slide {}
+.every_wrap main .best_product .product_wrap .product_group .swiper-slide a img {width:100%; margin-bottom:8px;}
+.every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(1) {}
+.every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(2) {}
+.every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(2) h4 {
+    font-size:var(--pc-font-body-16); font-weight:var(--pc-font-weight-400);
 }
+.every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(3) {}
+.every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(3) p {
+    font-size:var(--pc-font-body-16); font-weight:var(--pc-font-weight-500);
+}
+/* -------------------------2행 종료 */
+
+/* ------------3행 아이유배너 시작 */
+.every_wrap main .bannner_section {}
+.every_wrap main .bannner_section > a {}
+.every_wrap main .bannner_section > a > img {width:100%;}
