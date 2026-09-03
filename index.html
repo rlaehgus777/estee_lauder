@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/esteedb.js"></script>
     <script src="./script/index.js" defer></script>
 </head>
 <body>
@@ -88,18 +89,44 @@
                     <a href="#" class="cart"><img src="./images/cart_icon.svg" alt="장바구니"></a>
                 </div>
         </header>
-        <div class="hero"> <!-- 1행 시작 -->
-            <div class="swiper hero_wrap">
-                <div class="swiper-wrapper">
-                    <a href="#" class="hero_banner1 swiper-slide"><!-- hero배너 영역 --></a>
-                    <a href="#" class="hero_banner2 swiper-slide"><!-- hero배너 영역 --></a>
-                    <a href="#" class="hero_banner3 swiper-slide"><!-- hero배너 영역 --></a>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
+        <main>
+            <div class="hero"> <!-- 1행 히어로 배너 시작 -->
+                <div class="swiper hero_wrap">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="hero_banner1 swiper-slide"><!-- hero배너 영역 --></a>
+                        <a href="#" class="hero_banner2 swiper-slide"><!-- hero배너 영역 --></a>
+                        <a href="#" class="hero_banner3 swiper-slide"><!-- hero배너 영역 --></a>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                </div> <!-- 1행 히어로 배너 종료 -->
             </div>
-        </div>
+            <div class="best_product"> <!-- 2행 best 상품영역 시작 -->
+                <div class="top"> <!-- 상단부분 (제목,버튼 more버튼) -->
+                    <div class="title">
+                        <p class="slogan">ESTEE LAUDER</p>
+                        <h3>BEST</h3>
+                    </div>
+                    <div class="btn_group">
+                        <button type="button" class="skincare active">#SKIN CARE</button>
+                        <button type="button" class="makeup">#MAKE UP</button>
+                        <button type="button" class="perfume">#PERFUME</button>
+                        <button type="button" class="setandgift">#SET / GIFT</button>
+                    </div>
+                    <div class="more_btn">
+                        <a href="">
+                            MORE
+                            <img src="./images/more_icon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom swiper">
+                    <ul class="product_wrap swiper-wrapper">
+                    </ul>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>

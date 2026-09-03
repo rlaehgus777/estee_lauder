@@ -32,8 +32,8 @@ body {width:100%; height:100vh;}
 /* 1. 메뉴 호버 시 백그라운드 */
 .every_wrap header.active::after{
     display:block;
-    content:''; position:absolute; left:0; top:-60px;
-    width:100%; height:100vh; background:linear-gradient(180deg, #fff 55%, transparent);
+    content:''; position:absolute; left:0; top:0px;
+    width:100%; height:95vh; background:linear-gradient(180deg, #fff 55%, transparent);
     z-index:-1;
 }
 /* 2. 메뉴 호버 시 메뉴 글자 색상,굵기 변경 */
@@ -46,7 +46,6 @@ body {width:100%; height:100vh;}
 /* 3. 메뉴 호버 시 로고, 아이콘 색상 반전   */
 .every_wrap header.active h1 > a > img {filter:invert(0);}
 .every_wrap header.active .user_func > a > img {filter:invert(1);}
-
 
 /* 메뉴 호버 시 변경되는 구간 종료 */
 
@@ -104,59 +103,55 @@ body {width:100%; height:100vh;}
 .every_wrap header .user_func a {}
 .every_wrap header .user_func a img {filter:invert(0);}
 /* 히어로배너 */ 
-.every_wrap .hero {
+.every_wrap main .hero {
     width:100%; height:100vh; position:relative;}
-.every_wrap .hero .hero_wrap {
+.every_wrap main .hero .hero_wrap {
     width:100%; height:100%; position:absolute;
     top:0; left:0;
 }
-.every_wrap .hero .hero_wrap .swiper-wrapper {
+.every_wrap main .hero .hero_wrap .swiper-wrapper {
     width:100%; height:100%;
 }
-.every_wrap .hero .hero_wrap .hero_banner1 {
-    width:100%; height:100%;
-    background-image:url(../images/banner_hero.jpg);
-    background-size:cover;
-}
-.every_wrap .hero .hero_wrap .hero_banner2 {
+.every_wrap main .hero .hero_wrap .hero_banner1 {
     width:100%; height:100%;
     background-image:url(../images/banner_hero.jpg);
     background-size:cover;
 }
-.every_wrap .hero .hero_wrap .hero_banner3 {
+.every_wrap main .hero .hero_wrap .hero_banner2 {
+    width:100%; height:100%;
+    background-image:url(../images/banner_hero.jpg);
+    background-size:cover;
+}
+.every_wrap main .hero .hero_wrap .hero_banner3 {
     width:100%; height:100%;
     background-image:url(../images/banner_hero.jpg);
     background-size:cover;
 }
 /* 스와이퍼 설정 */
-.every_wrap .hero .hero_wrap .swiper-pagination{}
-.every_wrap .hero .hero_wrap .swiper-pagination-fraction{
+.every_wrap main .hero .hero_wrap .swiper-pagination{}
+.every_wrap main .hero .hero_wrap .swiper-pagination-fraction{
     position:absolute; width:auto;
     left:auto; right:138px; bottom:114px;
 }
-.every_wrap .hero .swiper-pagination, .swiper-pagination-total {
+.every_wrap main .hero .swiper-pagination, .swiper-pagination-total {
     color:var(--estee-gray); font-size:var(--pc-font-body-16);
 }
-.every_wrap .hero .swiper-pagination-current {
+.every_wrap main .hero .swiper-pagination-current {
     color:var(--estee-white); font-size:var(--pc-font-body-16);
 }
-.every_wrap .hero .swiper-button-next {
+.every_wrap main .hero .swiper-button-next {
     background-image:url(../images/next_prev_icon.svg);
     width:36px; height:72px; position:absolute;
     top:414px; right:40px;
 }
-.every_wrap .hero .swiper-button-next svg {display:none;}
-.every_wrap .hero .swiper-button-prev {
+.every_wrap main .hero .swiper-button-next svg {display:none;}
+.every_wrap main.hero .swiper-button-prev {
     background-image:url(../images/next_prev_icon.svg);
     transform:scaleX(-1);
     width:36px; height:72px; position:absolute;
     left:40px;
 }
-.every_wrap .hero .swiper-button-prev svg {display:none;}
+.every_wrap main .hero .swiper-button-prev svg {display:none;}
 /* 스외이퍼 설정 종료 */
-/* 히어로배너 종료 */
-.every_wrap .hero header {
-    width:100%; height:30px; position:absolute; z-index:30;
-    left:0; top:0;
-}
+/* 1행 히어로배너 종료 */
 
