@@ -26,7 +26,7 @@ const logo = document.querySelector('.logo');
 const navArea = document.querySelector('nav');
 const navBest = document.querySelector('.best');
 const navSkin = document.querySelector('.skin');
-const navMakeup = document.querySelector('.makeup');
+const navMakeup = document.querySelector('.every_wrap > header nav .menu li:nth-child(3)');
 const navPerfume = document.querySelector('.perfume');
 const navRenutriv = document.querySelector('.renutriv');
 const navSetGift = document.querySelector('.setandgift');
@@ -34,6 +34,9 @@ const navBrand = document.querySelector('.brand');
 const userInfo = document.querySelector('.user_info > img');
 const search = document.querySelector('.search > img');
 const cart = document.querySelector('.cart > img');
+
+const mainHeader = document.querySelector('.every_wrap > header');
+const hoverMenu = document.querySelector('.every_wrap > header > nav > .menu > li > .hover_menu_wrap');
 console.log(navArea, navMakeup);
 /* 내비게이션 변수 종료 */
 
@@ -43,3 +46,16 @@ tapeBannerClose.addEventListener('click',()=>{
     tapeBanner.style.display = 'none';
 })
 
+/* 마우스호버 시 메뉴 열기 */
+navMakeup.addEventListener('mouseenter',()=>{
+    mainHeader.classList.add('active');
+    hoverMenu.style.display = 'block';
+})
+
+navMakeup.addEventListener('mouseleave',()=>{
+    mainHeader.classList.add('active');
+    hoverMenu.style.display = 'none';
+})
+
+
+console.log(mainHeader, hoverMenu);
