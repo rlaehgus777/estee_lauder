@@ -142,9 +142,10 @@ body {width:100%; height:100vh;}
 .every_wrap main .hero .swiper-button-next {
     background-image:url(../images/next_prev_icon.svg);
     width:36px; height:72px; position:absolute;
-    top:414px; right:40px;
+    right:40px;
 }
 .every_wrap main .hero .swiper-button-next svg {display:none;}
+.every_wrap main .hero .swiper-button-prev svg {display:none;}
 .every_wrap main.hero .swiper-button-prev {
     background-image:url(../images/next_prev_icon.svg);
     transform:scaleX(-1);
@@ -155,3 +156,56 @@ body {width:100%; height:100vh;}
 /* 스외이퍼 설정 종료 */
 /* 1행 히어로배너 종료 */
 
+/* 2행 베스트 상품부분 시작 */
+
+
+/* 제목부분 */
+.every_wrap main  .best_product {padding:120px 0; position:relative;}
+.every_wrap main .best_product .top {
+    display:flex; flex-flow:row nowrap; align-items:center;
+    padding:0 100px; justify-content: space-between; position:relative;
+    margin-bottom:40px;
+}
+.every_wrap main .best_product .top .title {}
+.every_wrap main .best_product .top .title .slogan {
+    font-size:var(--pc-font-title-20); color:var(--estee-gray);
+    line-height:1.2;
+}
+.every_wrap main .best_product .top .title h3 {
+    font-size:var(--pc-font-title-26); font-weight:var(--pc-font-weight-500);
+}
+
+
+/* 버튼 그룹 */
+.every_wrap main .best_product .top .btn_group {
+    position:absolute; left:50%; transform:translateX(-50%);
+    display:flex; flex-flow:row nowrap; gap:14px;
+}
+.every_wrap main .best_product .top .btn_group button {
+    color:var(--estee-deep-gray);
+    width:135px; line-height:34px; border:1px solid var(--estee-deep-gray);
+    border-radius:50px;
+}
+.every_wrap main .best_product .top .btn_group button.active {
+    color:var(--estee-white); border:none; background-color:var(--estee-primary);
+}
+.every_wrap main .best_product .top .more_btn {}
+.every_wrap main .best_product .top .more_btn > a {
+    position:relative; font-size:var(--pc-font-body-14); line-height:var(--estee-line-height-150);
+    color:var(--estee-gray);
+}
+.every_wrap main .best_product .top .more_btn > a > img  {
+    position:absolute; left:0; top:16px;
+}
+
+
+/* 상품목록 시작 */
+.every_wrap main .best_product .product_wrap .swiper-pagination {
+    top:530px; bottom:auto; 
+}
+.every_wrap main .best_product .product_wrap {
+    padding:0 100px;
+}
+.every_wrap main .best_product .product_wrap .product_group {
+    
+}

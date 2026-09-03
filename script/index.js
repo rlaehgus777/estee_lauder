@@ -63,11 +63,11 @@ console.log(mainHeader, hoverMenu);
 
 /* 베스트 상품목록 반복문 */
 /* 변수 */
-const productWrap = document.querySelector('#best_product');
+const productWrap = document.querySelector('#best_product .swiper-wrapper');
 
 console.log(productWrap);
 
-for(let i=1;i<6;i++){
+for(let i=1;i<10;i++){
     const bestProductDiv = document.createElement('div');
     bestProductDiv.classList.add('swiper-slide');
     bestProductDiv.innerHTML = `<a href="#"><img src="${bestProduct[i].image}"></img></a>`
@@ -80,4 +80,9 @@ const bestSwiper = new Swiper('#best_product',{
     direction:'horizontal',
     slidesPerView:4,
     allowTouchMove : true,
+    spaceBetween : 20,
+    pagination :{
+        el:'.swiper-pagination',
+        type :'progressbar',
+    }
 })
