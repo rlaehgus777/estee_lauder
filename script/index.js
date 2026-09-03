@@ -14,13 +14,6 @@ const swiper = new Swiper('.hero_wrap',{
     }
 });
 
-/* 베스트 상품 부분 스와이퍼 */
-const bestSwiper = new Swiper('.every_wrap > main > best_product > .bottom',{
-    direction:'horizontal',
-    slidesPerView:4,
-    allowTouchMove : true,
-})
-
 /* 변수모음 */
 /* 띠배너 변수 */
 const tapeBanner = document.querySelector('.banner');
@@ -70,15 +63,21 @@ console.log(mainHeader, hoverMenu);
 
 /* 베스트 상품목록 반복문 */
 /* 변수 */
-const bestProductUl = document.querySelector('.every_wrap > main > .best_product > .bottom > .product_wrap');
+const productWrap = document.querySelector('#best_product');
 
-console.log(bestProductUl);
+console.log(productWrap);
 
 for(let i=1;i<6;i++){
-    const bestProductLi = document.createElement('li');
-    bestProductLi.classList.add('swiper-slide');
-    bestProductLi.innerHTML = `<a href="#"><img src="${bestProduct[i].image}"></img></a>`
-    bestProductLi.innerHTML += `<a href="#"><h4>${bestProduct[i].name}</h4>`;
-    bestProductLi.innerHTML += `<a href="#"><p>${bestProduct[i].price}</p>`;
-    bestProductUl.appendChild(bestProductLi);
+    const bestProductDiv = document.createElement('div');
+    bestProductDiv.classList.add('swiper-slide');
+    bestProductDiv.innerHTML = `<a href="#"><img src="${bestProduct[i].image}"></img></a>`
+    bestProductDiv.innerHTML += `<a href="#"><h4>${bestProduct[i].name}</h4>`;
+    bestProductDiv.innerHTML += `<a href="#"><p>${bestProduct[i].price}</p>`;
+    productWrap.appendChild(bestProductDiv);
 }
+/* 베스트 상품 부분 스와이퍼 */
+const bestSwiper = new Swiper('#best_product',{
+    direction:'horizontal',
+    slidesPerView:4,
+    allowTouchMove : true,
+})

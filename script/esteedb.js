@@ -32,7 +32,7 @@ const bestProduct = [{
 },
 {
     id: 6,
-    image : './images/thumnail6.jpgs',
+    image : './images/thumnail6.jpg',
     name : '얼티미트 다이아몬드 리버설 리커버리 크림',
     price : 'KRW 575,000',
 }
