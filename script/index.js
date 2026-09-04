@@ -130,9 +130,109 @@ console.log(dailySolution_wrap);
 
 
 /* 썸네일 누르면 상품목록 펼쳐지기 */
+//변수생성
+const nightProductList = document.querySelector('.daily_solution_product_wrap .night > .product_list');
+const makeupProductList = document.querySelector('.daily_solution_product_wrap .makeup > .product_list');
+const skincareProductList = document.querySelector('.daily_solution_product_wrap .skincare > .product_list');
+const perfumeProductList = document.querySelector('.daily_solution_product_wrap .perfume > .product_list');
+
+
+const nightBigthum = document.querySelector('.daily_solution_product_wrap .night > .big_thum');
+const makeupBigthum = document.querySelector('.daily_solution_product_wrap .makeup > .big_thum');
+const skincareBigthum = document.querySelector('.daily_solution_product_wrap .skincare > .big_thum');
+const perfumeBigthum = document.querySelector('.daily_solution_product_wrap .perfume > .big_thum');
+
+
+const nightThumSummary = document.querySelector('.daily_solution_product_wrap .night > .big_thum > .summary');
+const makeupThumSummary = document.querySelector('.daily_solution_product_wrap .makeup > .big_thum > .summary');
+const skincareThumSummary = document.querySelector('.daily_solution_product_wrap .skincare > .big_thum > .summary');
+const perfumeThumSummary = document.querySelector('.daily_solution_product_wrap .perfume > .big_thum > .summary');
+
+const nightSlide = document.querySelector('.daily_solution_product_wrap .night');
+const makeupSlide = document.querySelector('.daily_solution_product_wrap .makeup');
+const skincareSlide = document.querySelector('.daily_solution_product_wrap .skincare');
+const perfumeSlide = document.querySelector('.daily_solution_product_wrap .perfume');
+
+console.log(nightSlide, makeupSlide, skincareSlide, perfumeSlide);
+
+console.log(nightProductList, nightBigthum, makeupBigthum, skincareBigthum, perfumeBigthum);
+console.log(nightThumSummary, makeupThumSummary, skincareThumSummary, perfumeThumSummary);
+
+nightBigthum.addEventListener('click',()=>{
+    nightSlide.classList.add('active');
+    makeupSlide.classList.remove('active');
+    skincareSlide.classList.remove('active');
+    perfumeSlide.classList.remove('active');
+    nightThumSummary.style.display = 'block';
+    makeupThumSummary.style.display = 'none';
+    skincareThumSummary.style.display = 'none';
+    perfumeThumSummary.style.display = 'none';
+    nightProductList.style.display ='block';
+    makeupProductList.style.display ='none';
+    skincareProductList.style.display ='none';
+    perfumeProductList.style.display ='none';
+})
+makeupBigthum.addEventListener('click',()=>{
+    nightSlide.classList.remove('active');
+    makeupSlide.classList.add('active');
+    skincareSlide.classList.remove('active');
+    perfumeSlide.classList.remove('active');
+    nightThumSummary.style.display = 'none';
+    makeupThumSummary.style.display = 'block';
+    skincareThumSummary.style.display = 'none';
+    perfumeThumSummary.style.display = 'none';
+})
+skincareBigthum.addEventListener('click',()=>{
+    nightSlide.classList.remove('active');
+    makeupSlide.classList.remove('active');
+    skincareSlide.classList.add('active');
+    perfumeSlide.classList.remove('active');
+    nightThumSummary.style.display = 'none';
+    makeupThumSummary.style.display = 'none';
+    skincareThumSummary.style.display = 'block';
+    perfumeThumSummary.style.display = 'none';
+    nightProductList.style.display ='none';
+    makeupProductList.style.display ='none';
+    skincareProductList.style.display ='block';
+    perfumeProductList.style.display ='none';
+})
+perfumeBigthum.addEventListener('click',()=>{
+    nightSlide.classList.remove('active');
+    makeupSlide.classList.remove('active');
+    skincareSlide.classList.remove('active');
+    perfumeSlide.classList.add('active');
+    nightThumSummary.style.display = 'none';
+    makeupThumSummary.style.display = 'none';
+    skincareThumSummary.style.display = 'none';
+    perfumeThumSummary.style.display = 'block';
+    nightProductList.style.display ='none';
+    makeupProductList.style.display ='none';
+    skincareProductList.style.display ='none';
+    perfumeProductList.style.display ='block';
+})
+
+
 
 
 /* 데일리 솔루션 스와이퍼 설정 */
 const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
     slidesPerView : 'auto',
+    allowTouchMove :false,
+})
+
+/* renutriv 부분 */
+const renutrivProductWrap = document.querySelector('.renutriv_area .right .swiper-wrapper')
+console.log(renutrivProductWrap);
+for(let i = 0; i<10; i++){
+    console.log(i);
+    const renutrivProductSlide = document.createElement('div');
+    renutrivProductSlide.classList.add('swiper-slide');
+    renutrivProductSlide.innerHTML = `<a href="#" class="product_thum"><img src="${renutrivDb[i].thumnail}" alt=""></a>`
+    renutrivProductSlide.innerHTML += `<a href="#" class="product_name">${renutrivDb[i].name}</a>`
+    renutrivProductSlide.innerHTML += `<a href="#" class="product_price">${renutrivDb[i].price}</a>`
+    renutrivProductWrap.appendChild(renutrivProductSlide);
+}
+
+const renutrivSwiper = new Swiper ('.renutriv_product_wrap',{
+    slidesPerView : 4,
 })

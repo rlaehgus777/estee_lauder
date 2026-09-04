@@ -99,3 +99,66 @@ const dailySolution = [{
     price : 'KRW 110,000',
 },
 ]
+
+
+const renutrivDb = [{
+    id : 1,
+    name : '얼티미트 다이아몬드 에이지 리버설 리커버리 크림',
+    thumnail : './images/renutriv_thumnail1.jpg',
+    price : 'KRW 575,000',
+},
+{
+    id: 2,
+    name : '다이아몬드 트랜스포머티브 브릴리언스 소프트 크림',
+    thumnail : './images/renutriv_thumnail2.jpg',
+    price : 'KRW 480,000',
+},
+{
+    id : 3,
+    name : '리-뉴트리브 소프트닝 로션',
+    thumnail : './images/renutriv_thumnail3.jpg',
+    price : 'KRW 115,000',
+},
+{
+    id : 4,
+    name : '얼티미트 다이아몬드 트랜스포머티브 아이 세럼',
+    thumnail : './images/renutriv_thumnail4.jpg',
+    price : 'KRW 320,000' ,
+},
+{
+    id : 5,
+    name : '얼티미트 다이아몬드 에이지 리버설 리커버리 크림',
+    thumnail : './images/renutriv_thumnail1.jpg',
+    price : 'KRW 575,000',
+},
+{
+    id: 6,
+    name : '다이아몬드 트랜스포머티브 브릴리언스 소프트 크림',
+    thumnail : './images/renutriv_thumnail2.jpg',
+    price : 'KRW 480,000',
+},
+{
+    id : 7,
+    name : '리-뉴트리브 소프트닝 로션',
+    thumnail : './images/renutriv_thumnail3.jpg',
+    price : 'KRW 115,000',
+},
+{
+    id : 8,
+    name : '얼티미트 다이아몬드 트랜스포머티브 아이 세럼',
+    thumnail : './images/renutriv_thumnail4.jpg',
+    price : 'KRW 320,000' ,
+},
+{
+    id : 9,
+    name : '얼티미트 다이아몬드 에이지 리버설 리커버리 크림',
+    thumnail : './images/renutriv_thumnail1.jpg',
+    price : 'KRW 575,000',
+},
+{
+    id: 10,
+    name : '다이아몬드 트랜스포머티브 브릴리언스 소프트 크림',
+    thumnail : './images/renutriv_thumnail2.jpg',
+    price : 'KRW 480,000',
+},
+]
