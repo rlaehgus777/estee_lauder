@@ -122,3 +122,8 @@ setandgiftBtn.addEventListener('click',()=>{
 })
 console.log(skinCareBtn, makeupBtn, perfumeBtn, setandgiftBtn );
 
+
+//데일리 솔루션 영역 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const dailySolution_wrap = document.querySelector('.daily_solution_product_wrap');
+const dailySolution_sl = document.querySelector('.daily_solution_product_swiper_wrapper > .swiper-slide');
+console.log(dailySolution_wrap);

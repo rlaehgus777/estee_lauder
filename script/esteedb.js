@@ -61,3 +61,41 @@ const bestProduct = [{
     price : 'KRW 120,000~',
 }
 ]
+
+const dailySolution = [{
+    id :1 ,
+    thumnail:'./images/daily_pro1.jpg',
+    name : '어드밴스드 나이트 리페어 갈색병 세럼',
+    price : 'KRW 34,000~',
+},
+{
+    id :2 ,
+    thumnail:'./images/daily_pro2.jpg',
+    name : '어드밴스드 나이트 리페어 레스큐 솔루션',
+    price : 'KRW 150,000',
+},
+{
+    id :3 ,
+    thumnail:'./images/daily_pro3.jpg',
+    name : '어드밴스드 나이트 리페어 아이 리프트',
+    price : 'KRW 158,000',
+},
+{
+    id :4 ,
+    thumnail:'./images/daily_pro4.jpg',
+    name : '더블웨어 스킨핏 쿠션',
+    price : 'KRW 90,000~',
+},
+{
+    id :5 ,
+    thumnail:'./images/daily_pro5.jpg',
+    name : '퓨어컬러 젤리 글로우 오일',
+    price : 'KRW 40,000',
+},
+{
+    id :6 ,
+    thumnail:'./images/daily_pro6.jpg',
+    name : '퓨처리스트 파운데이션',
+    price : 'KRW 110,000',
+},
+]
