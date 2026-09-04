@@ -127,3 +127,19 @@ console.log(skinCareBtn, makeupBtn, perfumeBtn, setandgiftBtn );
 const dailySolution_wrap = document.querySelector('.daily_solution_product_wrap');
 const dailySolution_sl = document.querySelector('.daily_solution_product_swiper_wrapper > .swiper-slide');
 console.log(dailySolution_wrap);
+
+
+/* 썸네일 누르면 상품목록 펼쳐지기 */
+const daily_night_product_list = document.querySelector('.daily_solution_product_swiper_wrapper > .product_list');
+const daily_night_bigThum = document.querySelector('.daily_solution_product_swiper_wrapper > .night > .big_thum');
+console.log(daily_night_bigThum, daily_night_product_list);
+
+
+daily_night_bigThum.addEventListener('click',{
+
+})
+
+/* 데일리 솔루션 스와이퍼 설정 */
+const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
+    slidesPerview : 5 ,
+})

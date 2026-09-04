@@ -1,6 +1,6 @@
 /* index.css */
 /* ----------------pc버전 시작점 */
-body * {box-sizing:border-box;}
+body * {box-sizing:border-box; letter-spacing:var(--estee-letter-spacing-2);}
 body {width:100%; height:100vh;}
 /* 띠배너 */
 .every_wrap {width:100%; position:relative;}
@@ -232,3 +232,96 @@ body {width:100%; height:100vh;}
 .every_wrap main .bannner_section {}
 .every_wrap main .bannner_section > a {}
 .every_wrap main .bannner_section > a > img {width:100%;}
+/* 3행 종료 !!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+/* -------------------4행 데일리 솔루션시작  */
+.every_wrap main .daily_solution {padding:120px 0; display:flex; flex-flow:column nowrap; gap:30px;}
+.every_wrap main .daily_solution > .top {
+    width:1680px; margin:0 auto; display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+}
+.every_wrap main .daily_solution > .top > .title {display:flex; flex-flow:column nowrap;}
+.every_wrap main .daily_solution > .top > .title .slogan {
+    font-size:var(--pc-font-title-20); color:var(--estee-gray);
+    line-height:var(--estee-line-height-150);
+}
+.every_wrap main .daily_solution > .top > .title > h3 {
+    font-size:var(--pc-font-title-26); color:var(--estee-black); font-weight:var(--pc-font-weight-500);
+    line-height:var(--estee-line-height-150);
+}
+.every_wrap main .daily_solution > .top > .more_btn {
+    color:var(--estee-gray); font-size:var(--pc-font-body-14);
+    position:relative; line-height:var(--estee-line-height-150);
+}
+.every_wrap main .daily_solution > .top > .more_btn img {
+    position:absolute; left:0; top:16px;
+}
+
+
+
+
+
+.every_wrap main .daily_solution > .daily_solution_product_wrap {
+    width:1680px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide {
+    display:flex; flex-flow:row nowrap; gap:20px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .big_thum{
+    background-image:url(../images/thum_daily_1.jpg); background-repeat:no-repeat; position:relative;
+    height:750px; width:572.5px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .big_thum .summary{
+    position:absolute; left:40px; bottom:45px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .big_thum .summary .title{
+    font-size:var(--pc-font-title-24); color:var(--estee-white); line-height:var(--estee-line-height-150);
+    font-weight:var(--pc-font-weight-400); margin-bottom:10px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .big_thum .summary .hashtag {
+    display:flex; flex-flow:row nowrap; gap:14px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .big_thum .summary .hashtag span{
+    font-size:var(--pc-font-body-16); color:var(--estee-white); font-weight:lighter;
+    padding:6px 10px; background-color:rgba(255,255,255,0.2); border-radius:8px;
+}
+
+
+
+
+
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list {
+    display:flex; flex-flow:column nowrap; gap:10px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li{
+    position:relative;
+    display:flex; flex-flow:row nowrap; gap:20px;
+    width:572.5px; height:243.33px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li .small_thum{
+    width:237px; height:243px; display:block; 
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li .small_thum img{
+    width:100%; height:100%; object-fit:cover;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li .product_wrap {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li .product_wrap p {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li .product_wrap .tag {
+    font-size:var(--pc-font-body-12); font-weight:var(--pc-font-weight-200); background-color:var(--estee-primary);
+    padding:2px 6px; color:var(--estee-white); width:max-content; line-height:var(--estee-line-height-150);
+    margin-bottom:5px;
+}.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li:nth-child(2) .product_wrap .tag {
+    background-color:#8A431A;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li .product_wrap .name {
+    margin-bottom:30px; font-size:var(--pc-font-body-16); font-weight:var(--pc-font-weight-400);
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li .product_wrap .price {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li > .add_cart {
+    position:absolute; right:0; top:70px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .daily_solution_product_swiper_wrapper > .swiper-slide .product_list > li > .add_cart img {width:100%;}
