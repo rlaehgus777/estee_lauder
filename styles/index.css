@@ -241,7 +241,7 @@ body {width:100%; height:100vh;}
 .every_wrap main .daily_solution {padding:120px 0; display:flex; flex-flow:column nowrap; gap:30px;}
 .every_wrap main .daily_solution > .top {
     width:1680px; margin:0 auto; display:flex; flex-flow:row nowrap;
-    justify-content: space-between;
+    justify-content: space-between; align-items:flex-end;
 }
 .every_wrap main .daily_solution > .top > .title {display:flex; flex-flow:column nowrap;}
 .every_wrap main .daily_solution > .top > .title .slogan {
@@ -276,6 +276,27 @@ body {width:100%; height:100vh;}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .product_list {display:none;} /* 평시 리스트 안보이기 */
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .product_list {display:flex;} /* 액티브 적용시 보이기 */
 
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum > .summary {display:none;} /* 빅썸네일 내부 내용 안보이기 */
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary { /* 빅썸네일 내부 내용 액티브 적용시 보이기 */
+    display:block; position:absolute; left:40px; bottom:50px; 
+}
+/* --------------------------------빅썸네일 내부 내용 absolute내용 */
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary > .title{
+    color:#fff; font-size:var(--pc-font-title-24); font-weight:var(--pc-font-weight-400); margin-bottom:10px;
+} 
+
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary > .hashtag {
+    display:flex; flex-direction:row; gap:14px;
+}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary > .hashtag span {
+    padding:6px 10px; background-color:rgba(255,255,255,0.3); border-radius:8px; color:var(--estee-white);
+    font-size:var(--pc-font-body-16); font-weight:lighter;
+}
+
+
+
+
+/* ----------------------------------빅썸네일 내용 종료 */
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .night .big_thum{
     background-image:url(../images/thum_daily_1.jpg); background-repeat:no-repeat;
