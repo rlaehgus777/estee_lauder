@@ -220,7 +220,7 @@ body {width:100%; height:100vh;}
 .every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(1) {}
 .every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(2) {}
 .every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(2) h4 {
-    font-size:var(--pc-font-body-16); font-weight:var(--pc-font-weight-400);
+    font-size:var(--pc-font-body-16); font-weight:var(--pc-font-weight-400); line-height:var(--estee-line-height-150);
 }
 .every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(3) {}
 .every_wrap main .best_product .product_wrap .product_group .swiper-slide a:nth-child(3) p {
@@ -436,4 +436,69 @@ body {width:100%; height:100vh;}
 
 
 
+/* 리뉴트리브 소개 영역 */
+.every_wrap main .renutriv_area * {color:white;}
+.every_wrap main .renutriv_area {
+    background-image:url(../images/renutriv_bg.jpg); 
+    background-size:cover; height:900px; display:flex; align-items:center;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap {
+    width:1680px; margin:0 auto;
+    display:flex; flex-flow:row nowrap; gap:180px; align-items:center;
+}
 
+
+
+/* 좌측 영역 제목 및 내용들 css */
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left {
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > * {color:white; width:max-content;}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > .slogan {
+    font-size:var(--pc-font-title-20); color:var(--estee-gray); line-height:var(--estee-line-height-150);
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > h3 {
+    font-family:var(--pc-optima-fonts); font-size:var(--pc-font-title-26); color:#DEB200; margin-bottom:24px;
+    line-height:1.4em;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > .summary {
+    line-height:var(--estee-line-height-150); color:var(--estee-gray); margin-bottom:24px;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > .button_group {
+    display:flex; gap:12px;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > .button_group > .research,
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > .button_group > .everyproduct{
+    font-size:var(--pc-font-body-14); padding:8px 14px; border-radius:30px; line-height:var(--estee-line-height-150);
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > .button_group > .research {
+    border:1px solid var(--estee-gray); color:var(--estee-gray);
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .left > .button_group > .everyproduct {
+    color:var(--estee-black); background-color:var(--estee-white);
+}
+/* 좌측 영역 종료 */
+
+
+/* 상품 부분 시작 */
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right {width:1110px;}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap {
+    width:100%;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper {
+    transition-timing-function: linear;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide {
+    display:flex; flex-flow:column nowrap;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide > .product_thum {
+    margin-bottom:14px;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide > .product_thum > img {
+    width:100%; height:auto;
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide > .product_name {
+    margin-bottom:8px; line-height:var(--estee-line-height-150);
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide > .product_price {
+    line-height:var(--estee-line-height-150); font-weight:var(--pc-font-weight-500);
+}

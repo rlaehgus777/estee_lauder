@@ -234,5 +234,11 @@ for(let i = 0; i<10; i++){
 }
 
 const renutrivSwiper = new Swiper ('.renutriv_product_wrap',{
-    slidesPerView : 4,
+    slidesPerView : 3,
+    spaceBetween: 30,
+    speed:3000,
+    autoplay: {
+        delay: 1,
+    },
+    loop: true,
 })
