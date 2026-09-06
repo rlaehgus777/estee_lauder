@@ -242,3 +242,113 @@ const renutrivSwiper = new Swiper ('.renutriv_product_wrap',{
     },
     loop: true,
 })
+
+
+
+/* 헤리티지 부분 마우스 이벤트 */
+
+const heritageHoverArea1 = document.querySelector('.step1');
+const heritageHoverArea2 = document.querySelector('.step2');
+const heritageHoverArea3 = document.querySelector('.step3');
+const heritageHoverArea4 = document.querySelector('.step4');
+const heritageHoverArea5 = document.querySelector('.step5');
+const heritageHoverArea6 = document.querySelector('.step6');
+
+const heritageContents1 = document.querySelector('.step1 > .contents');
+const heritageContents2 = document.querySelector('.step2 > .contents');
+const heritageContents3 = document.querySelector('.step3 > .contents');
+const heritageContents4 = document.querySelector('.step4 > .contents');
+const heritageContents5 = document.querySelector('.step5 > .contents');
+const heritageContents6 = document.querySelector('.step6 > .contents');
+
+const heritageHoverContents1 = document.querySelector('.step1 > .contents_hover');
+const heritageHoverContents2 = document.querySelector('.step2 > .contents_hover');
+const heritageHoverContents3 = document.querySelector('.step3 > .contents_hover');
+const heritageHoverContents4 = document.querySelector('.step4 > .contents_hover');
+const heritageHoverContents5 = document.querySelector('.step5 > .contents_hover');
+const heritageHoverContents6 = document.querySelector('.step6 > .contents_hover');
+
+
+
+console.log(heritageContents1, heritageContents2, heritageContents3, heritageContents4, heritageContents5, heritageContents6);
+
+console.log(heritageHoverArea1, heritageHoverArea2, heritageHoverArea3, heritageHoverArea4, heritageHoverArea5, heritageHoverArea6);
+
+heritageHoverArea1.addEventListener('mouseenter',()=>{
+    heritageContents1.style.opacity ='0';
+    heritageHoverContents1.style.transition = 'opacity 0.5s ease';
+    heritageHoverContents1.style.opacity ='1';
+})
+heritageHoverArea1.addEventListener('mouseleave',()=>{
+        heritageContents1.style.opacity ='1';
+    heritageHoverContents1.style.opacity ='0';
+})
+
+
+heritageHoverArea2.addEventListener('mouseenter',()=>{
+    heritageContents2.style.opacity ='0';
+    heritageHoverContents2.style.transition = 'opacity 0.5s ease';
+    heritageHoverContents2.style.opacity ='1';
+})
+heritageHoverArea2.addEventListener('mouseleave',()=>{
+        heritageContents2.style.opacity ='1';
+    heritageHoverContents2.style.opacity ='0';
+})
+
+
+
+heritageHoverArea3.addEventListener('mouseenter',()=>{
+    heritageContents3.style.opacity ='0';
+    heritageHoverContents3.style.transition = 'opacity 0.5s ease';
+    heritageHoverContents3.style.opacity ='1';
+})
+heritageHoverArea3.addEventListener('mouseleave',()=>{
+    heritageContents3.style.opacity ='1';
+    heritageHoverContents3.style.opacity ='0';
+})
+
+
+heritageHoverArea4.addEventListener('mouseenter',()=>{
+    heritageContents4.style.opacity ='0';
+    heritageHoverContents4.style.transition = 'opacity 0.5s ease';
+    heritageHoverContents4.style.opacity ='1';
+})
+heritageHoverArea4.addEventListener('mouseleave',()=>{
+    heritageContents4.style.opacity ='1';
+    heritageHoverContents4.style.opacity ='0';
+})
+
+
+heritageHoverArea5.addEventListener('mouseenter',()=>{
+    heritageContents5.style.opacity ='0';
+    heritageHoverContents5.style.transition = 'opacity 0.5s ease';
+    heritageHoverContents5.style.opacity ='1';
+})
+heritageHoverArea5.addEventListener('mouseleave',()=>{
+    heritageContents5.style.opacity ='1';
+    heritageHoverContents5.style.opacity ='0';
+})
+
+
+heritageHoverArea6.addEventListener('mouseenter',()=>{
+    heritageContents6.style.opacity ='0';
+    heritageHoverContents6.style.transition = 'opacity 0.5s ease';
+    heritageHoverContents6.style.opacity ='1';
+})
+heritageHoverArea6.addEventListener('mouseleave',()=>{
+    heritageContents6.style.opacity ='1';
+    heritageHoverContents6.style.opacity ='0';
+})
+
+
+
+
+/* 마지막행 브랜드로고 슬라이드 */
+const brandSwiper = new Swiper ('.brand_wrap', {
+    slidesPerView: 5,
+    speed: 3000,
+    autoplay: {
+        delay:1,
+    },
+    loop: 'true'
+})
