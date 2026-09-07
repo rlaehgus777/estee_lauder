@@ -2,6 +2,54 @@
 /* ----------------pc버전 시작점 */
 body * {box-sizing:border-box; letter-spacing:var(--estee-letter-spacing-2);}
 body {}
+
+/* CTA버튼 */
+.cta_btn {
+    position:fixed; bottom:20px; right:10px; z-index:var(--z-index-400);
+}
+.cta_btn > #cta_non_active {
+    font-family:var(--pc-optima-fonts); font-size:var(--pc-font-micro-10);
+    width:90px; height:90px; border-radius:100%;
+    background-color:var(--estee-primary); color:var(--estee-white);
+    border:2px solid #CD9D43; font-weight:100;
+}
+.cta_btn > .cta_active {
+    display:none; flex-flow:column-reverse nowrap; 
+}
+.cta_btn > .cta_active > #cta_close {
+    width:90px; height:90px; background-color:var(--estee-primary);
+    border:2px solid #CD9C43; 
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+.cta_btn > .cta_active > #cta_close > img {}
+
+
+.cta_btn > .cta_active > #search_shop {
+    display:flex; flex-flow:column-reverse nowrap; align-items:center; justify-content: center;
+    font-size:var(--pc-font-body-14); color:var(--estee-white); width:90px; height:90px; gap:10px;
+    background-color:var(--estee-primary);
+    border-left:2px solid #CD9C43;
+    border-right:2px solid #CD9C43;
+    border-top:2px solid #CD9C43;
+}
+.cta_btn > .cta_active > #search_shop > img {}
+
+
+
+.cta_btn > .cta_active > #customer {
+    display:flex; flex-flow:column-reverse nowrap; width:90px; height:90px;
+    justify-content: center;
+    font-size:var(--pc-font-body-14); color:var(--estee-white); align-items:center; gap:10px;
+    background-color:var(--estee-primary);
+    border-left:2px solid #CD9C43;
+    border-right:2px solid #CD9C43;
+    border-top:2px solid #CD9C43;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+.cta_btn > .cta_active > #customer > img{width:14px; height:14px;}
+
 /* 띠배너 */
 .every_wrap {width:100%; position:relative;}
 .every_wrap .banner {
@@ -153,6 +201,11 @@ body {}
     width:36px; height:72px; position:absolute;
     left:40px; filter:brightness(2);
 }
+.every_wrap main .hero .swiper-button-next.swiper-button-disabled,
+.every_wrap main .hero .swiper-button-prev.swiper-button-disabled {
+    opacity:0.2;
+}
+
 .every_wrap main .hero .swiper-button-prev svg {display:none;}
 /* 스와이퍼(히어로) 설정 종료 */
 /* 1행 히어로배너 종료 */
@@ -392,7 +445,7 @@ body {}
 
 /* 컬러칩 css 영역-------------------------------------------------------------------------- */
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip {
-    margin-bottom:30px;
+    margin-bottom:30px; display:flex; flex-flow:row nowrap; gap:5px; align-items:center;
 }
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip span {
     display:inline-block; width:12px; height:12px; border-radius:100%;
@@ -646,7 +699,7 @@ body {}
 .every_wrap footer * {color:#fff;}
 .every_wrap footer {
     background-color:var(--estee-black); display:flex; flex-flow:row nowrap; height:486px; gap:471px;
-    position:relative; padding:0 120px; /* overflow:hidden; */
+    position:relative; padding:60px 120px; overflow:hidden;
 }
 .every_wrap footer > .left {}
 .every_wrap footer > .left > .slogan {
@@ -691,17 +744,29 @@ body {}
 
 
 .every_wrap footer > address {
-    display:flex; flex-flow:row nowrap;
+    display:flex; flex-flow:row nowrap; gap:70px;
 }
-.every_wrap footer > address > .left {}
+.every_wrap footer > address > .left {
+    display:flex; flex-flow:column nowrap; gap:6px;
+}
 .every_wrap footer > address > .left > p {
+    font-size:var(--pc-font-body-16); color:var(--estee-gray); line-height:var(--estee-line-height-150);
 }
 
 
 
-.every_wrap footer > address > .right 
-.every_wrap footer > address > .right > a {}
-.every_wrap footer > address > .right > .sns {}
+.every_wrap footer > address > .right {
+    display:flex; flex-flow:column nowrap; gap:8px;
+}
+.every_wrap footer > address > .right > a {
+    font-size:var(--pc-font-body-16); color:var(--estee-gray);
+}
+.every_wrap footer > address > .right > p {
+    font-size:var(--pc-font-body-16); color:var(--estee-gray);
+}
+.every_wrap footer > address > .right > .sns {
+    display:flex; flex-flow:row nowrap; gap:8px;
+}
 .every_wrap footer > address > .right > .sns > a {}
 .every_wrap footer > address > .right > .sns > a > img {}
 

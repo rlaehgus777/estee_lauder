@@ -163,7 +163,7 @@ nightBigthum.addEventListener('click',()=>{
     makeupSlide.classList.remove('active');
     skincareSlide.classList.remove('active');
     perfumeSlide.classList.remove('active');
-    nightThumSummary.style.display = 'block';
+    nightThumSummary.style.display = '';
     makeupThumSummary.style.display = 'none';
     skincareThumSummary.style.display = 'none';
     perfumeThumSummary.style.display = 'none';
@@ -355,4 +355,21 @@ const brandSwiper = new Swiper ('.brand_wrap', {
         delay:1,
     },
     loop: 'true'
+})
+
+
+
+/* cta 버튼 */
+const ctaNonActive = document.querySelector('#cta_non_active');
+const ctaActive = document.querySelector('.cta_active');
+const ctaActiveClose = document.querySelector('#cta_close');
+
+ctaNonActive.addEventListener('click',()=>{
+    ctaNonActive.style.display = "none";
+    ctaActive.style.display = "flex";
+})
+
+ctaActiveClose.addEventListener('click',()=>{
+    ctaNonActive.style.display = "block";
+    ctaActive.style.display = "none";
 })
