@@ -620,44 +620,39 @@ body {width:100%; height:100vh;}
 }
 
 
-.every_wrap main > .bottom_area > .offline_shop > footer {
-    padding:60px 120px; position:relative; overflow:hidden;
-    display:flex; gap:471px;
+.every_wrap footer {
+
 }
-.every_wrap main > .bottom_area > .offline_shop > footer > .left {}
+.every_wrap footer > .left {}
 .every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan {
-    display:flex; flex-flow:column nowrap; gap:36px; position:relative;
+
 }
 
 
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .first,
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .second,
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .third {
-    font-size:var(--pc-font-title-32); font-family:var(--pc-optima-fonts); line-height:1.2;
-    color:var(--estee-white);
+.every_wrap footer > .left > .slogan > .first,
+.every_wrap footer > .left > .slogan > .second,
+.every_wrap footer > .left > .slogan > .third {
+
 }
 
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .point_dot1, 
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .point_dot2, 
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .point_dot3 {
-    width:6px; height:6px; background-color:var(--estee-white); border-radius:100%;
-    position:absolute;
+.every_wrap footer > .left > .slogan > .point_dot1, 
+.every_wrap footer > .left > .slogan > .point_dot2, 
+.every_wrap footer > .left > .slogan > .point_dot3 {
+
 }
 
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .point_dot1 {
-    top:-4px; left:6px;
-}
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .point_dot2 {
-    top:70px; left:6px;
-}
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .point_dot3 {
-    bottom:90px; left:6px;
-}
+.every_wrap footer > .left > .slogan > .point_dot1 {
 
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .first {}
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .second {}
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .third{}
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan > .copyright {}
+.every_wrap footer > .left > .slogan > .point_dot2 {
+
+}
+.every_wrap footer > .left > .slogan > .point_dot3 {}
+
+
+.every_wrap footer > .left > .slogan > .first {}
+.every_wrap footer > .left > .slogan > .second {}
+.every_wrap footer > .left > .slogan > .third{}
+.every_wrap footer > .left > .slogan > .copyright {}
 
 
 
@@ -666,7 +661,6 @@ body {width:100%; height:100vh;}
 .every_wrap main > .bottom_area > .offline_shop > footer > address {}
 .every_wrap main > .bottom_area > .offline_shop > footer > address > .left {}
 .every_wrap main > .bottom_area > .offline_shop > footer > address > .left > p {
-    color:var(--estee-white);
 }
 
 
@@ -677,5 +671,4 @@ body {width:100%; height:100vh;}
 .every_wrap main > .bottom_area > .offline_shop > footer > address > .right > .sns > a > img {}
 
 .every_wrap main > .bottom_area > .offline_shop > footer > .biglogo {
-    position:absolute; right:122px; bottom:-120px;
 }
