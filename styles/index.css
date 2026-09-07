@@ -282,12 +282,12 @@ body {}
 /* 비활성화시 썸네일 어두움처리 */
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum::after {
     display:block; width:100%; height:100%; position:absolute; top:0; left:0; 
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0.4); content:'';
 }
 
 
 .every_warp main .daily_solution > .daily.solution_product_wrap .swiper-wrapper > .night, .makeup, .skincare > .big_thum {} /* 퍼퓸 제외 마진 적용 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active >  .big_thum {} /* 빅썸네일 활성화 */
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active >  .big_thum::after {display:none;} /* 빅썸네일 활성화 */
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .product_list {display:none;} /* 평시 리스트 안보이기 */
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active .product_list {
     display:flex; flex-flow:column nowrap; gap:10px;} /* 액티브 적용시 보이기 */
@@ -491,7 +491,19 @@ body {}
 
 
 /* 상품 부분 시작 */
-.every_wrap main .renutriv_area > .renutriv_content_wrap > .right {width:1110px;}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right {width:1110px; position:relative;}
+
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right::before {
+    position:absolute; display:block; content:''; top:0; left:0;
+    width:75px; height:100%; z-index:var(--z-index-400);
+    background:linear-gradient(90deg, #000, transparent);
+}
+.every_wrap main .renutriv_area > .renutriv_content_wrap > .right::after {
+    position:absolute; display:block; content:''; top:0; right:0;
+    width:75px; height:100%; z-index:var(--z-index-400);
+    background:linear-gradient(-90deg, #000, transparent);
+}
+
 .every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap {
     width:100%;
 }
@@ -633,56 +645,66 @@ body {}
 
 .every_wrap footer * {color:#fff;}
 .every_wrap footer {
-    background-color:var(--estee-black); display:flex; flex-flow:row nowrap; height:486px;
-    position:relative;
+    background-color:var(--estee-black); display:flex; flex-flow:row nowrap; height:486px; gap:471px;
+    position:relative; padding:0 120px; /* overflow:hidden; */
 }
 .every_wrap footer > .left {}
 .every_wrap footer > .left > .slogan {
-
+    display:flex; flex-flow:column nowrap; gap:36px;  position:relative;
 }
 
 
 .every_wrap footer > .left > .slogan > .first,
 .every_wrap footer > .left > .slogan > .second,
 .every_wrap footer > .left > .slogan > .third {
-
+    font-family:var(--pc-optima-fonts); font-size:var(--pc-font-title-32);
 }
 
 .every_wrap footer > .left > .slogan > .point_dot1, 
 .every_wrap footer > .left > .slogan > .point_dot2, 
 .every_wrap footer > .left > .slogan > .point_dot3 {
-
+    position:absolute; width:6px; height:6px; background-color:var(--estee-white);
+    border-radius:100%;
 }
 
-.every_wrap footer > .left > .slogan > .point_dot1 {}
+.every_wrap footer > .left > .slogan > .point_dot1 {
+    top:-12px; left:6px;
+}
 
 .every_wrap footer > .left > .slogan > .point_dot2 {
-
+    top:55px; left:6px;
 }
-.every_wrap footer > .left > .slogan > .point_dot3 {}
+.every_wrap footer > .left > .slogan > .point_dot3 {
+    left:6px; bottom:90px;
+}
 
 
 .every_wrap footer > .left > .slogan > .first {}
 .every_wrap footer > .left > .slogan > .second {}
 .every_wrap footer > .left > .slogan > .third{}
-.every_wrap footer > .left > .slogan > .copyright {}
+.every_wrap footer > .left > .slogan > .copyright {
+    font-size:var(--pc-font-body-16); color:var(--estee-gray);
+}
 
 
 
 
 
-.every_wrap footer > address {}
+.every_wrap footer > address {
+    display:flex; flex-flow:row nowrap;
+}
 .every_wrap footer > address > .left {}
 .every_wrap footer > address > .left > p {
 }
 
 
 
+.every_wrap footer > address > .right 
 .every_wrap footer > address > .right > a {}
 .every_wrap footer > address > .right > .sns {}
 .every_wrap footer > address > .right > .sns > a {}
 .every_wrap footer > address > .right > .sns > a > img {}
 
 .every_wrap footer > .biglogo {
-    position:absolute;
+    position:absolute; left:123px; bottom:-70px;
 }
