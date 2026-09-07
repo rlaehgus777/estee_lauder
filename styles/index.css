@@ -104,8 +104,8 @@ body {}
 .every_wrap header nav {}
 .every_wrap header nav .menu {
     display:flex; justify-content: center; align-items:center;
-
 }
+
 .every_wrap header nav .menu > li {
     width:150px; line-height:60px; text-align:center;
 }

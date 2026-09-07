@@ -13,7 +13,13 @@
 
 
     /* 헤더 시작 */
-    .every_wrap header {
-    top:30px;
-}
+    .every_wrap header {top:30px; background-color:var(--estee-white);}
+    .every_wrap header h1 {width:150px; height:150px;}
+    .every_wrap header h1 a {}
+    .every_wrap header > h1 > a > img {filter:invert(1);}
+
+    .every_wrap header nav {background-color:var(--estee-white);}
+    .every_wrap header nav .menu {
+        display:none;
+    }
 }
