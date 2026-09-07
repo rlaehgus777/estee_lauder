@@ -1,14 +1,15 @@
 /* var.css */
 :root {
     /* font weight */
-    --pc-font-weight-200:200;
-    --pc-font-weight-300:300;
-    --pc-font-weight-400:400;
-    --pc-font-weight-500:500;
-    --pc-font-weight-600:600;
-    --pc-font-weight-700:700;
+    --font-weight-200:200;
+    --font-weight-300:300;
+    --font-weight-400:400;
+    --font-weight-500:500;
+    --font-weight-600:600;
+    --font-weight-700:700;
     /* fonts */
-    --pc-optima-fonts:'optima',serif;
+    --optima-fonts:'Optima',serif;
+    --optima-m-fonts:'Optima-m',serif;
     --pc-pretendard-fonts:'pretendard',san-serif;
 
     /* font size */

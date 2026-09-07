@@ -98,8 +98,13 @@ input[type=number] {
 }
 @font-face {
     font-family: 'Optima';
-    src: url('../fonts/OPTIMA.TTF') format('optima'),
-        url('../fonts/Optima\ Medium.ttf') format('optima-medium');
+    src: url('../fonts/OPTIMA.TTF');
     font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Optima-m';
+    src: url('../fonts/OptimaMedium.ttf');
+    font-weight: 500;
     font-style: normal;
 }
