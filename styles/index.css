@@ -143,7 +143,7 @@ body {}
 .every_wrap main .hero .swiper-button-next {
     background-image:url(../images/next_prev_icon.svg);
     width:36px; height:72px; position:absolute;
-    right:40px;
+    right:40px; filter:brightness(2);
 }
 .every_wrap main .hero .swiper-button-next svg {display:none;}
 .every_wrap main .hero .swiper-button-prev svg {display:none;}
@@ -151,7 +151,7 @@ body {}
     background-image:url(../images/next_prev_icon.svg);
     transform:scaleX(-1);
     width:36px; height:72px; position:absolute;
-    left:40px;
+    left:40px; filter:brightness(2);
 }
 .every_wrap main .hero .swiper-button-prev svg {display:none;}
 /* 스와이퍼(히어로) 설정 종료 */
@@ -272,7 +272,7 @@ body {}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide{
     width:150px; display:flex; flex-flow:row nowrap; gap:20px; transition:width 0.4s;
 }
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide::after{}
+
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active{
     width:1200px; display:flex; flex-flow:row nowrap; gap:20px;
@@ -631,11 +631,13 @@ body {}
 }
 
 
+.every_wrap footer * {color:#fff;}
 .every_wrap footer {
-
+    background-color:var(--estee-black); display:flex; flex-flow:row nowrap; height:486px;
+    position:relative;
 }
 .every_wrap footer > .left {}
-.every_wrap main > .bottom_area > .offline_shop > footer > .left > .slogan {
+.every_wrap footer > .left > .slogan {
 
 }
 
@@ -652,7 +654,7 @@ body {}
 
 }
 
-.every_wrap footer > .left > .slogan > .point_dot1 {
+.every_wrap footer > .left > .slogan > .point_dot1 {}
 
 .every_wrap footer > .left > .slogan > .point_dot2 {
 
@@ -669,17 +671,18 @@ body {}
 
 
 
-.every_wrap main > .bottom_area > .offline_shop > footer > address {}
-.every_wrap main > .bottom_area > .offline_shop > footer > address > .left {}
-.every_wrap main > .bottom_area > .offline_shop > footer > address > .left > p {
+.every_wrap footer > address {}
+.every_wrap footer > address > .left {}
+.every_wrap footer > address > .left > p {
 }
 
 
 
-.every_wrap main > .bottom_area > .offline_shop > footer > address > .right > a {}
-.every_wrap main > .bottom_area > .offline_shop > footer > address > .right > .sns {}
-.every_wrap main > .bottom_area > .offline_shop > footer > address > .right > .sns > a {}
-.every_wrap main > .bottom_area > .offline_shop > footer > address > .right > .sns > a > img {}
+.every_wrap footer > address > .right > a {}
+.every_wrap footer > address > .right > .sns {}
+.every_wrap footer > address > .right > .sns > a {}
+.every_wrap footer > address > .right > .sns > a > img {}
 
-.every_wrap main > .bottom_area > .offline_shop > footer > .biglogo {
+.every_wrap footer > .biglogo {
+    position:absolute;
 }
