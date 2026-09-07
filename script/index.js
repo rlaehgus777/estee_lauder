@@ -167,7 +167,7 @@ nightBigthum.addEventListener('click',()=>{
     makeupThumSummary.style.display = 'none';
     skincareThumSummary.style.display = 'none';
     perfumeThumSummary.style.display = 'none';
-    nightProductList.style.display ='block';
+    nightProductList.style.display ='flex';
     makeupProductList.style.display ='none';
     skincareProductList.style.display ='none';
     perfumeProductList.style.display ='none';
@@ -181,6 +181,10 @@ makeupBigthum.addEventListener('click',()=>{
     makeupThumSummary.style.display = 'block';
     skincareThumSummary.style.display = 'none';
     perfumeThumSummary.style.display = 'none';
+    nightProductList.style.display ='none';
+    makeupProductList.style.display ='flex';
+    skincareProductList.style.display ='none';
+    perfumeProductList.style.display ='none';
 })
 skincareBigthum.addEventListener('click',()=>{
     nightSlide.classList.remove('active');
@@ -193,7 +197,7 @@ skincareBigthum.addEventListener('click',()=>{
     perfumeThumSummary.style.display = 'none';
     nightProductList.style.display ='none';
     makeupProductList.style.display ='none';
-    skincareProductList.style.display ='block';
+    skincareProductList.style.display ='flex';
     perfumeProductList.style.display ='none';
 })
 perfumeBigthum.addEventListener('click',()=>{
@@ -208,7 +212,7 @@ perfumeBigthum.addEventListener('click',()=>{
     nightProductList.style.display ='none';
     makeupProductList.style.display ='none';
     skincareProductList.style.display ='none';
-    perfumeProductList.style.display ='block';
+    perfumeProductList.style.display ='flex';
 })
 
 
