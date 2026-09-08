@@ -1,6 +1,12 @@
 /* reponsive.css */
 @media screen and (max-width:1680px){
+    /* 베스트 상품 swiper크기/ 패딩값 적용 */
     .every_wrap main .best_product {width:100%; padding:120px 60px;}
+
+    /* 베스트 상품 pagination 프로그레스 바 설정 */
+    .every_wrap main .best_product .swiper-pagination {
+        bottom:70px; left:50%; 
+        transform:translateX(-50%);width:1580px;}
 }
 
 @media screen and (max-width:1580px){
