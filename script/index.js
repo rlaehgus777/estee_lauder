@@ -3,7 +3,7 @@ const swiper = new Swiper('.hero_wrap',{
     direction:'horizontal',
     slidesPerView: 1,
     speed:600,
-    allowTouchMove: true, 
+    allowTouchMove: true,
     pagination: {
         el:'.swiper-pagination',
         type:'fraction',
@@ -11,8 +11,9 @@ const swiper = new Swiper('.hero_wrap',{
     navigation: {
         nextEl:'.swiper-button-next',
         prevEl:'.swiper-button-prev',
+        },
     }
-});
+);
 
 /* 변수모음 */
 /* 띠배너 변수 */
@@ -78,12 +79,17 @@ for(let i=1;i<10;i++){
 /* 베스트 상품 부분 스와이퍼 */
 const bestSwiper = new Swiper('#best_product_id',{
     direction:'horizontal',
-    slidesPerView:4,
+    slidesPerView:2,
     allowTouchMove : true,
     spaceBetween : 20,
     pagination :{
         el:'.best_product .swiper-pagination',
         type :'progressbar',
+    },
+    breakpoints : {
+        1280 : {
+            slidesPerView: 4,
+        },
     }
 })
 
