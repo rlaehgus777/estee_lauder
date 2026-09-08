@@ -86,11 +86,12 @@ const bestSwiper = new Swiper('#best_product_id',{
         el:'.best_product .swiper-pagination',
         type :'progressbar',
     },
+    //breakpointsInverse: true,
     breakpoints : {
         1280 : {
             slidesPerView: 4,
         },
-    }
+    },
 })
 
 
