@@ -88,9 +88,12 @@ const bestSwiper = new Swiper('#best_product_id',{
     },
     //breakpointsInverse: true,
     breakpoints : {
-        1280 : {
+        1680 : {
             slidesPerView: 4,
         },
+        1280: {
+            slidesPerView: 3,
+        }
     },
 })
 
