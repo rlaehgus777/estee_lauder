@@ -23,6 +23,16 @@
 
     .every_wrap main .hero .hero_wrap .hero_banner3 {
     background-image:url(../images/mobile_hero_non_text.jpg); background-size:cover; background-position:center;}
+
+    /* 히어로배너 텍스트 */
+    .every_wrap main .hero .hero_wrap .hero_banner1 > .title_sum > h2,
+    .every_wrap main .hero .hero_wrap .hero_banner2 > .title_sum > h2,
+    .every_wrap main .hero .hero_wrap .hero_banner3 > .title_sum > h2 {
+        font-size:var(--pc-font-title-32); font-family:var(--optima-fonts);}
+
+    .every_wrap main .hero .hero_wrap .hero_banner1 > .title_sum > p,
+    .every_wrap main .hero .hero_wrap .hero_banner2 > .title_sum > p,
+    .every_wrap main .hero .hero_wrap .hero_banner3 > .title_sum > p {font-size:var(--pc-font-title-20);}
     /* 히어로배너 끝 */
 }
 @media screen and (max-width:1000px) {
@@ -80,9 +90,43 @@
 
 
     /* 히어로 */
-    .every_wrap main .hero{height:450px;}
+    .every_wrap main .hero{height:75vh;}
     .every_wrap main .hero .hero_wrap {}
     .every_wrap main .hero .hero_wrap .swiper-wrapper {}
+
+    /* 히어로배너 모바일 전용  */
+    .every_wrap main .hero .hero_wrap .hero_banner1 {
+    width:100%; height:100%;
+    background-image:url(../images/hero_mobile.jpg);
+    background-size:cover;
+    background-position:72% center;
+}
+
+    .every_wrap main .hero .hero_wrap .hero_banner2 {
+    width:100%; height:100%;
+    background-image:url(../images/hero_mobile.jpg);
+    background-size:cover;
+    background-position:72% center;
+}
+    .every_wrap main .hero .hero_wrap .hero_banner3 {
+    width:100%; height:100%;
+    background-image:url(../images/hero_mobile.jpg);
+    background-size:cover;
+    background-position:72% center;
+}
+
+/* 히어로배너 컨텐츠 모바일 조절 */
+.every_wrap main .hero .hero_wrap .hero_banner1 > .title_sum,
+.every_wrap main .hero .hero_wrap .hero_banner2 > .title_sum,
+.every_wrap main .hero .hero_wrap .hero_banner3 > .title_sum {top:260px; left:35px;}
+
+.every_wrap main .hero .hero_wrap .hero_banner1 > .title_sum > h2,
+.every_wrap main .hero .hero_wrap .hero_banner2 > .title_sum > h2,
+.every_wrap main .hero .hero_wrap .hero_banner3 > .title_sum > h2 {font-size:var(--pc-font-title-24);}
+
+.every_wrap main .hero .hero_wrap .hero_banner1 > .title_sum > p,
+.every_wrap main .hero .hero_wrap .hero_banner2 > .title_sum > p,
+.every_wrap main .hero .hero_wrap .hero_banner3 > .title_sum > p {font-size:var(--pc-font-body-18); line-height:1.3;}
 
 
     /* 페이지네이션(히어로) */
