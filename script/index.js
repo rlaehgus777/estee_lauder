@@ -91,7 +91,13 @@ const bestSwiper = new Swiper('#best_product_id',{
         1680 : {
             slidesPerView: 4,
         },
-        1280: {
+        1500: {
+            slidesPerView: 4,
+        },
+        1280:{
+            slidsPerView :4,
+        },
+        1000: {
             slidesPerView: 3,
         }
     },
