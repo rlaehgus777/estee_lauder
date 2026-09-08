@@ -235,7 +235,7 @@ body {}
 
 
 /* 제목부분 */
-.every_wrap main .best_product {padding:120px 0; width:1680px; margin:0 auto; position:relative;}
+.every_wrap main .best_product {padding:120px 0; width:calc(100% - 240px); margin:0 auto; position:relative;}
 .every_wrap main .best_product > .top {
     display:flex; flex-flow:row nowrap; align-items:center;
     justify-content: space-between; position:relative;
@@ -278,8 +278,7 @@ body {}
 
 /* 상품목록 페이지네이션 설정 */
 .every_wrap main .best_product .swiper-pagination {
-    position:absolute; top:auto; bottom:71px; left:0;
-    width:1680px; height:1px;
+    top:auto; bottom:71px; left:0; height:1px; width:100%;
 }
 .every_wrap main .best_product .swiper-pagination .swiper-pagination-progressbar-fill{
     background-color:var(--estee-black); height:1px;
