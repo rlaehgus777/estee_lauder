@@ -303,9 +303,33 @@ body {}
 /* -------------------------2행 종료 */
 
 /* ------------3행 아이유배너 시작 */
-.every_wrap main .bannner_section {}
-.every_wrap main .bannner_section > a {}
-.every_wrap main .bannner_section > a > img {width:100%;}
+.every_wrap main .banner_section {position:relative; width:100%; height:500px;}
+.every_wrap main .banner_section > a {}
+.every_wrap main .banner_section > .summary {
+    position:absolute; top:235px; right:496px; z-index:var(--z-index-400);
+    display:flex; flex-flow:column nowrap; text-align:center; gap:15px;
+}
+.every_wrap main .banner_section > .summary > p:nth-child(1) {
+    font-size:var(--pc-font-title-22); font-family:var(--optima-fonts); color:var(--estee-primary);
+}
+.every_wrap main .banner_section > .summary > p:nth-child(1)::after {
+    display:block; content:''; position:absolute; left:15px; top:10px;
+    width:245px; height:1px; background-color:var(--estee-primary);
+}
+.every_wrap main .banner_section > .summary > p:nth-child(1)::before {
+    display:block; content:''; position:absolute; right:15px; top:10px;
+    width:245px; height:1px; background-color:var(--estee-primary);
+}
+.every_wrap main .banner_section > .summary > p:nth-child(2) {
+    font-size:var(--pc-font-title-32); font-family:var(--optima-fonts);
+}
+.every_wrap main .banner_section > .summary > p:nth-child(3) {
+    font-size:var(--pc-font-title-32); font-weight:500;
+}
+.every_wrap main .banner_section > .summary > p:nth-child(4) {
+    font-size:var(--pc-font-title-26); font-weight:200;
+}
+.every_wrap main .banner_section > a > img {width:100%; position:absolute; left:60%; transform:translateX(-60%);}
 /* 3행 종료 !!!!!!!!!!!!!!!!!!!!! */
 
 
