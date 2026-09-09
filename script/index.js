@@ -49,14 +49,19 @@ tapeBannerClose.addEventListener('click',()=>{
 })
 
 /* 마우스호버 시 메뉴 열기 */
+/* 호버 시 로고 색상 변경위한 변수 생성 */
+const hoverLogo = document.querySelector('header > h1 > a > img');
+console.log(hoverLogo);
 navMakeup.addEventListener('mouseenter',()=>{
     mainHeader.classList.add('active');
     hoverMenu.style.display = 'block';
+    hoverLogo.style.filter = 'invert(1)';
 })
 
 navMakeup.addEventListener('mouseleave',()=>{
     mainHeader.classList.remove('active');
     hoverMenu.style.display = 'none';
+    hoverLogo.style.filter = 'invert(0)';
 })
 
 
