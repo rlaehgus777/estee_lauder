@@ -370,6 +370,7 @@ body {}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper {gap:10px; width:100%;}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide{
     width:150px; display:flex; flex-flow:row nowrap; gap:20px; transition:width 0.4s cubic-bezier(0.65, -0.33, 0.26, 1.11);
+    cursor: pointer;
 }
 
 

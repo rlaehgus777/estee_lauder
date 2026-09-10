@@ -243,6 +243,12 @@ perfumeBigthum.addEventListener('click',()=>{
 const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
     slidesPerView : 'auto',
     allowTouchMove :false,
+    breakpoints : {
+        1680 : {
+            slidesPerView : 1,
+            allowTouchMove : true,
+        }
+    }
 })
 
 /* renutriv 부분 */
@@ -267,6 +273,25 @@ const renutrivSwiper = new Swiper ('.renutriv_product_wrap',{
     },
     loop: true,
 })
+/* if (renutrivProductWrap && typeof renutrivDb !== 'undefined') {
+    // 1. innerHTML을 매번 더하지 않고 HTML 문자열을 만들어 한 번에 삽입 (성능 및 레이아웃 유지)
+    let slideHTML = '';
+    
+    // renutrivDb 배열 길이 범위 내에서 안전하게 반복
+    const count = Math.min(10, renutrivDb.length); 
+    
+    for (let i = 0; i < count; i++) {
+        slideHTML += `
+            <div class="swiper-slide">
+                <a href="#" class="product_thum"><img src="${renutrivDb[i].thumnail}" alt=""></a>
+                <a href="#" class="product_name">${renutrivDb[i].name}</a>
+                <a href="#" class="product_price">${renutrivDb[i].price}</a>
+            </div>
+        `;
+    }
+    
+    renutrivProductWrap.innerHTML = slideHTML;
+} */
 
 
 
