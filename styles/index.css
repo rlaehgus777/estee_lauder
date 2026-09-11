@@ -163,7 +163,9 @@ body {}
 .every_wrap header .nav_m .nav_m_wrap .menu > li {
     padding:20px 15px;
 }
-.every_wrap header .nav_m .nav_m_wrap .menu > li > a {}
+.every_wrap header .nav_m .nav_m_wrap .menu > li > a {
+    font-size:var(--pc-font-body-16); font-weight:var(--font-weight-600);
+}
 .every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap {display:none;}
 .every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .makeup_hover {}
 
