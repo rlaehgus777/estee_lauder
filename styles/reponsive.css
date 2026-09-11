@@ -93,7 +93,7 @@
     /* 헤더 백그라운드 흰색 변경 및 위치조정, 패딩, 크기조정, 이미지 색상반전 */
     .every_wrap header {top:30px; background-color:var(--estee-white); padding:0 30px;}
     .every_wrap header h1 {}
-    .every_wrap header h1 > a {width:105px; height:60px;}
+    .every_wrap header h1 > a {width:150px; height:60px; display:block;}
     .every_wrap header h1 > a > img {object-fit:cover; filter:invert(1); width:100%; height:100%;}
     /* 헤더 설정끝 */
     .every_wrap main .hero .hero_wrap .hero_banner1 > .title_sum > h2,

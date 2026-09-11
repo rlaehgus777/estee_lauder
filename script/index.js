@@ -42,13 +42,34 @@ console.log(navArea, navMakeup);
 /* 내비게이션 변수 종료 */
 /* 내비게이션 모바일 버전 시작 */
 
-const navPc = document.querySelector('nav > .menu');
-const navPcClone = navPc.cloneNode(true);
+const dimmed = document.querySelector('.dimmed');
+const mobileHamburger = document.querySelector('#mobile_menu_btn'); /* 모바일 햄버거 버튼 */
+const mobileMenuList = document.querySelector('.mobile_nav'); /* 모바일 메뉴 창 */
+const mobileMenuClose = document.querySelector('.mobile_nav > .top > .icon > a:nth-child(3)'); /* 모바일 닫기버튼 */
 
-const navM = document.querySelector('.nav_m_wrap');
-navM.appendChild(navPcClone);
+const mobileSkinBtn = document.querySelector('.mobile_nav > li > #mobile_skin_btn'); /* 모바일 메뉴 스킨 버튼 */
+const mobileSkinMenuActive = document.querySelectorAll('.mobile_nav > li:nth-child(3) ul'); /* 모바일 메뉴 스킨 메뉴 */
+const mobileSkinArrow = document.querySelector('#mobile_skin_btn > span');
 
+console.log(mobileSkinMenuActive);
 
+mobileHamburger.addEventListener('click',()=>{
+    mobileMenuList.classList.add('active');
+    dimmed.style.opacity = "1";
+})
+
+mobileMenuClose.addEventListener('click',()=>{
+    mobileMenuList.classList.remove('active');
+    dimmed.style.opacity = "0";
+})
+
+mobileSkinBtn.addEventListener('click',()=>{
+    mobileSkinMenuActive.forEach(ul=>{
+        ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex';
+    })
+    mobileSkinArrow.classList.toggle('active');
+    console.log('클릭');
+})
 
 
 /* 띠배너 닫기 기능 */

@@ -16,6 +16,7 @@
     <script src="./script/index.js" defer></script>
 </head>
 <body>
+    <div class="dimmed"></div>
     <div class="cta_btn">
         <button type="button" id="cta_non_active"><img src="./images/cta_logo.png" alt="메뉴펼치기"></button>
         <div class="cta_active">
@@ -92,25 +93,112 @@
                     <li><a href="#" class="brand">BRAND</a></li>
                 </ul>
             </nav>
-                <div class="user_func"><!-- 유저기능 -->
-                    <a href="#" class="user_info"><img src="./images/user_icon.svg" alt="마이페이지"></a>
-                    <a href="#" class="search"><img src="./images/search_icon.svg" alt="검색하기"></a>
-                    <a href="#" class="cart"><img src="./images/cart_icon.svg" alt="장바구니"></a>
-                    <button type="button" id="mobile_menu_btn"><img src="./images/hamburger_icon.svg" alt=""></button>
-                </div>
-                <div class="nav_m">
-                    <div class="nav_m_wrap">
-                        <div class="user_menu">
-                            <h3><img src="./images/mobile_menu_logo.png" alt=""></h3>
-                            <div class="icon">
-                                <a href="#"><img src="./images/mobile_menu_user.svg" alt="마이페이지"></a>
-                                <a href="#"><img src="./images/mobile_menu_cart.svg" alt="마이페이지"></a>
-                                <a href="#"><img src="./images/mobile_menu_close.svg" alt="마이페이지"></a>
-                            </div>
-                        </div>
-                        <p class="product_image"><img src="./images/mobile_menu_image1.jpg" alt=""></p>
+            <div class="user_func"><!-- 유저기능 -->
+                <a href="#" class="user_info"><img src="./images/user_icon.svg" alt="마이페이지"></a>
+                <a href="#" class="search"><img src="./images/search_icon.svg" alt="검색하기"></a>
+                <a href="#" class="cart"><img src="./images/cart_icon.svg" alt="장바구니"></a>
+                <button type="button" id="mobile_menu_btn"><img src="./images/hamburger_icon.svg" alt=""></button>
+            </div>
+            <ul class="mobile_nav">
+                <li class="top">
+                    <h2><img src="./images/mobile_menu_logo.png" alt=""></h2>
+                    <div class="icon">
+                        <a href="#"><img src="./images/mobile_menu_user.svg" alt="마이페이지"></a>
+                        <a href="#"><img src="./images/mobile_menu_cart.svg" alt="장바구니"></a>
+                        <a href="#"><img src="./images/mobile_menu_close.svg" alt="닫기"></a>
                     </div>
-                </div>
+                </li>
+                <li><button type="button" id="mobile_best_btn">BEST</button></li>
+                <li>
+                    <button type="button" id="mobile_skin_btn">SKIN <span><img src="./images/arrow_icon.svg" alt=""></span></button>
+                    <ul class="category">
+                        <li class="subtitle">카테고리</li>
+                        <li><a href="#">클렌저 / 토너</a></li>
+                        <li><a href="#">세럼 / 에센스</a></li>
+                        <li><a href="#">로션 / 크림</a></li>
+                        <li><a href="#">아이 케어</a></li>
+                        <li><a href="#">스페셜 케어 / 마스크</a></li>
+                        <li><a href="#">선 케어</a></li>
+                    </ul>
+                    <ul class="menu1">
+                        <li class="subtitle">피부고민별</li>
+                        <li><a href="#">리페어</a></li>
+                        <li><a href="#">브라이트닝</a></li>
+                        <li><a href="#">주름완화</a></li>
+                        <li><a href="#">탄력 / 리프팅</a></li>
+                        <li><a href="#">피부결 / 모공</a></li>
+                        <li><a href="#">다크서클</a></li>
+                    </ul>
+                    <ul class="menu2">
+                        <li class="subtitle">COLLECTION</li>
+                        <li><a href="#">갈색병 리페어</a></li>
+                        <li><a href="#">마이크로 에센스</a></li>
+                        <li><a href="#">수프림</a></li>
+                        <li><a href="#">퍼펙셔니스트</a></li>
+                        <li><a href="#">뉴트리셔스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" id="mobile_makeup_btn">MAKE UP<span><img src="./images/arrow_icon.svg" alt=""></span></button>
+                    <ul class="category">
+                        <li class="subtitle">입술위에 더해지는 특별한 컬러</li>
+                        <li><a href="#">립스틱</a></li>
+                        <li><a href="#">리퀴드 립</a></li>
+                        <li><a href="#">립 글로스</a></li>
+                        <li><a href="#">립케어</a></li>
+                    </ul>
+                    <ul class="menu1">
+                        <li class="subtitle">눈가에 또렷하게 새겨지는 품격</li>
+                        <li><a href="#">아이섀도우</a></li>
+                        <li><a href="#">아이브로우</a></li>
+                        <li><a href="#">아이라이너</a></li>
+                        <li><a href="#">마스카라</a></li>
+                    </ul>
+                    <ul class="menu2">
+                        <li class="subtitle">하루종일 화사하게 빛나는</li>
+                        <li><a href="#">파운데이션</a></li>
+                        <li><a href="#">컨실러</a></li>
+                        <li><a href="#">파우더</a></li>
+                        <li><a href="#">블러쉬</a></li>
+                    </ul>
+                    <ul class="menu3">
+                        <li class="subtitle">COLLECTION</li>
+                        <li><a href="#">퓨어 컬러</a></li>
+                        <li><a href="#">더블 웨어</a></li>
+                        <li><a href="#">퓨처리스트</a></li>
+                        <li><a href="#">섬 츄어스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" id="mobile_renutriv_btn">RE-NUTRIV<span><img src="./images/arrow_icon.svg" alt=""></span></button>
+                    <ul class="category">
+                        <li class="subtitle">라인별</li>
+                        <li><a href="#">다이아몬드</a></li>
+                        <li><a href="#">얼티미트 리프트 리제너레이팅 유스</a></li>
+                        <li><a href="#">클래식 리 뉴트리브</a></li>
+                    </ul>
+                    <ul class="menu1">
+                        <li class="subtitle">스킨케어</li>
+                        <li><a href="#">클렌저 / 토너</a></li>
+                        <li><a href="#">에센스 / 세럼</a></li>
+                        <li><a href="#">에멀전 / 로션</a></li>
+                        <li><a href="#">크림</a></li>
+                        <li><a href="#">아이 케어</a></li>
+                        <li><a href="#">스페셜 케어</a></li>
+                    </ul>
+                    <ul class="menu2">
+                        <li class="subtitle">메이크업</li>
+                        <li><a href="#">파운데이션</a></li>
+                        <li><a href="#">파우더</a></li>
+                        <li><a href="#">쿠션</a></li>
+                    </ul>
+                </li>
+                <li><button type="button" id="mobile_perfume_btn">PERFUME</button></li>
+                <li><button type="button" id="mobile_setgift_btn">SET & GIFT</button></li>
+                <li><button type="button" id="mobile_brand_btn">BRAND</button></li>
+                <li><img src="./images/mobile_menu_image1.jpg" alt=""></li>
+                </ul>
+            </ul>
         </header>
         <main>
             <div class="hero"> <!-- 1행 히어로 배너 시작 -->

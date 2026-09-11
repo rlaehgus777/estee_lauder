@@ -2,6 +2,11 @@
 /* ----------------pc버전 시작점 */
 body * {box-sizing:border-box; letter-spacing:var(--estee-letter-spacing-2);}
 body {}
+.dimmed {
+    width:100%; height:100dvh; position:fixed; left:0; top:0;
+    background:rgba(0,0,0,0.5); opacity:0; z-index:100;
+    transition:opacity 0.5s ease;
+}
 
 /* CTA버튼 */
 .cta_btn {
@@ -71,6 +76,11 @@ body {}
     justify-content: space-between; position:absolute; z-index:500;
     top:45px;
 }
+.every_wrap header .user_func {
+    display:flex; gap:12px;
+}
+.every_wrap header .user_func #mobile_menu_btn {width:24px; height:24px;}
+.every_wrap header .user_func #mobile_menu_btn img {width:100%;}
 
 
 /* 메뉴 호버 시 변경되는 구간 */
@@ -81,6 +91,7 @@ body {}
     width:100%; height:100vh; background:linear-gradient(180deg, #fff 55%, transparent);
     z-index:-1;
 }
+.every_wrap header.active .user_func {}
 /* 2. 메뉴 호버 시 메뉴 글자 색상,굵기 변경 */
 .every_wrap header.active > nav > .menu > li > a {
     color:var(--estee-black); 
@@ -96,8 +107,8 @@ body {}
 
 
 .every_wrap header h1 {}
-.every_wrap header h1 a {width:150px; height:60px;}
-.every_wrap header h1 a img {width:100%; height:100%; filter:invert(0);}
+.every_wrap header h1 a {width:150px; height:60px; display:block;}
+.every_wrap header h1 a img {width:100%; height:100%;}
 
 /* 로고 종료 */
 /* 내비게이션 부분 */
@@ -144,81 +155,65 @@ body {}
     width:100%; height:100%;
 }
 
-.every_wrap header .user_func {display:flex; gap:12px;}
-.every_wrap header .user_func #mobile_menu {display:none; width:24px; height:24px;}
-.every_wrap header .user_func #mobile_menu > img{width:100%; height:100%;}
-.every_wrap header .user_func a {}
-.every_wrap header .user_func a img {}
+
 .every_wrap main {overflow:hidden;}
 
 
 /* 모바일 메뉴 디자인 */
-.every_wrap header .nav_m {position:absolute; right:0px; top:0px; width:360px;}
-.every_wrap header .nav_m .nav_m_wrap {
-    background-color:var(--estee-white); padding-top:60px;  padding-bottom:300px;
-    border-top-left-radius:50px; border-bottom-left-radius:50px;
-    min-height:950px; height:fit-content; border:1px solid #000;
+/* 상단 부분 */
+.every_wrap header .mobile_nav {
+    background-color:var(--estee-white);
+    width:75%; max-width:360px; height:100dvh; position:fixed; right:0; top:0;
+    padding:60px 0; border-top-left-radius: 50px; border-bottom-left-radius: 50px;
+    border:1px solid #000; display:flex; flex-flow:column nowrap;
+    overflow-y:auto; transform:translateX(100%); transition:transform 0.3s ease;
 }
-.every_wrap header .nav_m .nav_m_wrap .product_image {
-    position:absolute; bottom:30px; left:25px;
+.every_wrap header .mobile_nav.active {transform:translateX(0);}
+/* 모바일 메뉴 클릭 시 화살표 회전 */
+.every_wrap header .mobile_nav li #mobile_skin_btn span.active img {transform:rotate(180deg);}
+.every_wrap header .mobile_nav li #mobile_skin_btn span img {transition:transform 0.5s ease;}
+.every_wrap header .mobile_nav > .top {
+    display:flex; gap:91px; padding:20px 15px;
+    border-bottom:1px solid #ddd; margin-bottom:15px;
 }
-.every_wrap header .nav_m .nav_m_wrap .menu {}
-.every_wrap header .nav_m .nav_m_wrap .menu > li {
-    padding:20px 15px;
+.every_wrap header .mobile_nav > .top h2 {}
+.every_wrap header .mobile_nav > .top h2 img {}
+.every_wrap header .mobile_nav > .top h2 img {}
+.every_wrap header .mobile_nav > .top .icon {
+    display:flex; flex-flow:row nowrap; gap:8px;
 }
-.every_wrap header .nav_m .nav_m_wrap .menu > li > a {
-    font-size:var(--pc-font-body-16); font-weight:var(--font-weight-600);
+.every_wrap header .mobile_nav > .top .icon a {
+    display:block; width:22px; height:22px;
 }
-
-.every_wrap header .nav_m .nav_m_wrap .hover_menu_group {}
-.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover{}
-.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li {}
-.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li .menu_title{
-    font-size:var(--pc-font-body-14); font-weight:var(--font-weight-600); 
-    padding:12px 0;
+.every_wrap header .mobile_nav > .top .icon a img{width:100%;}
+/* 상단부분 종료 */
+.every_wrap header .mobile_nav > li {
+    padding:15px 15px;
 }
-.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li ul {}
-.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li ul li {}
-.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li ul li a{
+.every_wrap header .mobile_nav li button {
+    font-size:var(--pc-font-body-16); font-weight:var(--font-weight-600); margin-bottom:15px;
+    width:100%; text-align:left; display:flex; flex-flow:row nowrap; justify-content: space-between; align-items:center;
+}
+.every_wrap header .mobile_nav li button span {}
+.every_wrap header .mobile_nav li button span img {}
+.every_wrap header .mobile_nav li > ul {
+    display:none; flex-flow:column nowrap; gap:17px;
+    margin-bottom:15px;
+}
+.every_wrap header .mobile_nav li > ul > .subtitle {
+    font-size:var(--pc-font-body-14); font-weight:var(--font-weight-400); padding:12px 0;
+    border-bottom:1px solid #000;
+}
+.every_wrap header .mobile_nav li > ul > li {
+    padding:0 17px;
+}
+.every_wrap header .mobile_nav li > ul > li > a {
     font-size:var(--pc-font-body-12); color:var(--estee-gray);
 }
-
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .hover_menu_group > .menu_img {display:none;}
-
-
-.every_wrap header .nav_m .nav_m_wrap .user_menu  {
-    display:flex; gap:91px; padding:20px 15px; border-bottom:1px solid #ddd;
-}
-.every_wrap header .nav_m .nav_m_wrap .menu .user_menu h3 {}
-.every_wrap header .nav_m .nav_m_wrap .menu .user_menu h3 img{}
-.every_wrap header .nav_m .nav_m_wrap .menu .user_menu .icon {}
-.every_wrap header .nav_m .nav_m_wrap .menu .user_menu .icon a {}
-.every_wrap header .nav_m .nav_m_wrap .menu .user_menu .icon a img{}
-
-
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .makeup_hover > li  {}
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .makeup_hover > li > .menu_title {}
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .makeup_hover > li > .lips_menu {}
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .makeup_hover > li > .lips_menu > li {}
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .makeup_hover > li > .lips_menu > li > a {}
-
-
-
-
-
+.every_wrap header .mobile_nav li > ul > li > img{}
 
 /* 메뉴 옆 화살표 필요한 메뉴 */
-.every_wrap header .user_func .mobile_menu_list > li:nth-child(3),
-.every_wrap header .user_func .mobile_menu_list > li:nth-child(4),
-.every_wrap header .user_func .mobile_menu_list > li:nth-child(5) {
-    background-image:url(../images/arrow_icon.svg); background-repeat:no-repeat;
-    background-position:92% 50%;
-}
 
-.every_wrap header .user_func .mobile_menu_list > li > ul {display:none;}
-.every_wrap header .user_func .mobile_menu_list > li > ul .subtitle {}
-.every_wrap header .user_func .mobile_menu_list > li > ul >li {}
-.every_wrap header .user_func .mobile_menu_list > li > ul > li > a {}
 
 /* 히어로배너 */ 
 .every_wrap main .hero {
