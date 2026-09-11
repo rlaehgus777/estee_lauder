@@ -42,15 +42,11 @@ console.log(navArea, navMakeup);
 /* 내비게이션 변수 종료 */
 /* 내비게이션 모바일 버전 시작 */
 
-const mobileHamburgerBtn = document.querySelector('#mobile_menu_btn');
-const mobileMenuList = document.querySelector('.mobile_menu_list');
-console.log(mobileHamburgerBtn);
+const navPc = document.querySelector('nav > .menu');
+const navPcClone = navPc.cloneNode(true);
 
-mobileHamburgerBtn.addEventListener('click',()=>{
-    mobileMenuList.style.display = 'block';
-})
-
-
+const navM = document.querySelector('.nav_m_wrap');
+navM.appendChild(navPcClone);
 
 
 
