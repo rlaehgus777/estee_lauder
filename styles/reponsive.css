@@ -39,13 +39,11 @@
     .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide {
         width:150px;
     }
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active{
+    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active{}
 
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum {width:480px; height:650px;}
+    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum {}
 
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary { /* 빅썸네일 내부 내용 액티브 적용시 보이기 */
-    display:block; position:absolute; left:38px; bottom:130px; 
-    }
+    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary { /* 빅썸네일 내부 내용 액티브 적용시 보이기 */}
 
 
     .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li{
