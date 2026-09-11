@@ -155,9 +155,12 @@ body {}
 /* 모바일 메뉴 디자인 */
 .every_wrap header .nav_m {position:absolute; right:0px; top:0px; width:360px;}
 .every_wrap header .nav_m .nav_m_wrap {
-    background-color:var(--estee-white); padding-top:60px; 
+    background-color:var(--estee-white); padding-top:60px;  padding-bottom:300px;
     border-top-left-radius:50px; border-bottom-left-radius:50px;
-    min-height:956px; border:1px solid #000;
+    min-height:950px; height:fit-content; border:1px solid #000;
+}
+.every_wrap header .nav_m .nav_m_wrap .product_image {
+    position:absolute; bottom:30px; left:25px;
 }
 .every_wrap header .nav_m .nav_m_wrap .menu {}
 .every_wrap header .nav_m .nav_m_wrap .menu > li {
@@ -166,8 +169,21 @@ body {}
 .every_wrap header .nav_m .nav_m_wrap .menu > li > a {
     font-size:var(--pc-font-body-16); font-weight:var(--font-weight-600);
 }
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap {display:none;}
-.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .makeup_hover {}
+
+.every_wrap header .nav_m .nav_m_wrap .hover_menu_group {}
+.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover{}
+.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li {}
+.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li .menu_title{
+    font-size:var(--pc-font-body-14); font-weight:var(--font-weight-600); 
+    padding:12px 0;
+}
+.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li ul {}
+.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li ul li {}
+.every_wrap header .nav_m .nav_m_wrap .hover_menu_group .makeup_hover li ul li a{
+    font-size:var(--pc-font-body-12); color:var(--estee-gray);
+}
+
+.every_wrap header .nav_m .nav_m_wrap .menu > li > .hover_menu_wrap > .hover_menu_group > .menu_img {display:none;}
 
 
 .every_wrap header .nav_m .nav_m_wrap .user_menu  {
