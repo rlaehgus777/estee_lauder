@@ -40,6 +40,19 @@ const mainHeader = document.querySelector('.every_wrap > header');
 const hoverMenu = document.querySelector('.every_wrap > header > nav > .menu > li > .hover_menu_wrap');
 console.log(navArea, navMakeup);
 /* 내비게이션 변수 종료 */
+/* 내비게이션 모바일 버전 시작 */
+
+const mobileHamburgerBtn = document.querySelector('#mobile_menu_btn');
+const mobileMenuList = document.querySelector('.mobile_menu_list');
+console.log(mobileHamburgerBtn);
+
+mobileHamburgerBtn.addEventListener('click',()=>{
+    mobileMenuList.style.display = 'block';
+})
+
+
+
+
 
 
 /* 띠배너 닫기 기능 */
