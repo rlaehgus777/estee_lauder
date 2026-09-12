@@ -629,7 +629,7 @@ body {}
     background-size:cover; height:900px; display:flex; align-items:center;
 }
 .every_wrap main .renutriv_area > .renutriv_content_wrap {
-    width:1680px; margin:0 auto;
+    width:calc(100% - 240px)px; margin:0 auto;
     display:flex; flex-flow:row nowrap; gap:180px; align-items:center;
 }
 
@@ -705,9 +705,9 @@ body {}
 
 
 /* 헤리티지 부분 시작 */
-.every_wrap main .heritage {padding:120px;}
+.every_wrap main .heritage {width:calc(100% - 240px); margin:0 auto; padding:120px 0;}
 .every_wrap main .heritage .heritage_wrap {
-    width:1680px; height:max-content; display:flex; flex-flow:column nowrap;
+    width:100%; height:max-content; display:flex; flex-flow:column nowrap;
     gap:60px;
 }
 .every_wrap main .heritage > .heritage_wrap > .title{
@@ -738,7 +738,7 @@ body {}
     background-size:cover; display:flex; flex-flow:row wrap;
 }
 .every_wrap main .heritage > .heritage_wrap > .hover_area > div[class*="step"] {
-    width:560px; height:400px; display:flex; justify-content:center; align-items:center;
+    width:33.3%; height:400px; display:flex; justify-content:center; align-items:center;
     position:relative; z-index:var(--z-index-300);
 }
 .every_wrap main .heritage > .heritage_wrap > .hover_area > div[class*="step"] > .contents {
