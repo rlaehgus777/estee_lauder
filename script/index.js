@@ -26,8 +26,8 @@ console.log(tapeBanner, tapeBannerClose);
 const logo = document.querySelector('header > h1 > .logo');
 const navArea = document.querySelector('nav');
 const navBest = document.querySelector('.best');
-const navSkin = document.querySelector('.skin');
-const navMakeup = document.querySelector('.every_wrap > header nav .menu li:nth-child(3)');
+const navSkin = document.querySelector('.every_wrap > header nav .menu > li:nth-child(2)');
+const navMakeup = document.querySelector('.every_wrap > header nav .menu > li:nth-child(3)');
 const navPerfume = document.querySelector('.perfume');
 const navRenutriv = document.querySelector('.renutriv');
 const navSetGift = document.querySelector('.setandgift');
@@ -37,7 +37,8 @@ const search = document.querySelector('.search > img');
 const cart = document.querySelector('.cart > img');
 
 const mainHeader = document.querySelector('.every_wrap > header');
-const hoverMenu = document.querySelector('.every_wrap > header > nav > .menu > li > .hover_menu_wrap');
+const hoverMenuMakeup = document.querySelector('.every_wrap > header > nav > .menu > li > .hover_menu_wrap_makeup');
+const hoverMenuSkin = document.querySelector('.every_wrap > header > nav > .menu > li > .hover_menu_wrap_skin');
 console.log(navArea, navMakeup);
 /* 내비게이션 변수 종료 */
 /* 내비게이션 모바일 버전 시작 */
@@ -48,19 +49,29 @@ const mobileMenuList = document.querySelector('.mobile_nav'); /* 모바일 메�
 const mobileMenuClose = document.querySelector('.mobile_nav > .top > .icon > a:nth-child(3)'); /* 모바일 닫기버튼 */
 
 const mobileSkinBtn = document.querySelector('.mobile_nav > li > #mobile_skin_btn'); /* 모바일 메뉴 스킨 버튼 */
+const mobileMakeupBtn = document.querySelector('.mobile_nav > li > #mobile_makeup_btn'); /* 모바일 메뉴 스킨 버튼 */
+const mobileRenutrivBtn = document.querySelector('.mobile_nav > li > #mobile_renutriv_btn'); /* 모바일 메뉴 스킨 버튼 */
+
+
+
 const mobileSkinMenuActive = document.querySelectorAll('.mobile_nav > li:nth-child(3) ul'); /* 모바일 메뉴 스킨 메뉴 */
+const mobileMakeupMenuActive = document.querySelectorAll('.mobile_nav > li:nth-child(4) ul'); /* 모바일 메뉴 스킨 메뉴 */
+const mobileRenutrivMenuActive = document.querySelectorAll('.mobile_nav > li:nth-child(5) ul'); /* 모바일 메뉴 스킨 메뉴 */
+
 const mobileSkinArrow = document.querySelector('#mobile_skin_btn > span');
+const mobileMakeupArrow = document.querySelector('#mobile_makeup_btn > span');
+const mobileRenutrivArrow = document.querySelector('#mobile_renutriv_btn > span');
 
 console.log(mobileSkinMenuActive);
 
 mobileHamburger.addEventListener('click',()=>{
     mobileMenuList.classList.add('active');
-    dimmed.style.opacity = "1";
+    dimmed.style.display = "block";
 })
 
 mobileMenuClose.addEventListener('click',()=>{
     mobileMenuList.classList.remove('active');
-    dimmed.style.opacity = "0";
+    dimmed.style.display = "none";
 })
 
 mobileSkinBtn.addEventListener('click',()=>{
@@ -68,7 +79,22 @@ mobileSkinBtn.addEventListener('click',()=>{
         ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex';
     })
     mobileSkinArrow.classList.toggle('active');
-    console.log('클릭');
+})
+
+
+mobileMakeupBtn.addEventListener('click',()=>{
+    mobileMakeupMenuActive.forEach(ul=>{
+        ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex';
+    })
+    mobileMakeupArrow.classList.toggle('active');
+})
+
+
+mobileRenutrivBtn.addEventListener('click',()=>{
+    mobileRenutrivMenuActive.forEach(ul=>{
+        ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex';
+    })
+    mobileRenutrivArrow.classList.toggle('active');
 })
 
 
@@ -84,18 +110,32 @@ const hoverLogo = document.querySelector('header > h1 > a > img');
 console.log(hoverLogo);
 navMakeup.addEventListener('mouseenter',()=>{
     mainHeader.classList.add('active');
-    hoverMenu.style.display = 'block';
+    hoverMenuMakeup.style.display = 'block';
     hoverLogo.style.filter = 'invert(1)';
+    navMakeup.classList.add('active');
 })
 
 navMakeup.addEventListener('mouseleave',()=>{
     mainHeader.classList.remove('active');
-    hoverMenu.style.display = 'none';
+    hoverMenuMakeup.style.display = 'none';
     hoverLogo.style.filter = 'invert(0)';
+    navMakeup.classList.remove('active');
 })
 
+navSkin.addEventListener('mouseenter',()=>{
+    mainHeader.classList.add('active');
+    hoverMenuSkin.style.display = 'block';
+    hoverLogo.style.filter = 'invert(1)';
+    navSkin.classList.add('active');
+})
 
-console.log(mainHeader, hoverMenu);
+navSkin.addEventListener('mouseleave',()=>{
+    mainHeader.classList.remove('active');
+    hoverMenuSkin.style.display = 'none';
+    hoverLogo.style.filter = 'invert(0)';
+    navSkin.classList.remove('active');
+})
+
 
 /* 베스트 상품목록 반복문 */
 /* 변수 */
@@ -297,6 +337,7 @@ for(let i = 0; i<10; i++){
 const renutrivSwiper = new Swiper ('.renutriv_product_wrap',{
     slidesPerView : 3,
     spaceBetween: 30,
+    allowTouchMove : true,
     speed:3000,
     autoplay: {
         delay: 1,

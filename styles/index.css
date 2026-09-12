@@ -4,8 +4,7 @@ body * {box-sizing:border-box; letter-spacing:var(--estee-letter-spacing-2);}
 body {}
 .dimmed {
     width:100%; height:100dvh; position:fixed; left:0; top:0;
-    background:rgba(0,0,0,0.5); opacity:0; z-index:100;
-    transition:opacity 0.5s ease;
+    background:rgba(0,0,0,0.5); display:none; z-index:500;
 }
 
 /* CTA버튼 */
@@ -79,7 +78,7 @@ body {}
 .every_wrap header .user_func {
     display:flex; gap:12px;
 }
-.every_wrap header .user_func #mobile_menu_btn {width:24px; height:24px;}
+.every_wrap header .user_func #mobile_menu_btn {display:none ;width:24px; height:24px;}
 .every_wrap header .user_func #mobile_menu_btn img {width:100%;}
 
 
@@ -96,7 +95,7 @@ body {}
 .every_wrap header.active > nav > .menu > li > a {
     color:var(--estee-black); 
 }
-.every_wrap header.active > nav > .menu > li:nth-child(3) > a {
+.every_wrap header > nav > .menu > li.active > a {
     color:var(--estee-primary); font-weight:var(--font-weight-600);
 }
 /* 3. 메뉴 호버 시 로고, 아이콘 색상 반전   */
@@ -121,37 +120,46 @@ body {}
     width:150px; line-height:60px; text-align:center;
 }
 .every_wrap header nav .menu > li > a {color:#fff;}
-.every_wrap header nav .menu > li .hover_menu_wrap {
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin {
     width:100%; position:absolute; left:0; top:50px;
     display:none; padding:50px;
 }
-.every_wrap header nav .menu > li .hover_menu_wrap::after{}
-.every_wrap header nav .menu > li .hover_menu_wrap .hover_menu_group {
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup::after{}
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup .hover_menu_group,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin .hover_menu_group {
     background-color:#fff;
     display:flex; padding:0 60px; width:max-content; margin:0 auto; gap:120px;
 }
-.every_wrap header nav .menu > li .hover_menu_wrap .hover_menu_group .makeup_hover {
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup .hover_menu_group .makeup_hover,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin .hover_menu_group .skin_hover {
     display:flex; margin:0 auto; gap:120px; z-index:var(--z-index-200);
     position:relative;
 }
-.every_wrap header nav .menu > li .hover_menu_wrap .hover_menu_group .makeup_hover > li {
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin .hover_menu_group .skin_hover > li {
     width:max-content; display:flex; flex-flow:column nowrap; gap:13px;
     text-align:left;
 }
-.every_wrap header nav .menu li > .hover_menu_wrap .hover_menu_group .makeup_hover > li .menu_title {
+.every_wrap header nav .menu li > .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li .menu_title,
+.every_wrap header nav .menu li > .hover_menu_wrap_skin .hover_menu_group .skin_hover > li .menu_title {
     font-size:var(--pc-font-body-16);
     font-weight:var(--font-weight-500); color:var(--estee-black);
 }
-.every_wrap header nav .menu li > .hover_menu_wrap .hover_menu_group .makeup_hover > li > ul[class*="_menu"] {
+.every_wrap header nav .menu li > .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li > ul[class*="_menu"],
+.every_wrap header nav .menu li > .hover_menu_wrap_skin .hover_menu_group .skin_hover > li > ul[class*="_menu"] {
     display:flex; flex-flow:column nowrap; gap:15px;
 }
-.every_wrap header nav .menu li > .hover_menu_wrap .hover_menu_group .makeup_hover > li > ul[class*="_menu"] a {
+.every_wrap header nav .menu li > .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li > ul[class*="_menu"] a,
+.every_wrap header nav .menu li > .hover_menu_wrap_skin .hover_menu_group .skin_hover > li > ul[class*="_menu"] a {
     color:var(--estee-gray); font-size:var(--font-weight-400); 
 }
-.every_wrap header nav .menu li .hover_menu_wrap .hover_menu_group .menu_img {
+.every_wrap header nav .menu li .hover_menu_wrap_makeup .hover_menu_group .menu_img,
+.every_wrap header nav .menu li .hover_menu_wrap_skin .hover_menu_group .menu_img {
     position:relative; z-index: var(--z-index-200); width:350px; height:250px;
 }
-.every_wrap header nav .menu li .hover_menu_wrap .hover_menu_group .menu_img img {
+.every_wrap header nav .menu li .hover_menu_wrap_makeup .hover_menu_group .menu_img img,
+.every_wrap header nav .menu li .hover_menu_wrap_skin .hover_menu_group .menu_img img {
     width:100%; height:100%;
 }
 
@@ -165,13 +173,17 @@ body {}
     background-color:var(--estee-white);
     width:75%; max-width:360px; height:100dvh; position:fixed; right:0; top:0;
     padding:60px 0; border-top-left-radius: 50px; border-bottom-left-radius: 50px;
-    border:1px solid #000; display:flex; flex-flow:column nowrap;
+    display:flex; flex-flow:column nowrap;
     overflow-y:auto; transform:translateX(100%); transition:transform 0.3s ease;
 }
 .every_wrap header .mobile_nav.active {transform:translateX(0);}
 /* 모바일 메뉴 클릭 시 화살표 회전 */
 .every_wrap header .mobile_nav li #mobile_skin_btn span.active img {transform:rotate(180deg);}
+.every_wrap header .mobile_nav li #mobile_makeup_btn span.active img {transform:rotate(180deg);}
+.every_wrap header .mobile_nav li #mobile_renutriv_btn span.active img {transform:rotate(180deg);}
 .every_wrap header .mobile_nav li #mobile_skin_btn span img {transition:transform 0.5s ease;}
+.every_wrap header .mobile_nav li #mobile_makeup_btn span img {transition:transform 0.5s ease;}
+.every_wrap header .mobile_nav li #mobile_renutriv_btn span img {transition:transform 0.5s ease;}
 .every_wrap header .mobile_nav > .top {
     display:flex; gap:91px; padding:20px 15px;
     border-bottom:1px solid #ddd; margin-bottom:15px;
