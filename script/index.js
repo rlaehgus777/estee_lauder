@@ -249,6 +249,15 @@ console.log(nightSlide, makeupSlide, skincareSlide, perfumeSlide);
 console.log(nightProductList, nightBigthum, makeupBigthum, skincareBigthum, perfumeBigthum);
 console.log(nightThumSummary, makeupThumSummary, skincareThumSummary, perfumeThumSummary);
 
+
+
+
+
+/* 데일리 솔루션 스와이퍼 설정 */
+const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
+    slidesPerView : 'auto',
+    allowTouchMove :false,
+})
 nightBigthum.addEventListener('click',()=>{
     nightSlide.classList.add('active');
     makeupSlide.classList.remove('active');
@@ -309,17 +318,8 @@ perfumeBigthum.addEventListener('click',()=>{
 
 
 
-/* 데일리 솔루션 스와이퍼 설정 */
-const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
-    slidesPerView : 'auto',
-    allowTouchMove :false,
-    breakpoints : {
-        1680 : {
-            slidesPerView : 1,
-            allowTouchMove : true,
-        }
-    }
-})
+
+
 
 /* renutriv 부분 */
 const renutrivProductWrap = document.querySelector('.renutriv_area .right .swiper-wrapper')
