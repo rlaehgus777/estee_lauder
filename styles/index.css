@@ -823,7 +823,7 @@ body {}
     background-color:var(--estee-black); display:flex; flex-flow:row nowrap; height:486px; gap:471px;
     position:relative; padding:60px 120px; overflow:hidden;
 }
-.every_wrap footer > .left {}
+.every_wrap footer > .left {height:max-content;}
 .every_wrap footer > .left > .slogan {
     display:flex; flex-flow:column nowrap; gap:36px;  position:relative;
 }
@@ -866,7 +866,7 @@ body {}
 
 
 .every_wrap footer > address {
-    display:flex; flex-flow:row nowrap; gap:70px;
+    display:flex; flex-flow:row nowrap; gap:70px; height:max-content;
 }
 .every_wrap footer > address > .left {
     display:flex; flex-flow:column nowrap; gap:6px;
