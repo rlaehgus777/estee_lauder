@@ -1,8 +1,7 @@
 /* reponsive.css */
 @media screen and (max-width:1820px) {
     .every_wrap main .best_product {width:calc(100% - 120px); padding:120px 0;}
-    .every_wrap main .daily_solution {width:calc(100% - 120px);
-}
+
 }
 
 
@@ -14,20 +13,7 @@
 
 @media screen and (max-width:1760px){
     /* 데일리 솔루션 타이틀 모어버튼 부분 */
-    .every_wrap main .daily_solution {width:calc(100% - 120px);}
-    .every_wrap main .daily_solution > .top {
-        width:100%;
-    }
 
-    .every_wrap main .daily_solution > .daily_solution_product_wrap {}
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper {gap:10px; width:100%;}
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide{
-        width:150px; display:flex; flex-flow:row nowrap; gap:20px; transition:width 0.4s cubic-bezier(0.65, -0.33, 0.26, 1.11);
-    }
-
-
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active{width:1200px;}
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li{}
 
         /* 헤리티지 부분ㅇ */
     .every_wrap main .heritage {width:calc(100% - 120px);}
@@ -67,18 +53,6 @@
         bottom:70px; left:50%; 
         transform:translateX(-50%);width:100%;}
     
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide {
-        width:150px;
-    }
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active{}
-
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum {}
-
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary { /* 빅썸네일 내부 내용 액티브 적용시 보이기 */}
-
-
-    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li{
-    }
 
     /* 리뉴트리브 */
     .every_wrap main .renutriv_area {}
