@@ -53,4 +53,23 @@
     --z-index-300:300;
     --z-index-400:400;
     --z-index-500:500;
+
+    /* 에스티로더 컬러칩 */
+    .sand{background-color:#CAA27F;}
+    .coolvanila{background-color:#CBA284;}
+    .warmvanila{background-color:#C19D7D}
+    .born{background-color:#FFC8A3;}
+    .poslin{background-color:#C0966E;}
+
+    .cheerypunch{background-color:#F4364C;}
+    .freshberry{background-color:#971B2F;}
+    .sweetpig{background-color:#D25B73;}
+    .papayacrush{background-color:#DC582A;}
+    .melonkiss{background-color:#E73C3E;}
+
+    .desertbeige{background-color:#D7B18D;}
+    .warmcream{background-color:#D5AA80;}
+    .warmposlin{background-color:#E2C09B;}
+    .warmvanila_poun {background-color:#DCB999;}
+    .poslin_poun {background-color:#DFC5AA;}
 }

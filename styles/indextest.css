@@ -3,7 +3,7 @@
     padding:120px 0; display:flex; flex-flow:column nowrap; gap:30px; 
     width:calc(100% - 240px); margin:0 auto;}
 .every_wrap main .daily_solution > .top {
-    width:1680px; margin:0 auto; display:flex; flex-flow:row nowrap;
+    max-width:1680px; margin:0 auto; display:flex; flex-flow:row nowrap;
     justify-content: space-between; align-items:flex-end;
 }
 .every_wrap main .daily_solution > .top > .title {display:flex; flex-flow:column nowrap;}
@@ -34,7 +34,7 @@
 }
 
 
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active{width:calc(100% - 450px); gap:20px;}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide-active{width:calc(100% - 450px);}
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum {width:572.5px;}
 /* 비활성화시 썸네일 어두움처리 */
@@ -71,21 +71,21 @@
 
 
 /* ----------------------------------빅썸네일 내용 종료 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .big_thum{
-    background-repeat:no-repeat; background-size:cover; background-position:center;
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum{
+    background-repeat:no-repeat; background-size:cover; background-position:center; position:relative;
 }
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .night .big_thum{background-image:url(../images/thum_daily_1.jpg);}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup .big_thum{background-image:url(../images/thum_daily_2.jpg);}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .skincare .big_thum{background-image:url(../images/thum_daily_3.jpg);}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .perfume .big_thum{background-image:url(../images/thum_daily_4.jpg);}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .night .big_thum{background-image:url(../images/thum_daily_1.jpg);}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .makeup .big_thum{background-image:url(../images/thum_daily_2.jpg);}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .skincare .big_thum{background-image:url(../images/thum_daily_3.jpg);}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .perfume .big_thum{background-image:url(../images/thum_daily_4.jpg);}
 
 /* -----------------------------big 썸네일 설정완료 */
 
 /* 상품영역 공통 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list {display:none;}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list {display:none;flex-flow:column nowrap; width:calc(100% - 572.5px);}
 
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active .product_list{
-    display:flex; flex-flow:column nowrap; width:calc(100% - 572.5px);}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide-active .product_list{
+    display:flex;}
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li{
     position:relative;
@@ -148,11 +148,7 @@
 }
 
 
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip .color1 {background-color:#CAA27F;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip .color2 {background-color:#CBA284;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip .color3 {background-color:#C19D7D;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip .color4 {background-color:#FFC8A3;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip .color5 {background-color:#C0966E;}
+
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip .total {
     font-size:var(--pc-font-body-12); color:var(--estee-gray);
 }
@@ -160,20 +156,9 @@
 
 
 
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(2) .product_wrap .colorchip .color1 {background-color:#F4364C;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(2)  .product_wrap .colorchip .color2 {background-color:#971B2F;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(2)  .product_wrap .colorchip .color3 {background-color:#D25B73;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(2)  .product_wrap .colorchip .color4 {background-color:#DC582A;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(2)  .product_wrap .colorchip .color5 {background-color:#E73C3E;}
 
 
 
-
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(3) .product_wrap .colorchip .color1 {background-color:#D7B18D;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(3)  .product_wrap .colorchip .color2 {background-color:#D5AA80;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(3)  .product_wrap .colorchip .color3 {background-color:#E2C09B;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(3)  .product_wrap .colorchip .color4 {background-color:#DCB999;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li:nth-child(3)  .product_wrap .colorchip .color5 {background-color:#DFC5AA;}
 
 
 /* ----------------------------------------컬러칩 끝 */

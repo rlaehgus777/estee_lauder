@@ -259,10 +259,10 @@ const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
     allowTouchMove :false,
 })
 nightBigthum.addEventListener('click',()=>{
-    nightSlide.classList.add('active');
-    makeupSlide.classList.remove('active');
-    skincareSlide.classList.remove('active');
-    perfumeSlide.classList.remove('active');
+    nightSlide.classList.add('swiper-slide-active');
+    makeupSlide.classList.remove('swiper-slide-active');
+    skincareSlide.classList.remove('swiper-slide-active');
+    perfumeSlide.classList.remove('swiper-slide-active');
     nightThumSummary.style.display = '';
     makeupThumSummary.style.display = 'none';
     skincareThumSummary.style.display = 'none';
@@ -273,10 +273,10 @@ nightBigthum.addEventListener('click',()=>{
     perfumeProductList.style.display ='none';
 })
 makeupBigthum.addEventListener('click',()=>{
-    nightSlide.classList.remove('active');
-    makeupSlide.classList.add('active');
-    skincareSlide.classList.remove('active');
-    perfumeSlide.classList.remove('active');
+    nightSlide.classList.remove('swiper-slide-active');
+    makeupSlide.classList.add('swiper-slide-active');
+    skincareSlide.classList.remove('swiper-slide-active');
+    perfumeSlide.classList.remove('swiper-slide-active');
     nightThumSummary.style.display = 'none';
     makeupThumSummary.style.display = 'block';
     skincareThumSummary.style.display = 'none';
@@ -287,10 +287,10 @@ makeupBigthum.addEventListener('click',()=>{
     perfumeProductList.style.display ='none';
 })
 skincareBigthum.addEventListener('click',()=>{
-    nightSlide.classList.remove('active');
-    makeupSlide.classList.remove('active');
-    skincareSlide.classList.add('active');
-    perfumeSlide.classList.remove('active');
+    nightSlide.classList.remove('swiper-slide-active');
+    makeupSlide.classList.remove('swiper-slide-active');
+    skincareSlide.classList.add('swiper-slide-active');
+    perfumeSlide.classList.remove('swiper-slide-active');
     nightThumSummary.style.display = 'none';
     makeupThumSummary.style.display = 'none';
     skincareThumSummary.style.display = 'block';
@@ -301,10 +301,10 @@ skincareBigthum.addEventListener('click',()=>{
     perfumeProductList.style.display ='none';
 })
 perfumeBigthum.addEventListener('click',()=>{
-    nightSlide.classList.remove('active');
-    makeupSlide.classList.remove('active');
-    skincareSlide.classList.remove('active');
-    perfumeSlide.classList.add('active');
+    nightSlide.classList.remove('swiper-slide-active');
+    makeupSlide.classList.remove('swiper-slide-active');
+    skincareSlide.classList.remove('swiper-slide-active');
+    perfumeSlide.classList.add('swiper-slide-active');
     nightThumSummary.style.display = 'none';
     makeupThumSummary.style.display = 'none';
     skincareThumSummary.style.display = 'none';
