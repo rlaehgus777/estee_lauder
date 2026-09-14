@@ -29,7 +29,7 @@
     .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active{width:1200px;}
     .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li{}
 
-        /* 헤리티지 부분 */
+        /* 헤리티지 부분ㅇ */
     .every_wrap main .heritage {width:calc(100% - 120px);}
     .every_wrap main .heritage > .heritage_wrap > .title > .slogan {
     font-size:var(--pc-font-title-22);}
