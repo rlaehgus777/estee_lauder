@@ -413,9 +413,9 @@ body {}
 
 
 
-
-/* -------------------4행 데일리 솔루션시작  */
-.every_wrap main .daily_solution {
+/
+/* /* -------------------4행 데일리 솔루션시작  */
+/*.every_wrap main .daily_solution {
     padding:120px 0; display:flex; flex-flow:column nowrap; gap:30px; 
     width:calc(100% - 240px); margin:0 auto;}
 .every_wrap main .daily_solution > .top {
@@ -437,13 +437,13 @@ body {}
 }
 .every_wrap main .daily_solution > .top > .more_btn img {
     position:absolute; left:0; top:16px;
-}
+} */
 
 
 
 
  /* 상품영역 시작 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap {}
+/* .every_wrap main .daily_solution > .daily_solution_product_wrap {}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper {gap:10px; width:100%;}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide{
     width:150px; display:flex; flex-flow:row nowrap; gap:20px; transition:width 0.4s cubic-bezier(0.65, -0.33, 0.26, 1.11);
@@ -456,24 +456,23 @@ body {}
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum {width:572.5px; height:750px;}
 /* 비활성화시 썸네일 어두움처리 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum::after {
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum::after {
     display:block; width:100%; height:100%; position:absolute; top:0; left:0; 
     background-color:rgba(0,0,0,0.4); content:'';
 }
 
 
-.every_warp main .daily_solution > .daily.solution_product_wrap .swiper-wrapper > .night, .makeup, .skincare > .big_thum {} /* 퍼퓸 제외 마진 적용 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active >  .big_thum::after {display:none;} /* 빅썸네일 활성화 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .product_list {display:none;} /* 평시 리스트 안보이기 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active .product_list {
+.every_wrap main .daily_solution > .daily.solution_product_wrap .swiper-wrapper > .night, .makeup, .skincare > .big_thum {} /* 퍼퓸 제외 마진 적용 */
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active >  .big_thum::after {display:none;} /* 빅썸네일 활성화 */
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .product_list {display:none;} /* 평시 리스트 안보이기 */
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active .product_list {
     display:flex; flex-flow:column nowrap; gap:10px;} /* 액티브 적용시 보이기 */
 
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum > .summary {display:none;} /* 빅썸네일 내부 내용 안보이기 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary { /* 빅썸네일 내부 내용 액티브 적용시 보이기 */
-    display:block; position:absolute; left:40px; bottom:50px; 
-}
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum > .summary {display:none;} /* 빅썸네일 내부 내용 안보이기 */
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary { /* 빅썸네일 내부 내용 액티브 적용시 보이기 */
+    display:block; position:absolute; left:40px; bottom:50px;}*/
 /* --------------------------------빅썸네일 내부 내용 absolute내용 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary > .title{
+/* .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active > .big_thum > .summary > .title{
     color:#fff; font-size:var(--pc-font-title-24); font-weight:var(--font-weight-400); margin-bottom:10px;
 } 
 
@@ -484,13 +483,13 @@ body {}
     padding:6px 10px; background-color:rgba(255,255,255,0.3); border-radius:8px; color:var(--estee-white);
     font-size:var(--pc-font-body-16); font-weight:lighter;
 }
-
+ */
 
 
 
 /* ----------------------------------빅썸네일 내용 종료 */
 
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .night .big_thum{
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .night .big_thum{
     background-image:url(../images/thum_daily_1.jpg); background-repeat:no-repeat;
     background-size:cover; background-position:center;
 }
@@ -510,7 +509,7 @@ body {}
 /* -----------------------------big 썸네일 설정완료 */
 
 /* 상품영역 공통 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list {}
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list {}
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide.active .product_list{}
 
@@ -550,7 +549,7 @@ body {}
 
 /* 메이크업 부분 CSS */
 /* make up부분 컬러칩 포함한 상품리스트 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li {position:relative;}
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li {position:relative;}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .small_thum {}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .small_thum img {}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .add_cart {
@@ -567,7 +566,7 @@ body {}
 }
 
 /* 컬러칩 css 영역-------------------------------------------------------------------------- */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip {
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip {
     margin-bottom:30px; display:flex; flex-flow:row nowrap; gap:5px; align-items:center;
 }
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup > .product_list li .product_wrap .colorchip span {
@@ -616,10 +615,10 @@ body {}
 
 
 /* 장바구니 버튼 absolute*/
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .night .product_list > li > .add_cart {
+/*.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .night .product_list > li > .add_cart {
     position:absolute; right:0; top:70px;
 }
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li > .add_cart img {width:100%;}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li > .add_cart img {width:100%;} */
 
 
 /* 리뉴트리브 소개 영역 */
@@ -700,6 +699,7 @@ body {}
 .every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide > .product_price {
     line-height:var(--estee-line-height-150); font-weight:var(--font-weight-500);
 }
+*/
 
 
 
