@@ -21,11 +21,19 @@
             display:flex; 
         }
         .daily_wrap .daily.active .swiper-wrapper .swiper-slide.swiper-slide-active {width:calc(100% - (50px * 3));}
+        /* 액티브 상태에서 비활성화 된 요소들은 50px 갯수가 3개이기 때문에 calc를 사용하여 50px * 3 으로 계산 */
+
         .daily_wrap .daily.active .swiper-wrapper .swiper-slide.swiper-slide-active .left {}
         .daily_wrap .daily.active .swiper-wrapper .swiper-slide.swiper-slide-active .right {}
+
         .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) {width:50px;}
+        /* 액티브가 붙지 않은 요소들을 50px로 고정함 */
         .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) .left {flex:1;}
+        /* 액티브가 붙지 않은 요소를 빈공간을 전부 채움 */
         .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) .right {display:none;}
+        /* 액티브가 붙지 않은 요소들의 right를 안보이게 처리 */
+
+
         .daily_wrap .daily .swiper-wrapper .swiper-slide > * {
             height:300px; font-size:1rem;
         }
@@ -64,17 +72,17 @@
     </div>
 
     <script>
-        const daily = document.querySelector('.daily');
-        const mq = window.matchMedia('(min-width: 500px)');
+        const daily = document.querySelector('.daily'); /* daily 변수생성 */
+        const mq = window.matchMedia('(min-width: 500px)'); /* 화면 넓이가 500px 이상인지를 확인 */
         
         dailyCls(mq);
-        mq.addEventListener('change', dailyCls);
+        mq.addEventListener('change', dailyCls); /* 화면넓이가 500px 이상이라면 해당함수를 실행 */
         
-        function dailyCls(e) {
-            daily.classList.toggle('active', e.matches);
+        function dailyCls(e) { /* 함수 생성 */
+            daily.classList.toggle('active', e.matches); /* 매개변수의 값이 true라면 active 추가 false라면 제거 */
 
-            const s_s = daily.querySelectorAll('.swiper-slide');
-            for(let s of s_s){
+            const s_s = daily.querySelectorAll('.swiper-slide'); /* swiper-slide를 모두잡는 변수생성 */
+            for(let s of s_s){ /* 조건문 생성 */
                 s.style.transition = 'all 0.4s';
                 s.addEventListener('click',()=>{
                     for(let sAll of s_s) sAll.classList.remove('swiper-slide-active');

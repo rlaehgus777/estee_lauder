@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2.html</title>
+    <link rel="stylesheet" href="./estee_lauder/styles/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<style>
+    h1 {}
+    .daily_wrap {
+        max-width:1024px; min-width:320px;
+        border:2px solid #000; margin:0 auto; padding:20px;
+    }
+    .daily_wrap .daily {}
+    .daily_wrap .daily .swiper-wrapper {}
+    .daily_wrap .daily .swiper-wrapper .swiper-slide {display:flex;}
+
+    .daily_wrap .daily .swiper-wrapper .swiper-slide:not(.swiper-slide-active){}
+
+    .daily_wrap .daily .swiper-wrapper .swiper-slide > * {
+        height:300px; font-size:1rem;
+    }
+    .daily_wrap .daily.active .swiper-wrapper .swiper-slide.swiper-slide-active {width:calc(100% - (50px * 3));}
+    .daily_wrap .daily .swiper-wrapper .swiper-slide .left{
+        background:beige; flex:0.5;
+    }
+    .daily_wrap .daily .swiper-wrapper .swiper-slide .right{
+        background:brown; flex:1;
+    }
+    .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) {width:50px;}
+    .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) .left {flex:1;}
+    .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) .right {display:none;}
+</style>
+<body>
+    <h1>test</h1>
+    <div class="daily_wrap">
+        <div class="swiper daily">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="left">left</div>
+                    <div class="right">right</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="left">left</div>
+                    <div class="right">right</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="left">left</div>
+                    <div class="right">right</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="left">left</div>
+                    <div class="right">right</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const daily = document.querySelector('.daily');
+    const mq = window.matchMedia('(min-width:1024px)');
+
+    dailyCls(mq);
+    mq.addEventListener('change',dailyCls);
+
+    function dailyCls(e){
+        daily.classList.toggle('active', e.matches);
+
+        const s_s = daily.querySelectorAll('.swiper-slide');
+        for(let s of s_s){
+            s.style.transition = 'all 0.4s';
+            s.addEventListener('click',()=>{
+                for(let sAll of s_s) sAll.classList.remove('swiper-slide-active');
+                s.classList.add('swiper-slide-active');
+            })
+        }
+    }
+
+    const testSwiper = new Swiper (daily,{
+        slidesPerView: 1,
+        spaceBetween:0,
+        breakpoints: {
+            1024:{
+                slidesPerView :'auto',
+                spaceBetween:5,
+            },
+            700:{
+                slidesPerView:2,
+                spaceBetween:5,
+            },
+        }
+    })
+</script>
+</html>
