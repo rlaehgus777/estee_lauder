@@ -254,10 +254,47 @@ console.log(nightThumSummary, makeupThumSummary, skincareThumSummary, perfumeThu
 
 
 /* 데일리 솔루션 스와이퍼 설정 */
-const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
-    slidesPerView : 'auto',
-    allowTouchMove :false,
-})
+const daily_solution_wrap = document.querySelector('.daily_solution_product_wrap');
+const mq = window.matchMedia('(min-width:1680px)');
+dailyFunc(mq);
+mq.addEventListener('change',dailyFunc);
+
+function dailyFunc(e){
+    daily_solution_wrap.classList.toggle('active', e.matches);
+
+    const daily_slide = daily_solution_wrap.querySelectorAll('.swiper-slide');
+    for(let dailyChecking of daily_slide){
+            dailyChecking.style.transition = 'all 0.4s';
+            dailyChecking.addEventListener('click',()=>{
+                for(let dailyRemove of daily_slide) dailyRemove.classList.remove('swiper-slide-active');
+                    dailyChecking.classList.add('swiper-slide-active');
+                    console.log('클릭');
+                })
+            }
+        }
+
+const dailySwiper = new Swiper(daily_solution_wrap, {
+    slidesPerView :1,
+    spaceBetween :0,
+    pagination:{
+        el:'.daily_solution_wrap > .swiper-pagination',
+        type:'progressbar',
+    },
+    breakpoints :{
+        1680:{
+            slidesPerView:'auto',
+            spaceBetween:10,
+            },
+        1480:{
+            slidesPerView:2,
+            spaceBetween:30,
+            },
+        1023:{
+            slidesPerView:1,
+            spaceBetween:10,
+            }
+            }
+        })
 /* nightBigthum.addEventListener('click',()=>{
     nightSlide.classList.add('swiper-slide-active');
     makeupSlide.classList.remove('swiper-slide-active');

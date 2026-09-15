@@ -1,0 +1,222 @@
+/* =========================================================
+데일리 솔루션 (.daily_solution) 영역 정리
+- 중복/빈 선택자 정리, DOM 위치별로 묶어서 재배치
+- @media 는 max-width 문법만 사용 (사이트 reponsive.css 관례와 동일)
+· 1680px 이상 : 지금처럼 1열 활성화 / 3열 접힘 (총 4개 슬라이드)
+· 1024px ~ 1679px : 2개 동시 노출
+· 1023px 이하 : 1개만 노출
+- JS는 수정하지 않음. swiper-slide-active / active 클래스는 스크립트가 그대로 토글
+(Swiper 자체 slidesPerView 폭 계산과 어긋나는 구간은 !important 로 강제)
+========================================================= */
+
+/* ---------- 섹션 레이아웃 : 타이틀 / 더보기 버튼 (전 구간 공통) ---------- */
+.every_wrap main .daily_solution {
+    padding:120px 0; display:flex; flex-flow:column nowrap; gap:30px;
+    max-width:1680px; margin:0 auto;
+}
+.every_wrap main .daily_solution > .top {
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:flex-end;
+    width:100%; position:relative;
+}
+.every_wrap main .daily_solution > .top > .title {display:flex; flex-flow:column nowrap;}
+.every_wrap main .daily_solution > .top > .title .slogan {
+    font-size:var(--pc-font-title-20); color:var(--estee-gray);
+    line-height:var(--estee-line-height-150);
+}
+.every_wrap main .daily_solution > .top > .title > h3 {
+    font-size:var(--pc-font-title-26); color:var(--estee-black); font-weight:var(--font-weight-500);
+    line-height:var(--estee-line-height-150);
+}
+.every_wrap main .daily_solution > .top > .more_btn {
+    color:var(--estee-gray); font-size:var(--pc-font-body-14);
+    position:absolute; top:0; right:30px; line-height:var(--estee-line-height-150);
+}
+.every_wrap main .daily_solution > .top > .more_btn img {
+    position:absolute; left:0; top:16px;
+}
+
+
+/* ---------- 상품 래퍼 / 슬라이드 공통 뼈대 (전 구간 공통) ---------- */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap {width:100%;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide {
+    display:flex; flex-flow:row nowrap; gap:20px; cursor:pointer;
+    transition:width 0.4s cubic-bezier(0.65, -0.33, 0.26, 1.11);
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum {
+    position:relative; width:100%;
+    background-repeat:no-repeat; background-size:cover; background-position:center;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .night .big_thum {background-image:url(../images/thum_daily_1.jpg);}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .makeup .big_thum {background-image:url(../images/thum_daily_2.jpg);}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .skincare .big_thum {background-image:url(../images/thum_daily_3.jpg);}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .perfume .big_thum {background-image:url(../images/thum_daily_4.jpg);}
+
+
+/* -- 빅썸네일 내부 카피(.summary : 타이틀/해시태그) -- 접힘 개념이 없는 구간에서는 항상 노출 */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum > .summary {
+    display:block; position:absolute; left:40px; bottom:50px; z-index:400;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum > .summary > .title {
+    color:#fff; font-size:var(--pc-font-title-24); font-weight:var(--font-weight-400); margin-bottom:10px;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum > .summary > .hashtag {
+    display:flex; flex-direction:row; gap:14px;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum > .summary > .hashtag span {
+    padding:6px 10px; background-color:rgba(255,255,255,0.3); border-radius:8px; color:var(--estee-white);
+    font-size:var(--pc-font-body-16); font-weight:lighter;
+}
+
+/* -- 상품 리스트(.product_list) -- 접힘 개념이 없는 구간에서는 항상 노출 */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list {
+    display:flex; flex-flow:column nowrap; gap:10px;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li {
+    position:relative; display:flex; flex-flow:row nowrap; gap:20px; width:100%;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .small_thum {width:200px; display:block;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .small_thum img {width:100%; object-fit:cover;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap p {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap .tag {
+    font-size:var(--pc-font-body-12); font-weight:var(--font-weight-200); background-color:var(--estee-primary);
+    padding:2px 6px; color:var(--estee-white); width:max-content; line-height:var(--estee-line-height-150);
+    margin-bottom:7px;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li:nth-child(2) .product_wrap .tag {
+    background-color:#8A431A;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap .name {
+    font-size:var(--pc-font-body-16); font-weight:var(--font-weight-400); margin-bottom:30px;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap .price {}
+
+/* -- 장바구니 버튼(.add_cart) 위치 -- */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li > .add_cart {
+    position:absolute; right:0px; top:70px;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li > .add_cart img {width:100%;}
+
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .add_cart,
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .perfume .product_list > li .add_cart {
+    position:absolute; top:70px; right:0;
+}
+/* -- 메이크업(.makeup) 전용 : 컬러칩 상품 리스트 -- */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li {position:relative;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .small_thum {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .small_thum img {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .add_cart img {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .product_wrap {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .product_wrap .tag {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .product_wrap .name {margin-bottom:5px;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .product_wrap .price {
+    font-size:var(--pc-font-body-16); line-height:var(--estee-line-height-150);
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .product_wrap .colorchip {
+    margin-bottom:30px; display:flex; flex-flow:row nowrap; gap:5px; align-items:center;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .product_wrap .colorchip span {
+    display:inline-block; width:12px; height:12px; border-radius:100%;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li .product_wrap .colorchip .total {
+    font-size:var(--pc-font-body-12); color:var(--estee-gray);
+}
+
+
+/* =========================================================
+데스크탑 (기본값, 1680px 이상) — 1열 활성화 / 3열 접힘 (4개 슬라이드)
+JS가 min-width:1680px 에서만 .daily_solution_product_wrap 에 active 를 붙이므로
+별도 미디어쿼리 없이 .active 스코프만으로 이 구간에 한정됨
+   ========================================================= */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active {height:650px;}
+
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide:not(.swiper-slide-active) {width:150px;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide:not(.swiper-slide-active) .big_thum {flex:1;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide:not(.swiper-slide-active) .product_list {flex:1;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide-active {width:calc(100% - 540px);}
+
+/* 접힌 슬라이드는 썸네일을 어둡게, 상품 리스트/카피는 숨김 */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper .swiper-slide .big_thum::after {
+    display:block; width:100%; height:100%; position:absolute; top:0; left:0;
+    background-color:rgba(0,0,0,0.4); content:'';
+}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide-active .big_thum::after {display:none;}
+
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper .swiper-slide .big_thum > .summary {display:none;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide-active .big_thum > .summary {display:block;}
+
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper .swiper-slide .product_list {display:none;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide-active .product_list {
+    display:flex; width:calc(100% - 485px); margin-right:20px;}
+
+
+/* 활성화 시 밝은 이미지는 내용 보이지 않음 딤드처리 */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(1).swiper-slide .big_thum::after,
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(2).swiper-slide .big_thum::after,
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(3).swiper-slide .big_thum::after,
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(4).swiper-slide .big_thum::after{
+    display:block; width:100%; height:100%; position:absolute; left:0; bottom:0; content:'';
+    background:linear-gradient(0deg, #000 1%, transparent 99%); z-index:300; transform:translateY(120px);
+}
+
+/* 페이지네이션 설정 */
+.every_wrap main .daily_solution > .daily_solution_wrap {position:relative;}
+.every_wrap main .daily_solution > .daily_solution_wrap .swiper-pagination {
+    width:100%; height:1px; top:auto !important;bottom:-30px; left:0; position:absolute; display:none;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap .swiper-pagination-progressbar{
+    background-color:#d5d5d5;
+}
+.every_wrap main .daily_solution > .daily_solution_wrap .swiper-pagination-progressbar-fill{
+    background-color:var(--estee-black);
+}
+
+/* 활성화 시 제품목록 크기 조정 */
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide .big_thum {width:520px;}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide .big_thum img{}
+/* =========================================================
+태블릿 — @media screen and (max-width:1679px)
+→ 슬라이드 2개가 동시에 노출 (Swiper의 slidesPerView 계산과 무관하게 폭 고정)
+   ========================================================= */
+@media screen and (max-width:1679px) {
+    .every_wrap main .daily_solution {padding:60px 60px; max-width:none;}
+
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide {
+        width:calc(50% - 5px) !important;
+        flex-flow:column nowrap;
+    }
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum {height:420px;}
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .small_thum {width:140px;}
+
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list{width:95%;}
+
+    /* 데일리 솔루션 - 빅썸네일 딤드 위치조정 */
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(1).swiper-slide .big_thum::after,
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(2).swiper-slide .big_thum::after,
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(3).swiper-slide .big_thum::after,
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper div:nth-child(4).swiper-slide .big_thum::after{
+        transform:translateY(0);
+    }
+    /* 페이지네이션 보이기 */
+    .every_wrap main .daily_solution > .daily_solution_wrap .swiper-pagination {display:block;}
+}
+
+
+/* =========================================================
+   모바일 — @media screen and (max-width:1023px)
+   → 슬라이드 1개만 노출 (Swiper의 slidesPerView 계산과 무관하게 폭 고정)
+   ========================================================= */
+@media screen and (max-width:1023px) {
+    .every_wrap main .daily_solution {padding:60px 30px;}
+
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide {
+        width:100% !important;
+        flex-flow:column nowrap;
+    }
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum {height:250px; border-radius:8px; overflow:hidden;}
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li {}
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .small_thum {}
+    .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum > .summary {left:28px; bottom:25px; }
+}
