@@ -1,98 +1,697 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test2.html</title>
-    <link rel="stylesheet" href="./estee_lauder/styles/reset.css">
+    <title>Estee Lauder 코리아 | 공식몰</title>
+    <link rel="shortcut icon" href="./images/favi_esteelauer.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/var.css">
+<!--     <link rel="stylesheet" href="./styles/index.css"> -->
+    <link rel="stylesheet" href="./styles/indextest.css">
+    <link rel="stylesheet" href="./styles/reponsive.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/esteedb.js"></script>
+<!--     <script src="./script/index.js" defer></script> -->
 </head>
-<style>
-    h1 {}
-    .daily_wrap {
-        max-width:1024px; min-width:320px;
-        border:2px solid #000; margin:0 auto; padding:20px;
-    }
-    .daily_wrap .daily {}
-    .daily_wrap .daily .swiper-wrapper {}
-    .daily_wrap .daily .swiper-wrapper .swiper-slide {display:flex;}
-
-    .daily_wrap .daily .swiper-wrapper .swiper-slide:not(.swiper-slide-active){}
-
-    .daily_wrap .daily .swiper-wrapper .swiper-slide > * {
-        height:300px; font-size:1rem;
-    }
-    .daily_wrap .daily.active .swiper-wrapper .swiper-slide.swiper-slide-active {width:calc(100% - (50px * 3));}
-    .daily_wrap .daily .swiper-wrapper .swiper-slide .left{
-        background:beige; flex:0.5;
-    }
-    .daily_wrap .daily .swiper-wrapper .swiper-slide .right{
-        background:brown; flex:1;
-    }
-    .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) {width:50px;}
-    .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) .left {flex:1;}
-    .daily_wrap .daily.active .swiper-wrapper .swiper-slide:not(.swiper-slide-active) .right {display:none;}
-</style>
 <body>
-    <h1>test</h1>
-    <div class="daily_wrap">
-        <div class="swiper daily">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="left">left</div>
-                    <div class="right">right</div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="left">left</div>
-                    <div class="right">right</div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="left">left</div>
-                    <div class="right">right</div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="left">left</div>
-                    <div class="right">right</div>
-                </div>
-            </div>
+    <div class="dimmed"></div>
+    <div class="cta_btn">
+        <button type="button" id="cta_non_active"><img src="./images/cta_logo.png" alt="메뉴펼치기"></button>
+        <div class="cta_active">
+            <button type="button" id="cta_close"><img src="./images/close_icon.svg" alt=""></button>
+            <button type="button" id="search_shop">매장찾기<img src="./images/search_icon.svg" alt=""></button>
+            <button type="button" id="customer">고객센터<img src="./images/customercenter_icon.svg" alt=""></button>
         </div>
     </div>
-</body>
+    <div class="every_wrap"> <!-- 전체묶음 -->
+        <div class="banner"> <!-- 띠배너 -->
+            <div class="content">
+                <a href="#" class="new_user">신규 회원 첫 구매 15% OFF (할인 코드: WELCOME*)</a>
+                <button type="button" id="close"><img src="./images/close_icon.svg" alt="닫기"></button>
+            </div>
+        </div>
+        <header> <!-- 내비게이션 -->
+            <h1><a href="index.html" class="logo"><img src="./images/estee_typo_logo.png" alt=""></a></h1><!-- 로고 -->
+            <nav><!-- 내비게이션 -->
+                <ul class="menu"><!-- 메뉴 -->
+                    <li><a href="#" class="best">BEST</a></li>
+                    <li>
+                        <a href="#" class="skin">SKIN</a>
+                        <div class="hover_menu_wrap_skin">
+                            <div class="hover_menu_group">
+                                <ul class="skin_hover">
+                                    <li>
+                                        <a href="#" class="menu_title">지친 내 피부에 필요한</a>
+                                        <ul class="lips_menu">
+                                            <li><a href="#">클렌저 / 토너</a></li>
+                                            <li><a href="#">세럼 / 에센스</a></li>
+                                            <li><a href="#">로션 / 크림</a></li>
+                                            <li><a href="#">아이 케어</a></li>
+                                            <li><a href="#">스페셜 케어 / 마스크</a></li>
+                                            <li><a href="#">선 케어</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu_title">내 피부의 고민해결법</a>
+                                        <ul class="eyes_menu">
+                                            <li><a href="#">리페어</a></li>
+                                            <li><a href="#">브라이트닝</a></li>
+                                            <li><a href="#">주름완화</a></li>
+                                            <li><a href="#">탄력 / 리프팅</a></li>
+                                            <li><a href="#">피부결 / 모공</a></li>
+                                            <li><a href="#">다크 서클</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu_title">COLLECTION</a>
+                                        <ul class="face_menu">
+                                            <li><a href="#">갈색병 리페어</a></li>
+                                            <li><a href="#">마이크로 에센스</a></li>
+                                            <li><a href="#">수프림</a></li>
+                                            <li><a href="#">퍼펙셔니스트</a></li>
+                                            <li><a href="#">뉴트리셔스</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="menu_img">
+                                    <img src="./images/mobile_menu_image2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="makeup">MAKE UP</a>
+                        <div class="hover_menu_wrap_makeup">
+                            <div class="hover_menu_group">
+                                <ul class="makeup_hover">
+                                    <li>
+                                        <a href="#" class="menu_title">입술위에 더해지는 특별한 컬러</a>
+                                        <ul class="lips_menu">
+                                            <li><a href="#">립스틱</a></li>
+                                            <li><a href="#">리퀴드 립</a></li>
+                                            <li><a href="#">립 글로스</a></li>
+                                            <li><a href="#">립 케어</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu_title">눈가에 또렷하게 새겨지는 품격</a>
+                                        <ul class="eyes_menu">
+                                            <li><a href="#">아이섀도우</a></li>
+                                            <li><a href="#">아이브로우</a></li>
+                                            <li><a href="#">아이라이너</a></li>
+                                            <li><a href="#">마스카라</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu_title">하루종일 화사하게 빛나는</a>
+                                        <ul class="face_menu">
+                                            <li><a href="#">파운데이션</a></li>
+                                            <li><a href="#">컨실러</a></li>
+                                            <li><a href="#">파우더</a></li>
+                                            <li><a href="#">프라이머</a></li>
+                                            <li><a href="#">블러쉬</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu_title">COLLECTION</a>
+                                        <ul class="collection_menu">
+                                            <li><a href="#">퓨어 컬러</a></li>
+                                            <li><a href="#">더블 웨어</a></li>
+                                            <li><a href="#">퓨처리스트</a></li>
+                                            <li><a href="#">섬 츄어스</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="menu_img">
+                                    <img src="./images/menu_makeup.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="perfume">PERFUME</a></li>
+                    <li><a href="#" class="renutriv">RE-NUTRIV</a></li>
+                    <li><a href="#" class="setandgift">SET & GIFT</a></li>
+                    <li><a href="#" class="brand">BRAND</a></li>
+                </ul>
+            </nav>
+            <div class="user_func"><!-- 유저기능 -->
+                <a href="#" class="user_info"><img src="./images/user_icon.svg" alt="마이페이지"></a>
+                <a href="#" class="search"><img src="./images/search_icon.svg" alt="검색하기"></a>
+                <a href="#" class="cart"><img src="./images/cart_icon.svg" alt="장바구니"></a>
+                <button type="button" id="mobile_menu_btn"><img src="./images/hamburger_icon.svg" alt=""></button>
+            </div>
+            <ul class="mobile_nav">
+                <li class="top">
+                    <h2><img src="./images/mobile_menu_logo.png" alt=""></h2>
+                    <div class="icon">
+                        <a href="#"><img src="./images/mobile_menu_user.svg" alt="마이페이지"></a>
+                        <a href="#"><img src="./images/mobile_menu_cart.svg" alt="장바구니"></a>
+                        <a href="#"><img src="./images/mobile_menu_close.svg" alt="닫기"></a>
+                    </div>
+                </li>
+                <li><button type="button" id="mobile_best_btn">BEST</button></li>
+                <li>
+                    <button type="button" id="mobile_skin_btn">SKIN <span><img src="./images/arrow_icon.svg" alt=""></span></button>
+                    <ul class="category">
+                        <li class="subtitle">카테고리</li>
+                        <li><a href="#">클렌저 / 토너</a></li>
+                        <li><a href="#">세럼 / 에센스</a></li>
+                        <li><a href="#">로션 / 크림</a></li>
+                        <li><a href="#">아이 케어</a></li>
+                        <li><a href="#">스페셜 케어 / 마스크</a></li>
+                        <li><a href="#">선 케어</a></li>
+                    </ul>
+                    <ul class="menu1">
+                        <li class="subtitle">피부고민별</li>
+                        <li><a href="#">리페어</a></li>
+                        <li><a href="#">브라이트닝</a></li>
+                        <li><a href="#">주름완화</a></li>
+                        <li><a href="#">탄력 / 리프팅</a></li>
+                        <li><a href="#">피부결 / 모공</a></li>
+                        <li><a href="#">다크서클</a></li>
+                    </ul>
+                    <ul class="menu2">
+                        <li class="subtitle">COLLECTION</li>
+                        <li><a href="#">갈색병 리페어</a></li>
+                        <li><a href="#">마이크로 에센스</a></li>
+                        <li><a href="#">수프림</a></li>
+                        <li><a href="#">퍼펙셔니스트</a></li>
+                        <li><a href="#">뉴트리셔스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" id="mobile_makeup_btn">MAKE UP<span><img src="./images/arrow_icon.svg" alt=""></span></button>
+                    <ul class="category">
+                        <li class="subtitle">입술위에 더해지는 특별한 컬러</li>
+                        <li><a href="#">립스틱</a></li>
+                        <li><a href="#">리퀴드 립</a></li>
+                        <li><a href="#">립 글로스</a></li>
+                        <li><a href="#">립케어</a></li>
+                    </ul>
+                    <ul class="menu1">
+                        <li class="subtitle">눈가에 또렷하게 새겨지는 품격</li>
+                        <li><a href="#">아이섀도우</a></li>
+                        <li><a href="#">아이브로우</a></li>
+                        <li><a href="#">아이라이너</a></li>
+                        <li><a href="#">마스카라</a></li>
+                    </ul>
+                    <ul class="menu2">
+                        <li class="subtitle">하루종일 화사하게 빛나는</li>
+                        <li><a href="#">파운데이션</a></li>
+                        <li><a href="#">컨실러</a></li>
+                        <li><a href="#">파우더</a></li>
+                        <li><a href="#">블러쉬</a></li>
+                    </ul>
+                    <ul class="menu3">
+                        <li class="subtitle">COLLECTION</li>
+                        <li><a href="#">퓨어 컬러</a></li>
+                        <li><a href="#">더블 웨어</a></li>
+                        <li><a href="#">퓨처리스트</a></li>
+                        <li><a href="#">섬 츄어스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button type="button" id="mobile_renutriv_btn">RE-NUTRIV<span><img src="./images/arrow_icon.svg" alt=""></span></button>
+                    <ul class="category">
+                        <li class="subtitle">라인별</li>
+                        <li><a href="#">다이아몬드</a></li>
+                        <li><a href="#">얼티미트 리프트 리제너레이팅 유스</a></li>
+                        <li><a href="#">클래식 리 뉴트리브</a></li>
+                    </ul>
+                    <ul class="menu1">
+                        <li class="subtitle">스킨케어</li>
+                        <li><a href="#">클렌저 / 토너</a></li>
+                        <li><a href="#">에센스 / 세럼</a></li>
+                        <li><a href="#">에멀전 / 로션</a></li>
+                        <li><a href="#">크림</a></li>
+                        <li><a href="#">아이 케어</a></li>
+                        <li><a href="#">스페셜 케어</a></li>
+                    </ul>
+                    <ul class="menu2">
+                        <li class="subtitle">메이크업</li>
+                        <li><a href="#">파운데이션</a></li>
+                        <li><a href="#">파우더</a></li>
+                        <li><a href="#">쿠션</a></li>
+                    </ul>
+                </li>
+                <li><button type="button" id="mobile_perfume_btn">PERFUME</button></li>
+                <li><button type="button" id="mobile_setgift_btn">SET & GIFT</button></li>
+                <li><button type="button" id="mobile_brand_btn">BRAND</button></li>
+                <li><img src="./images/mobile_menu_image1.jpg" alt=""></li>
+                </ul>
+            </ul>
+        </header>
+        <main>
+            <div class="hero"> <!-- 1행 히어로 배너 시작 -->
+                <div class="swiper hero_wrap">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="hero_banner1 swiper-slide">
+                            <!-- hero배너 영역 -->
+                            <div class="title_sum">
+                                <h2>ESTEE LAUDER</h2>
+                                <h2>Advanced Night Repair Serum</h2>
+                                <p>밤사이 이루어지는 피부 리셋</p>
+                            </div>
+                        </a>
+                        <a href="#" class="hero_banner2 swiper-slide">
+                            <!-- hero배너 영역 -->
+                            <div class="title_sum">
+                                <h2>ESTEE LAUDER</h2>
+                                <h2>Advanced Night Repair Serum</h2>
+                                <p>밤사이 이루어지는 피부 리셋</p>
+                            </div>
+                        </a>
+                        <a href="#" class="hero_banner3 swiper-slide">
+                            <!-- hero배너 영역 -->
+                            <div class="title_sum">
+                                <h2>ESTEE LAUDER</h2>
+                                <h2>Advanced Night Repair Serum</h2>
+                                <p>밤사이 이루어지는 피부 리셋</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                </div> <!-- 1행 히어로 배너 종료 -->
+            </div>
+            <div class="best_product"> <!-- 2행 best 상품영역 시작 -->
+                <div class="top"> <!-- 상단부분 (제목,버튼 more버튼) -->
+                    <div class="title">
+                        <p class="slogan">ESTEE LAUDER</p>
+                        <h3>BEST</h3>
+                    </div>
+                    <div class="btn_group">
+                        <button type="button" class="skincare active">#SKIN CARE</button>
+                        <button type="button" class="makeup">#MAKE UP</button>
+                        <button type="button" class="perfume">#PERFUME</button>
+                        <button type="button" class="setandgift">#SET / GIFT</button>
+                    </div>
+                    <div class="more_btn">
+                        <a href="#">
+                            MORE
+                            <img src="./images/more_icon.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="product_wrap swiper" id="best_product_id">
+                    <div class="product_group swiper-wrapper">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div><!-- 2행 best 상품영역 종료 -->
+            <a href="#" class="banner_section"> <!-- 3행 광고배너 -->
+                <div class="summary">
+                    <p>NEW</p>
+                    <p>Double Wear SkinFit Cushion Foundation SPF</p>
+                    <p>공기처럼 가볍게, 피부에 가장 완벽한 핏</p>
+                    <p>새로운 소프트 매트 피니시</p>
+                </div>
+            </a> <!-- 3행 광고배너 종료 -->
+            <div class="daily_solution"><!-- 지옥의 4행 종료....하 -->
+                <div class="top">
+                    <div class="title">
+                        <p class="slogan">ESTEE LAUDER</p>
+                        <h3>Daily SOLUTION</h3>
+                    </div>
+                    <a href="#" class="more_btn">
+                        MORE
+                        <img src="./images/more_icon.svg" alt="더많은 상품보기">
+                    </a>
+                </div>
+                <div class="swiper daily_solution_product_wrap">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide night">
+                            <div class="big_thum">
+                                <!-- img는 background-image로 처리예정 -->
+                                <div class="summary">
+                                    <p class="title">지친 피부에 세안 후 나이트 루틴</p>
+                                    <div class="hashtag">
+                                        <span>#갈색병</span>
+                                        <span>#나이트루틴</span>
+                                        <span>#주름개선</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_list">
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro1.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">어드밴스드 나이트 리페어 갈색병 세럼</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro2.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">NEW</p>
+                                        <p class="name">어드밴스드 나이트 리페어 레스큐 솔루션</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro3.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">어드밴스드 나이트 리페어 갈색병 세럼</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide makeup">
+                            <div class="big_thum">
+                                <!-- img는 background-image로 처리예정 -->
+                                <div class="summary">
+                                    <p class="title">일상이 화보가 되는 오늘, 최고의 밀착력</p>
+                                    <div class="hashtag">
+                                        <span>#스킨핏쿠션</span>
+                                        <span>#글로우오일</span>
+                                        <span>#퓨어컬러립스틱</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_list">
+                                <li class="product1">
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro4.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">더블웨어 스킨핏 쿠션</p>
+                                        <div class="colorchip">
+                                            <span class="sand"></span>
+                                            <span class="coolvanila"></span>
+                                            <span class="warmvanila"></span>
+                                            <span class="born"></span>
+                                            <span class="poslin"></span>
+                                            <span class="total">+4</span>
+                                        </div>
+                                        <p class="price">KRW 90,000</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro5.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">NEW</p>
+                                        <p class="name">퓨어컬러 젤리 글로우 오일</p>
+                                        <div class="colorchip">
+                                            <span class="cheerypunch"></span>
+                                            <span class="freshberry"></span>
+                                            <span class="sweetpig"></span>
+                                            <span class="papayacrush"></span>
+                                            <span class="melonkiss"></span>
+                                        </div>
+                                        <p class="price">KRW 40,000</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro6.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">퓨처리스트 파운데이션</p>
+                                        <div class="colorchip">
+                                            <span class="desertbeige"></span>
+                                            <span class="warmcream"></span>
+                                            <span class="warmposlin"></span>
+                                            <span class="warmvanila_poun"></span>
+                                            <span class="poslin_poun"></span>
+                                            <span class="total">+6</span>
+                                        </div>
+                                        <p class="price">KRW 110,000</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide skincare">
+                            <div class="big_thum">
+                                <!-- img는 background-image로 처리예정 -->
+                                <div class="summary">
+                                    <p class="title">단 한 방울로 완성되는 피부 장벽의 차이.</p>
+                                    <div class="hashtag">
+                                        <span>#안티에이징</span>
+                                        <span>#리뉴트리브</span>
+                                        <span>#마이크로에센스</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_list">
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro1.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">어드밴스드 나이트 리페어 갈색병 세럼</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro2.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">NEW</p>
+                                        <p class="name">어드밴스드 나이트 리페어 레스큐 솔루션</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro3.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">어드밴스드 나이트 리페어 갈색병 세럼</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide perfume">
+                            <div class="big_thum">
+                                <!-- img는 background-image로 처리예정 -->
+                                <div class="summary">
+                                    <p class="title">풍성하게 퍼지는 나만의 섬세한 아우라.</p>
+                                    <div class="hashtag">
+                                        <span>#플레져스</span>
+                                        <span>#에어린</span>
+                                        <span>#프라이빗컬렉션</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="product_list">
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro1.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">어드밴스드 나이트 리페어 갈색병 세럼</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro2.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">NEW</p>
+                                        <p class="name">어드밴스드 나이트 리페어 레스큐 솔루션</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                                <li>
+                                    <a href="#" class="small_thum"><img src="./images/daily_pro3.jpg" alt=""></a>
+                                    <div class="product_wrap">
+                                        <p class="tag">BEST SELLER</p>
+                                        <p class="name">어드밴스드 나이트 리페어 갈색병 세럼</p>
+                                        <p class="price">KRW 34,000~</p>
+                                    </div>
+                                    <button type="button" class="add_cart"><img src="./images/cart_gray_icon.svg" alt="장바구니 담기"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="renutriv_area"> <!-- 5행 renutriv 시작점 -->
+                <div class="renutriv_content_wrap">
+                    <div class="left">
+                        <p class="slogan">ESTEE LAUDER PREMIUM</p>
+                        <h3>RE-NUTRIV</h3>
+                        <p class="summary">
+                            최적의 피부 상태로,<br>시간의 흔적을 감추어 더 어려보이는 피부<br>15년간 장수 과학의 최전선에서 에스티 로더가 밝혀낸<br>동안 피부를 위한 안티에이징의 비밀을 만나보세요.
+                        </p>
+                        <div class="button_group">
+                            <button type="button" class="research">15년의 연구과정 보기</button>
+                            <button type="button" class="everyproduct">RE-NUTRIV 라인업 전체보기</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="swiper renutriv_product_wrap">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heritage"> <!-- 6행 heritage 시작 -->
+                <div class="heritage_wrap">
+                    <div class="title">
+                        <p class="slogan">EVERY NIGHT, EVERY DAY</p>
+                        <h3>The Heritage of Precision</h3>
+                        <p class="summary">함께해온 80년 우리는 실망시키지 않습니다.</p>
+                    </div>
+                    <div class="hover_area">
+                        <div class="step1">
+                            <p class="contents"><em>01</em><br>ETHICAL INGREDIENT SOURCING</p>
+                            <div class="contents_hover">
+                                <p class="title"><em>01</em><br>지속 가능한 원료선별</p>
+                                <p class="summary">전 세계 파트너십을 통해 윤리적으로 채취된 고순도<br> 천연 원료를 확보합니다.</p>
+                            </div>
+                        </div>
+                        <div class="step2">
+                            <p class="contents"><em>02</em><br>EXCLUSIVE BIO-TECHNOLOGY</p>
+                            <div class="contents_hover">
+                                <p class="title"><em>02</em><br>독자 바이오 기술 적용</p>
+                                <p class="summary">에스티 로더 연구소의 특허받은<br> 발효 및 자생 기술을 원료에 결합합니다.</p>
+                            </div>
+                        </div>
+                        <div class="step3">
+                            <p class="contents"><em>03</em><br>PRECISION FORMULATION</p>
+                            <div class="contents_hover">
+                                <p class="title"><em>03</em><br>고밀도 제형 정밀 배합</p>
+                                <p class="summary">수분감과 영양 성분이 피부에 즉각 흡수되도록<br> 과학적인 비율로 제형을 조합합니다.</p>
+                            </div>
+                        </div>
+                        <div class="step4">
+                            <p class="contents"><em>04</em><br>RIGOROUS SAFETY TESTING</p>
+                            <div class="contents_hover">
+                                <p class="title"><em>04</em><br>글로벌 기준 품질·저자극 검사</p>
+                                <p class="summary">모든 인종과 다양한 피부 타입에 안심하고 <br> 사용할 수 있도록 깐깐한 임상 테스트를 거칩니다.</p>
+                            </div>
+                        </div>
+                        <div class="step5">
+                            <p class="contents"><em>05</em><br>HYGIENIC STERILE BOTTLING</p>
+                            <div class="contents_hover">
+                                <p class="title"><em>05</em><br>보호용 용기 무균 충전</p>
+                                <p class="summary">성분 변질을 완벽히 차단하는 <br> 특수 용기에 자동화 무균 시스템으로 밀봉 채웁니다.</p>
+                            </div>
+                        </div>
+                        <div class="step6">
+                            <p class="contents"><em>06</em><br>FINAL INSPECTION & SHIPPING</p>
+                            <div class="contents_hover">
+                                <p class="title"><em>06</em><br>전수 품질 검사 및 글로벌 출고</p>
+                                <p class="summary">완제품의 외관과 실링 상태를 100% 최종 확인한 후<br> 최적의 신선도로 공급합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_area"> <!-- 마지막행 하단영역 시작 -->
+                <div class="offline_shop">
+                    <div class="top">
+                        <div class="title">
+                            <h3>OFF-LINE ESTEE LAUDER</h3>
+                            <p class="slogan">오프라인에서도 에스티로더를 만나보세요.</p>
+                        </div>
+                        <div class="swiper brand_wrap">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="./images/hyundai.png" alt="현대백화점"></div>
+                                <div class="swiper-slide"><img src="./images/lotte.png" alt="롯데백화점"></div>
+                                <div class="swiper-slide"><img src="./images/shinsegae.png" alt="신세계백화점"></div>
+                                <div class="swiper-slide"><img src="./images/gallerlia.png" alt="갤러리아"></div>
+                                <div class="swiper-slide"><img src="./images/chicor.png" alt="시코르"></div>
+                                <div class="swiper-slide"><img src="./images/akplaza.png" alt="ak플라자"></div>
+                                <div class="swiper-slide"><img src="./images/incheonair.png" alt="인천공항"></div>
+                                <div class="swiper-slide"><img src="./images/kimpoair.png" alt="김포공항"></div>
+                            </div>
+                        </div>
+                        <div class="modelphoto">
+                            <img src="./images/footer_model1.jpg" alt="">
+                            <img src="./images/footer_model2.jpg" alt="">
+                            <img src="./images/footer_model3.jpg" alt="">
+                            <img src="./images/footer_model4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="left">
+                <div class="slogan">
+                    <p class="first">EVERY NIGHT</p>
+                    <p class="second">EVERY DAY</p>
+                    <p class="third">ESTEE LAUDER</p>
+                    <p class="point_dot1"></p>
+                    <p class="point_dot2"></p>
+                    <p class="point_dot3"></p>
+                    <p class="copyright">© 2026 ESTEE LAUDER.CO.LTD.All RIGHT RESERVED</p>
+                </div>
+            </div>
+            <address>
+                <div class="left">
+                    <p>이엘씨에이한국(유) 대표 Jean-Alexandre Havard.</p>
+                    <p>06232 서울시 강남구 강남대로382(역삼동) 메리츠 타워 9층</p>
+                    <p>사업자등록번호 : 211-81-71889</p>
+                    <p>고객관리지원팀 : 1644-3728</p>
+                    <p>호스팅서비스 사업자 : (주)엘지유플러스</p>
+                </div>
+                <div class="right">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이메일 무단수집 거부</a>
+                    <p>통신판매업신고 : 강남15737호</p>
+                    <div class="sns">
+                        <a href="#"><img src="./images/youtube_icon.png" alt=""></a>
+                        <a href="#"><img src="./images/insta_icon.png" alt=""></a>
+                        <a href="#"><img src="./images/facebook_icon.png" alt=""></a>
+                    </div>
+                </div>
+            </address>
+            <p class="biglogo"><img src="./images/biglogo.png" alt=""></p>
+        </footer>
+    </div>
 <script>
-    const daily = document.querySelector('.daily');
-    const mq = window.matchMedia('(min-width:1320px)');
+        const daily_solution_wrap = document.querySelector('.daily_solution_product_wrap');
+        const mq = window.matchMedia('(min-width:1630px)');
 
-    dailyCls(mq);
-    mq.addEventListener('change',dailyCls);
+        mq.addEventListener('change',dailyFunc);
 
-    function dailyCls(e){
-        daily.classList.toggle('active', e.matches);
+        function dailyFunc(e){
+            daily_solution_wrap.classList.toggle('active', e.matches);
 
-        const s_s = daily.querySelectorAll('.swiper-slide');
-        for(let s of s_s){
-            s.style.transition = 'all 0.4s';
-            s.addEventListener('click',()=>{
-                for(let sAll of s_s) sAll.classList.remove('swiper-slide-active');
-                s.classList.add('swiper-slide-active');
-            })
+            const daily_slide = daily_solution_wrap.querySelectorAll('.swiper-slide');
+            for(let dailyChecking of daily_slide){
+                dailyChecking.style.transition = 'all 0.4s';
+                dailyChecking.addEventListener('click',()=>{
+                    for(let dailyRemove of daily_slide) dailyRemove.classList.remove('swiper-slide-active');
+                    dailyChecking.classList.add('swiper-slide-active');
+                    console.log('클릭');
+                })
+            }
         }
-    }
 
-    const testSwiper = new Swiper (daily,{
-        slidesPerView: 1,
-        spaceBetween:0,
-        breakpoints: {
-            1024:{
-                slidesPerView :2,
-                spaceBetween:5,
-            },
-            700:{
-                slidesPerView:1,
-                spaceBetween:5,
-            },
-        }
-    })
-</script>
+        const dailySwiper = new Swiper(daily_solution_wrap, {
+            slidesPerView :1,
+            spaceBetween :0,
+            breakpoints :{
+                1630:{
+                    slidesPerView:'auto',
+                    spaceBetween:10,
+                },
+                1024:{
+                    slidesPerView:2,
+                    spaceBetween:10,
+                },
+                768:{
+                    slidesPerView:1,
+                    spaceBetween:10,
+                }
+            }
+        })
+    </script>
+</body>
 </html>

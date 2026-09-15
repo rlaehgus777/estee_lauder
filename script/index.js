@@ -258,7 +258,7 @@ const dailySwiper = new Swiper ('.daily_solution_product_wrap',{
     slidesPerView : 'auto',
     allowTouchMove :false,
 })
-nightBigthum.addEventListener('click',()=>{
+/* nightBigthum.addEventListener('click',()=>{
     nightSlide.classList.add('swiper-slide-active');
     makeupSlide.classList.remove('swiper-slide-active');
     skincareSlide.classList.remove('swiper-slide-active');
@@ -313,7 +313,7 @@ perfumeBigthum.addEventListener('click',()=>{
     makeupProductList.style.display ='none';
     skincareProductList.style.display ='none';
     perfumeProductList.style.display ='flex';
-})
+}) */
 
 
 
