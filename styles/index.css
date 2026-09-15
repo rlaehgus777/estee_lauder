@@ -464,9 +464,9 @@ body {}
 
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide-active >  .big_thum::after {display:none;} /* 빅썸네일 활성화 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .product_list {display:none;} /* 평시 리스트 안보이기 */
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide-active .product_list {
     display:flex; flex-flow:column nowrap; gap:10px;} /* 액티브 적용시 보이기 */
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .product_list {display:none;} /* 평시 리스트 안보이기 */
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum > .summary {
     display:none; position:absolute; left:40px; bottom:50px; 

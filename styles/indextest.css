@@ -87,10 +87,30 @@
 /* -----------------------------big 썸네일 설정완료 */
 
 /* 상품영역 공통 */
+/* max-width:1680px */
+.every_wrap main .daily_solution > .daily_solution_product_wrap {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide  {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum .summary {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum img{}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum::after {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list {}
+/* min-width:1680px */
+.every_wrap main .daily_solution > .daily_solution_product_wrap.active {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap.active .swiper-wrapper {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap.active .swiper-wrapper .swiper-slide{}
+.every_wrap main .daily_solution > .daily_solution_product_wrap.active .swiper-wrapper .swiper-slide .big_thum {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap.active .swiper-wrapper .swiper-slide .big_thum .summary {}
+.every_wrap main .daily_solution > .daily_solution_product_wrap.active .swiper-wrapper .swiper-slide .big_thum::after{}
+.every_wrap main .daily_solution > .daily_solution_product_wrap.active .product_list {}
+
+
 .every_wrap main .daily_solution > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide .product_list{display:none; flex-flow:column nowrap; width:calc(100% - 620px); gap:20px;}
 .every_wrap main .daily_solution > .daily_solution_product_wrap.active .swiper-wrapper > .swiper-slide-active .product_list {display:flex;flex-flow:column nowrap; width:calc(100% - 620px); gap:20px;}
 
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide-active .product_list{
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list{
     display:flex;}
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li{
