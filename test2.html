@@ -62,7 +62,7 @@
 </body>
 <script>
     const daily = document.querySelector('.daily');
-    const mq = window.matchMedia('(min-width:1024px)');
+    const mq = window.matchMedia('(min-width:1320px)');
 
     dailyCls(mq);
     mq.addEventListener('change',dailyCls);
@@ -85,11 +85,11 @@
         spaceBetween:0,
         breakpoints: {
             1024:{
-                slidesPerView :'auto',
+                slidesPerView :2,
                 spaceBetween:5,
             },
             700:{
-                slidesPerView:2,
+                slidesPerView:1,
                 spaceBetween:5,
             },
         }

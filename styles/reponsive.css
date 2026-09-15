@@ -1,6 +1,7 @@
 /* reponsive.css */
 @media screen and (max-width:1820px) {
     .every_wrap main .best_product {width:calc(100% - 120px); padding:120px 0;}
+    .every_wrap main .daily_solution {padding:60px 0;}
 
 }
 
@@ -17,7 +18,7 @@
 
 
 }
-@media screen and (max-width:1740px){
+@media screen and (max-width:1720px){
     
 }
 @media screen and (max-width:1708px){
