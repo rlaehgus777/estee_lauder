@@ -694,10 +694,10 @@ body {}
     width:100%; height:auto;
 }
 .every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide > .product_name {
-    margin-bottom:8px; line-height:var(--estee-line-height-150);
+    margin-bottom:8px; line-height:var(--estee-line-height-150); color:var(--estee-white);
 }
 .every_wrap main .renutriv_area > .renutriv_content_wrap > .right > .renutriv_product_wrap > .swiper-wrapper > .swiper-slide > .product_price {
-    line-height:var(--estee-line-height-150); font-weight:var(--font-weight-500);
+    line-height:var(--estee-line-height-150); font-weight:var(--font-weight-500); color:var(--estee-white);
 }
 */
 
@@ -705,10 +705,10 @@ body {}
 
 
 /* 헤리티지 부분 시작 */
-.every_wrap main .heritage {width:calc(100% - 240px); margin:0 auto; padding:120px 0;}
+.every_wrap main .heritage {max-width:1680px; margin:0 auto;}
 .every_wrap main .heritage .heritage_wrap {
     width:100%; height:max-content; display:flex; flex-flow:column nowrap;
-    gap:60px;
+    gap:60px; padding:120px 120px;
 }
 .every_wrap main .heritage > .heritage_wrap > .title{
     display:flex; flex-flow:column nowrap; gap:12px;
@@ -780,6 +780,7 @@ body {}
 }
 .every_wrap main .heritage > .heritage_wrap > .hover_area > div[class*="step"] > .contents_hover .summary{
     line-height:var(--estee-line-height-150); font-weight:var(--font-weight-200); color:var(--estee-white);
+    font-size:var(--pc-font-body-16);
 }
 
 

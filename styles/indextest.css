@@ -4,7 +4,7 @@
 .every_wrap main .daily_solution > .top {
     display:flex; flex-flow:row nowrap;
     justify-content: space-between; align-items:flex-end;
-    width:100%;
+    width:100%;position:relative;
 }
 .every_wrap main .daily_solution > .top > .title {display:flex; flex-flow:column nowrap;}
 .every_wrap main .daily_solution > .top > .title .slogan {
@@ -17,7 +17,8 @@
 }
 .every_wrap main .daily_solution > .top > .more_btn {
     color:var(--estee-gray); font-size:var(--pc-font-body-14);
-    position:relative; line-height:var(--estee-line-height-150);
+    position:absolute; line-height:var(--estee-line-height-150);
+    top:0; right:30px;
 }
 .every_wrap main .daily_solution > .top > .more_btn img {
     position:absolute; left:0; top:16px;
@@ -27,8 +28,8 @@
 
 
  /* 상품영역 시작 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap {width:100%; height:750px;}
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper {gap:10px;}
+.every_wrap main .daily_solution > .daily_solution_product_wrap {width:100%; height:650px;}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper {gap:15px; justify-content: center;}
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide{
     width:150px; display:flex; flex-flow:row nowrap; gap:20px; transition:width 0.4s cubic-bezier(0.65, -0.33, 0.26, 1.11);
     cursor:pointer;
@@ -83,7 +84,7 @@
 /* -----------------------------big 썸네일 설정완료 */
 
 /* 상품영역 공통 */
-.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list {display:none;flex-flow:column nowrap; width:calc(100% - 620px);}
+.every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list {display:none;flex-flow:column nowrap; width:calc(100% - 620px); gap:20px;}
 
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide-active .product_list{
     display:flex;}
@@ -179,6 +180,6 @@
     position:absolute; right:0; top:70px;
 }
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .makeup .product_list > li > .add_cart {
-    position:absolute; right:-40px; top:92px;
+    position:absolute; right:10px; top:92px;
 }
 .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list > li > .add_cart img {width:100%;}
