@@ -44,6 +44,8 @@
     .every_wrap main .daily_solution {width:calc(100% - 240px); padding:120px 0; margin:0 auto;}
     .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide-active >  .big_thum::after {display:none;}
     .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide > .big_thum {width:400px;}
+    .every_wrap main .daily_solution > .daily_solution_product_wrap .swiper-wrapper > .swiper-slide .product_list {
+    display:flex; flex-flow:column nowrap; gap:10px; margin-right:20px;}
 
     /* 리뉴트리브 */
     .every_wrap main .renutriv_area {}
