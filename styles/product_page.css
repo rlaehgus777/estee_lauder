@@ -1,0 +1,209 @@
+/* product_page.css */
+body{background-color:#ececec;}
+.cta_btn {
+    position:fixed; bottom:10px; right:10px; z-index:var(--z-index-400);
+}
+.cta_btn > #cta_non_active {
+    font-family:var(--optima-m-fonts); font-size:var(--pc-font-micro-10);
+    width:90px; height:90px; border-radius:100%;
+    background-color:var(--estee-primary); color:var(--estee-white);
+    border:2px solid #CD9D43; font-weight:100; overflow:hidden;
+}
+.cta_btn > #cta_non_active > img {
+    width:50%; height:50%; text-align:center;
+}
+.cta_btn > .cta_active {
+    display:none; flex-flow:column-reverse nowrap; 
+    box-shadow:5px 0 10px rgba(0,0,0,0.5); border-radius:80px;
+}
+.cta_btn > .cta_active > #cta_close {
+    width:90px; height:90px; background-color:var(--estee-primary);
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+.cta_btn > .cta_active > #cta_close > img {}
+
+
+.cta_btn > .cta_active > #search_shop {
+    display:flex; flex-flow:column-reverse nowrap; align-items:center; justify-content: center;
+    font-size:var(--pc-font-body-14); color:var(--estee-white); width:90px; height:90px; gap:10px;
+    background-color:var(--estee-primary);
+}
+.cta_btn > .cta_active > #search_shop > img {}
+
+
+
+.cta_btn > .cta_active > #customer {
+    display:flex; flex-flow:column-reverse nowrap; width:90px; height:90px;
+    justify-content: center;
+    font-size:var(--pc-font-body-14); color:var(--estee-white); align-items:center; gap:10px;
+    background-color:var(--estee-primary);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+.cta_btn > .cta_active > #customer > img{width:14px; height:14px;}
+
+/* 띠배너 */
+.every_wrap {width:100%; position:relative;}
+.every_wrap .banner {
+    width:100%; background-color:var(--estee-black); height:45px; display:flex; align-items: center;
+    position:absolute; z-index:var(--z-index-500);
+    left:0; top:0;
+}
+.every_wrap .banner .content {
+    width:1680px; text-align:center; position:relative; margin:0 auto;
+}
+.every_wrap .banner .content .new_user {color:var(--estee-white); font-size:var(--pc-font-body-12);}
+.every_wrap .banner .content #close {width:24px; height:24px; position:absolute; top:-4px; right:0px;}
+.every_wrap .banner .content #close img {width:100%; height:100%;}
+/* ------------------------띠배너 종료 */
+
+/* 헤더 시작 */
+
+/* 로고 */
+.every_wrap header {
+    width:100%; height:60px;
+    display:flex; align-items:center; padding:0 120px;
+    justify-content: space-between; position:absolute; z-index:500;
+    top:45px;
+}
+.every_wrap header .user_func {
+    display:flex; gap:12px;
+}
+.every_wrap header .user_func #mobile_menu_btn {display:none ;width:24px; height:24px;}
+.every_wrap header .user_func #mobile_menu_btn img {width:100%;}
+
+
+/* 메뉴 호버 시 변경되는 구간 */
+/* 1. 메뉴 호버 시 백그라운드 */
+.every_wrap header.active::after{
+    display:block;
+    content:''; position:absolute; left:0; top:0px;
+    width:100%; height:100vh; background:linear-gradient(180deg, #fff 55%, transparent);
+    z-index:-1;
+}
+.every_wrap header.active .user_func {}
+/* 2. 메뉴 호버 시 메뉴 글자 색상,굵기 변경 */
+.every_wrap header.active > nav > .menu > li > a {
+    color:var(--estee-black); 
+}
+.every_wrap header > nav > .menu > li.active > a {
+    color:var(--estee-primary); font-weight:var(--font-weight-600);
+}
+/* 3. 메뉴 호버 시 로고, 아이콘 색상 반전   */
+.every_wrap header.active h1 > a > img {}
+.every_wrap header .user_func > a > img {filter:invert(1);}
+
+/* 메뉴 호버 시 변경되는 구간 종료 */
+
+
+.every_wrap header h1 {}
+.every_wrap header h1 a {width:150px; height:60px; display:block;}
+.every_wrap header h1 a img {width:100%; height:100%;filter:invert(1);}
+
+/* 로고 종료 */
+/* 내비게이션 부분 */
+.every_wrap header nav {}
+.every_wrap header nav .menu {
+    display:flex; justify-content: center; align-items:center;
+}
+.every_wrap header nav .menu > li {
+    width:150px; line-height:60px; text-align:center;
+}
+.every_wrap header nav .menu > li > a {color:var(--estee-black);}
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin {
+    width:100%; position:absolute; left:0; top:40px;
+    display:none; padding:50px; background-color:#fff;
+}
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup::after{}
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup .hover_menu_group,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin .hover_menu_group {
+    background-color:#fff;
+    display:flex; padding:0 60px; width:max-content; margin:0 auto; gap:120px;
+}
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup .hover_menu_group .makeup_hover,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin .hover_menu_group .skin_hover {
+    display:flex; margin:0 auto; gap:120px; z-index:var(--z-index-200);
+    position:relative;
+}
+.every_wrap header nav .menu > li .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li,
+.every_wrap header nav .menu > li .hover_menu_wrap_skin .hover_menu_group .skin_hover > li {
+    width:max-content; display:flex; flex-flow:column nowrap; gap:13px;
+    text-align:left;
+}
+.every_wrap header nav .menu li > .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li .menu_title,
+.every_wrap header nav .menu li > .hover_menu_wrap_skin .hover_menu_group .skin_hover > li .menu_title {
+    font-size:var(--pc-font-body-16);
+    font-weight:var(--font-weight-500); color:var(--estee-black);
+}
+.every_wrap header nav .menu li > .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li > ul[class*="_menu"],
+.every_wrap header nav .menu li > .hover_menu_wrap_skin .hover_menu_group .skin_hover > li > ul[class*="_menu"] {
+    display:flex; flex-flow:column nowrap; gap:15px;
+}
+.every_wrap header nav .menu li > .hover_menu_wrap_makeup .hover_menu_group .makeup_hover > li > ul[class*="_menu"] a,
+.every_wrap header nav .menu li > .hover_menu_wrap_skin .hover_menu_group .skin_hover > li > ul[class*="_menu"] a {
+    color:var(--estee-gray); font-size:var(--font-weight-400); 
+}
+.every_wrap header nav .menu li .hover_menu_wrap_makeup .hover_menu_group .menu_img,
+.every_wrap header nav .menu li .hover_menu_wrap_skin .hover_menu_group .menu_img {
+    position:relative; z-index: var(--z-index-200); width:350px; height:250px;
+}
+.every_wrap header nav .menu li .hover_menu_wrap_makeup .hover_menu_group .menu_img img,
+.every_wrap header nav .menu li .hover_menu_wrap_skin .hover_menu_group .menu_img img {
+    width:100%; height:100%;
+}
+.every_wrap header .mobile_nav {
+    background-color:var(--estee-white);
+    width:75%; max-width:360px; height:100dvh; position:fixed; right:0; top:0;
+    padding:60px 0; border-top-left-radius: 50px; border-bottom-left-radius: 50px;
+    display:flex; flex-flow:column nowrap;
+    overflow-y:auto; transform:translateX(100%); /* transition:transform 0.3s ease; */
+}
+.every_wrap header .mobile_nav.active {transform:translateX(0);}
+/* 모바일 메뉴 클릭 시 화살표 회전 */
+.every_wrap header .mobile_nav li #mobile_skin_btn span.active img {transform:rotate(180deg);}
+.every_wrap header .mobile_nav li #mobile_makeup_btn span.active img {transform:rotate(180deg);}
+.every_wrap header .mobile_nav li #mobile_renutriv_btn span.active img {transform:rotate(180deg);}
+.every_wrap header .mobile_nav li #mobile_skin_btn span img {transition:transform 0.5s ease;}
+.every_wrap header .mobile_nav li #mobile_makeup_btn span img {transition:transform 0.5s ease;}
+.every_wrap header .mobile_nav li #mobile_renutriv_btn span img {transition:transform 0.5s ease;}
+.every_wrap header .mobile_nav > .top {
+    display:flex; gap:91px; padding:20px 15px;
+    border-bottom:1px solid #ddd; margin-bottom:15px;
+}
+.every_wrap header .mobile_nav > .top h2 {}
+.every_wrap header .mobile_nav > .top h2 img {}
+.every_wrap header .mobile_nav > .top h2 img {}
+.every_wrap header .mobile_nav > .top .icon {
+    display:flex; flex-flow:row nowrap; gap:8px;
+}
+.every_wrap header .mobile_nav > .top .icon a {
+    display:block; width:22px; height:22px;
+}
+.every_wrap header .mobile_nav > .top .icon a img{width:100%;}
+/* 상단부분 종료 */
+.every_wrap header .mobile_nav > li {
+    padding:15px 15px;
+}
+.every_wrap header .mobile_nav li button {
+    font-size:var(--pc-font-body-16); font-weight:var(--font-weight-600); margin-bottom:15px;
+    width:100%; text-align:left; display:flex; flex-flow:row nowrap; justify-content: space-between; align-items:center;
+}
+.every_wrap header .mobile_nav li button span {}
+.every_wrap header .mobile_nav li button span img {}
+.every_wrap header .mobile_nav li > ul {
+    display:none; flex-flow:column nowrap; gap:17px;
+    margin-bottom:15px;
+}
+.every_wrap header .mobile_nav li > ul > .subtitle {
+    font-size:var(--pc-font-body-14); font-weight:var(--font-weight-400); padding:12px 0;
+    border-bottom:1px solid #000;
+}
+.every_wrap header .mobile_nav li > ul > li {
+    padding:0 17px;
+}
+.every_wrap header .mobile_nav li > ul > li > a {
+    font-size:var(--pc-font-body-12); color:var(--estee-gray);
+}
+.every_wrap header .mobile_nav li > ul > li > img{}
