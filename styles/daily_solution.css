@@ -30,7 +30,7 @@
 }
 .every_wrap main .daily_solution > .top > .more_btn {
     color:var(--estee-gray); font-size:var(--pc-font-body-14);
-    position:absolute; top:0; right:30px; line-height:var(--estee-line-height-150);
+    position:absolute; bottom:50%; right:30px; line-height:var(--estee-line-height-150);
 }
 .every_wrap main .daily_solution > .top > .more_btn img {
     position:absolute; left:0; top:16px;
@@ -91,7 +91,9 @@
 .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap .name {
     font-size:var(--pc-font-body-16); font-weight:var(--font-weight-400); margin-bottom:30px;
 }
-.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap .price {}
+.every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .product_wrap .price {
+    font-size:var(--pc-font-body-16); font-weight:var(--font-weight-500);
+}
 
 /* -- 장바구니 버튼(.add_cart) 위치 -- */
 .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li > .add_cart {
@@ -201,6 +203,8 @@ JS가 min-width:1680px 에서만 .daily_solution_product_wrap 에 active 를 붙
     }
     /* 페이지네이션 보이기 */
     .every_wrap main .daily_solution > .daily_solution_wrap .swiper-pagination {display:block;}
+
+    .every_wrap main .daily_solution > .top > .more_btn {bottom:0; right:18px;}
 }
 
 
@@ -219,4 +223,5 @@ JS가 min-width:1680px 에서만 .daily_solution_product_wrap 에 active 를 붙
     .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li {}
     .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .product_list > li .small_thum {}
     .every_wrap main .daily_solution > .daily_solution_wrap > .daily_solution_product_wrap .swiper-wrapper .swiper-slide .big_thum > .summary {left:28px; bottom:25px; }
+    
 }
