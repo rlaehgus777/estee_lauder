@@ -239,14 +239,12 @@
         </header>
         <div class="product_details">
             <div class="product_area">
-                <div class="thum_nail">
+                <div class="thumnail">
                     <div class="small_thum">
                         <p class="sm_1"><img src="./images/product_small_thum2.jpg" alt=""></p>
                         <p class="sm_2"><img src="./images/product_small_thum1.jpg" alt=""></p>
                     </div>
-                    <div class="big_thum">
-                        <p class="bg_1"></p>
-                    </div>
+                    <div class="big_thum"></div>
                 </div>
                 <div class="product_info">
                     <div class="top">
@@ -259,37 +257,37 @@
                         <div class="middle">
                             <p class="option_info">1C0 쉘</p>
                             <ul class="color_chip">
-                                <li class="active" data-value="1c0쉘">
+                                <li data-value="1c0쉘">
                                     <span class="product_1c0"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">1C0</span>
                                 </li>
                                 <li data-value="1w1본">
                                     <span class="product_1w1"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">1W1</span>
                                 </li>
                                 <li data-value="1w2샌드">
                                     <span class="product_1w2"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">1W2</span>
                                 </li>
                                 <li data-value="1n0포슬린">
                                     <span class="product_1n0"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">1N0</span>
                                 </li>
                                 <li data-value="1n1아이보리누드">
                                     <span class="product_1n1"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">1N1</span>
                                 </li>
                                 <li data-value="2c0쿨바닐라">
                                     <span class="product_2c0"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">2C0</span>
                                 </li>
                                 <li data-value="2w0웜바닐라">
                                     <span class="product_2w0"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">2W0</span>
                                 </li>
                                 <li data-value="3w1토니">
                                     <span class="product_3w1"></span>
-                                    <span class="color_name"></span>
+                                    <span class="color_name">3W1</span>
                                 </li>
                             </ul>
                             <div class="color_picker">
@@ -299,6 +297,7 @@
                                 <button type="button" id="color_select_btn">
                                     <span class="color_chip product_1c0"></span>
                                     <span class="select_name">1C0 쉘</span>
+                                    <span class="more"><img src="./images/select_arrow_icon.svg" alt=""></span>
                                 </button>
                                 <ul class="select_list">
                                     <li data-value="1w1본">
@@ -338,20 +337,21 @@
                                 </div>
                                 <div class="bottom">
                                     <div class="option_control">
-                                        <button type="button" id="option_minus"></button>
+                                        <button type="button" id="option_minus"><img src="./images/option_minus.svg" alt=""></button>
                                         <span>1</span>
-                                        <button type="button" id="option_plus"></button>
+                                        <button type="button" id="option_plus"><img src="./images/option_plus.svg" alt=""></button>
                                     </div>
                                     <p class="final_price">KRW 90,000</p>
                                 </div>
                             </div>
+                            <div class="line"></div>
                         </div>
                         <div class="bottom">
                             <div class="customer_btn_group">
                                 <button type="button" id="add_a_new_btn"><img src="./images/option_cart_icon.svg" alt="">ADD A NEW</button>
                                 <button type="button" id="buy_btn">BUY NOW</button>
                             </div>
-                            <div class="delivary_info">
+                            <div class="delivery_info">
                                 <h3>에스티로더 온라인몰 혜택</h3>
                                 <p class="first">더욱 매력적인 포뮬러를 만나보세요! 구매 시 샘플 5종을 선택해 받아보실 수 있습니다.</p>
                                 <p class="second">🚚전 제품 무료배송</p>
@@ -363,10 +363,12 @@
             </div>
             <div class="product_info_area">
                 <div class= "info_btn">
-                    <button type="button" id="product_details_btn">상품 상세정보</button>
+                    <button type="button" id="product_details_btn" class="active">상품 상세정보</button>
                     <button type="button" id="review_btn">리뷰</button>
                     <button type="button" id="qna_btn">Q&A</button>
                     <button type="button" id="etc_btn">배송 / 교환 / 반품안내</button>
+                </div>
+                <div class="product_details_wrap">
                     <div class="product_image_wrap">
                         <div class="product_image1"></div>
                         <div class="product_image2"></div>
@@ -375,30 +377,30 @@
                     </div>
                     <div class="product_warning_wrap">
                         <h2>제품 상세정보 고지</h2>
-                    <dl class="product_warning_info">
-                        <dt>제품번호</dt>
-                        <dd>본품: 147010 / 리필: 147011</dd>
-                        <dt>제품 사용시 주의사항</dt>
-                        <dd>
-                            <p>화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것.</p>
-                            <p>상처가 있는 부위 등에는 사용을 자제할 것.</p>
-                            <p>어린이의 손이닿지 않는 곳에 보관할 것.</p>
-                            <p>직사광선을 피해서 보관할 것.</p>
-                            <p>사용 후에는 반드시 덮개를 닫아 보관할 것 </p>
-                        </dd>
-                        <dt>제조자</dt>
-                        <dd>Estée Lauder Companies</dd>
-                        <dt>수입원</dt>
-                        <dd>이엘씨에이한국(유)</dd>
-                        <dt>제조국</dt>
-                        <dd>일본 (Japan) 또는 미국 (USA) (제품용기/외상자 별도 표기)</dd>
-                        <dt>제조연월</dt>
-                        <dd>제품 용기 및 상자에 표시된 제조번호 및 유통기한에 따름</dd>
-                        <dt>품질이상 연락처</dt>
-                        <dd>1644-3728 (에스티로더 고객지원센터)</dd>
-                        <dt>품질보증기준</dt>
-                        <dd>본 제품에 이상이 있을 경우, 공정거래위원회 고시 '소비자분쟁해결기준'에 의해 보상받을 수 있습니다.</dd>
-                    </dl>
+                        <dl class="product_warning_info">
+                            <dt>제품번호</dt>
+                            <dd>본품: 147010 / 리필: 147011</dd>
+                            <dt>제품 사용시 주의사항</dt>
+                            <dd>
+                                <p>화장품 사용 시 또는 사용 후 직사광선에 의하여 사용부위가 붉은 반점, 부어오름 또는 가려움증 등의 이상 증상이나 부작용이 있는 경우 전문의 등과 상담할 것.</p>
+                                <p>상처가 있는 부위 등에는 사용을 자제할 것.</p>
+                                <p>어린이의 손이닿지 않는 곳에 보관할 것.</p>
+                                <p>직사광선을 피해서 보관할 것.</p>
+                                <p>사용 후에는 반드시 덮개를 닫아 보관할 것 </p>
+                            </dd>
+                            <dt>제조자</dt>
+                            <dd>Estée Lauder Companies</dd>
+                            <dt>수입원</dt>
+                            <dd>이엘씨에이한국(유)</dd>
+                            <dt>제조국</dt>
+                            <dd>일본 (Japan) 또는 미국 (USA) (제품용기/외상자 별도 표기)</dd>
+                            <dt>제조연월</dt>
+                            <dd>제품 용기 및 상자에 표시된 제조번호 및 유통기한에 따름</dd>
+                            <dt>품질이상 연락처</dt>
+                            <dd>1644-3728 (에스티로더 고객지원센터)</dd>
+                            <dt>품질보증기준</dt>
+                            <dd>본 제품에 이상이 있을 경우, 공정거래위원회 고시 '소비자분쟁해결기준'에 의해 보상받을 수 있습니다.</dd>
+                        </dl>
                     </div>
                 </div>
             </div>
