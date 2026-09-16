@@ -453,6 +453,9 @@ footer > .biglogo {
     font-size:var(--pc-font-body-18); line-height:1.5; font-weight:500;
 }
 .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info {display:flex; flex-flow:row wrap;}
+.every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info > * {
+    border-bottom : 1px solid #888888; height:100px;
+}
 .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dt {width:150px}
 .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dd {width:calc(100% - 150px);}
 .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dd p{}
