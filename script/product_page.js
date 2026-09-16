@@ -1,5 +1,20 @@
 //product_page.js
 
+/* cta버튼 */
+const ctaNonActive = document.querySelector('#cta_non_active');
+const ctaActive = document.querySelector('.cta_active');
+const ctaActiveClose = document.querySelector('#cta_close');
+
+ctaNonActive.addEventListener('click',()=>{
+    ctaNonActive.style.display = "none";
+    ctaActive.style.display = "flex";
+})
+
+ctaActiveClose.addEventListener('click',()=>{
+    ctaNonActive.style.display = "block";
+    ctaActive.style.display = "none";
+})
+
 /* 띠배너 닫기 */
 const tapeBanner = document.querySelector('.banner');
 const tapeBannerClose = document.querySelector('.banner .content #close img');
@@ -112,3 +127,72 @@ mobileRenutrivBtn.addEventListener('click',()=>{
 })
 
 
+// =========================== small thum에 마우스 올렸을때 big thum으로 교체
+const smallThum1 = document.querySelector('.sm_1');
+const smallThum2 = document.querySelector('.sm_2');
+const smallThum3 = document.querySelector('.sm_3');
+const bigThum = document.querySelector('.big_thum');
+console.log(smallThum1, smallThum2, smallThum3, bigThum);
+
+smallThum1.addEventListener('mouseenter',()=>{
+    bigThum.style.backgroundImage = "url(./images/product_small_thum1.jpg)";
+    bigThum.style.backgroundRepeat = "no-repeat";
+    bigThum.style.backgroundSize = "cover";
+    bigThum.style.backgroundPosition = "center";
+});
+smallThum2.addEventListener('mouseenter',()=>{
+    bigThum.style.backgroundImage = "url(./images/product_small_thum2.jpg)";
+    bigThum.style.backgroundRepeat = "no-repeat";
+    bigThum.style.backgroundSize = "cover";
+    bigThum.style.backgroundPosition = "center";
+});
+smallThum3.addEventListener('mouseenter',()=>{
+    bigThum.style.backgroundImage = "url(./images/product_small_thum3.jpg)";
+    bigThum.style.backgroundRepeat = "no-repeat";
+    bigThum.style.backgroundSize = "cover";
+    bigThum.style.backgroundPosition = "center";
+});
+
+
+
+
+/* ================================================================================== */
+/* 자세히 보기 클릭 시 내용 노출 */
+const infoSummary = document.querySelector('.product_info .top .info');
+const infoSummaryBtn = document.querySelector('#more_summary');
+const infoSummaryBtnImg = document.querySelector('#more_summary > img');
+console.log(infoSummaryBtn, infoSummary);
+infoSummaryBtn.addEventListener('click',()=>{  
+    const isActive = infoSummary.classList.toggle('active');
+    infoSummaryBtn.childNodes[0].textContent = isActive ? '접기' : '자세히 보기';
+})
+
+
+
+/* =============================================================================================== */
+/* 컬러피커 움직임 구현 */
+const color1c0 = document.querySelector('.middle > .color_chip li:nth-child(1)');
+const color1w1 = document.querySelector('.middle > .color_chip li:nth-child(2)');
+const color1w2 = document.querySelector('.middle > .color_chip li:nth-child(3)');
+const color1n0 = document.querySelector('.middle > .color_chip li:nth-child(4)');
+const color1n1 = document.querySelector('.middle > .color_chip li:nth-child(5)');
+const color2c0 = document.querySelector('.middle > .color_chip li:nth-child(6)');
+const color2w0 = document.querySelector('.middle > .color_chip li:nth-child(7)');
+const color3w1 = document.querySelector('.middle > .color_chip li:nth-child(8)');
+const colorPicker = document.querySelector('#color_select_form .middle .color_picker img');
+const colorResult = document.querySelector('#color_select_form > .middle .option_info');
+
+color1w1.addEventListener('click',()=>{
+    colorPicker.style.transform = "translateX(53px)";
+    colorResult.textContent = '1W1 본';
+
+})
+
+
+
+/* ================옵션 선택 */
+const colorSelectBtn = document.querySelector('#color_select_btn');
+const colorList = document.querySelector('.select_list');
+colorSelectBtn.addEventListener('click',()=>{
+    colorList.classList.toggle('active');
+})
