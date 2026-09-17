@@ -146,9 +146,9 @@ console.log(productWrap);
 for(let i=1;i<10;i++){
     const bestProductDiv = document.createElement('div');
     bestProductDiv.classList.add('swiper-slide');
-    bestProductDiv.innerHTML = `<a href="#"><img src="${bestProduct[i].image}"></img></a>`
-    bestProductDiv.innerHTML += `<a href="#"><h4>${bestProduct[i].name}</h4>`;
-    bestProductDiv.innerHTML += `<a href="#"><p>${bestProduct[i].price}</p>`;
+    bestProductDiv.innerHTML = `<a href="/estee_lauder/product_page.html"><img src="${bestProduct[i].image}"></img></a>`
+    bestProductDiv.innerHTML += `<a href="/estee_lauder/product_page.html"><h4>${bestProduct[i].name}</h4>`;
+    bestProductDiv.innerHTML += `<a href="/estee_lauder/product_page.html"><p>${bestProduct[i].price}</p>`;
     productWrap.appendChild(bestProductDiv);
 }
 /* 베스트 상품 부분 스와이퍼 */
