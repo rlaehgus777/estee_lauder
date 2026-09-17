@@ -608,7 +608,9 @@ body {min-width:320px;}
 
 .every_wrap main > .bottom_area > .offline_shop > .top > .modelphoto {
     display:flex; flex-flow:row nowrap; padding:60px 120px; gap:40px;
+    
 }
+.every_wrap main > .bottom_area > .offline_shop > .top > .modelphoto img{width:100%;}
 
 
 .every_wrap footer * {color:#fff;}

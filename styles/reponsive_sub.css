@@ -1,0 +1,46 @@
+@media screen and (max-width:1580px){
+    .every_wrap header {padding:0 60px;}
+    /* 사이즈 축소시 메뉴버튼 사라지고 햄버거 버튼으로 대체 */
+    .every_wrap header nav .menu{display:none;}
+    .every_wrap header .user_func a:nth-child(1) {display:none;}
+    .every_wrap header .user_func a:nth-child(2) > img {}
+    .every_wrap header .user_func a:nth-child(3) {display:none;}
+    .every_wrap header .user_func #mobile_menu_btn {display:block;}
+    .every_wrap header .user_func #mobile_menu_btn > img {filter:invert(0);}
+}
+@media screen and (max-width:1280px){
+    /* 헤더부분 내용변경======================================== */
+    .every_wrap header h1 > .logo > img {display:none;}
+    .every_wrap header {position:relative; background-color:yellow;}
+    .every_wrap header p > .mobile_back {display:block;}
+    .every_wrap header p > .mobile_back > img {width:12px; height:24px; position:absolute; top:20px; left:30px;}
+    /* =================================================================== */
+
+    /* 이미지 중앙정렬 밑 flex 흐름 변경 */
+    .every_wrap .product_details .product_area {display:flex; flex-flow:row nowrap; gap:60px;}
+    .every_wrap .product_details .product_area .thumnail {justify-content: center;}
+    /* =========================================================== */
+}
+
+@media screen and (max-width:1220px){
+    /* ==================smallthum 위치 변경 */
+    .every_wrap .product_details .product_area .thumnail {position:relative;}
+    .every_wrap .product_details .product_area .thumnail .small_thum {
+        flex-flow:row nowrap; position:absolute; bottom:12px; left:50%; transform:translateX(-50%);
+    }
+}
+@media screen and (max-width:1190px){
+    .every_wrap .product_details {width:100%; padding:180px 15px;}
+    .every_wrap .product_details .product_area {gap:30px;}
+    .every_wrap .product_details .product_area .product_info .top .eng_title {font-size:var(--pc-font-body-18);} /* 영문명 폰트사이즈 */
+    .every_wrap .product_details .product_area .product_info .top .kor_title {font-size:var(--pc-font-body-16);} /* 국문 폰트사이즈 */
+    .every_wrap .product_details .product_area .product_info .top .info {font-size:var(--pc-font-body-12); -webkit-line-clamp:3;} /* 상세정보 폰트 크기 및 라인클램프 3줄로 수정 */
+
+    .every_wrap .product_details .product_info_area .info_btn {gap:30px;}
+    .every_wrap .product_details .product_info_area .info_btn button {font-size:var(--pc-font-body-14); height:45px;}
+}
+@media screen and (max-width:1110px){
+    .every_wrap .product_details .product_area {flex-flow:column nowrap;}
+    .every_wrap .product_details .product_area .thumnail {}
+}
+@media screen and (max-width:1024px){}
