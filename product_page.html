@@ -296,11 +296,15 @@
                             </div>
                             <div class="color_select">
                                 <button type="button" id="color_select_btn">
-                                    <span class="color_chip product_1c0"></span>
-                                    <span class="select_name">1C0 쉘</span>
+                                    <span class="color_chip"></span>
+                                    <span class="select_name">옵션을 선택해주세요.</span>
                                     <span class="more"><img src="./images/select_arrow_icon.svg" alt=""></span>
                                 </button>
                                 <ul class="select_list">
+                                    <li data-value="1c0쉘">
+                                        <span class="color_chip product_1c0"></span>
+                                        <span>1C0 쉘</span>
+                                    </li>
                                     <li data-value="1w1본">
                                         <span class="color_chip product_1w1"></span>
                                         <span>1W1 본</span>
@@ -339,7 +343,7 @@
                                 <div class="bottom">
                                     <div class="option_control">
                                         <button type="button" id="option_minus"><img src="./images/option_minus.svg" alt=""></button>
-                                        <span>1</span>
+                                        <span id="option_number">1</span>
                                         <button type="button" id="option_plus"><img src="./images/option_plus.svg" alt=""></button>
                                     </div>
                                     <p class="final_price">KRW 90,000</p>
