@@ -250,64 +250,64 @@ optionResultClose.addEventListener('click',()=>{
 console.log(optionChecker);
 
 option1c0.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#DAB3A2";
-    optionChecker[1].textContent = "1C0 쉘";
+/*     optionChecker[0].style.backgroundColor = "#DAB3A2";
+    optionChecker[1].textContent = "1C0 쉘"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
     optionResultName.textContent = "1C0 쉘";
 })
 option1w1.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#CBA986";
-    optionChecker[1].textContent = "1W1 본";
+/*     optionChecker[0].style.backgroundColor = "#CBA986";
+    optionChecker[1].textContent = "1W1 본"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
     optionResultName.textContent = "1W1 본";
 })
 option1w2.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#CAA27F";
-    optionChecker[1].textContent = "1W2 샌드";
+/*     optionChecker[0].style.backgroundColor = "#CAA27F";
+    optionChecker[1].textContent = "1W2 샌드"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
     optionResultName.textContent = "1W2 샌드";
 })
 option1n0.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#CBA98E";
-    optionChecker[1].textContent = "1N0 포슬린";
+/*     optionChecker[0].style.backgroundColor = "#CBA98E";
+    optionChecker[1].textContent = "1N0 포슬린"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
     optionResultName.textContent = "1N0 포슬린";
 })
 option1n1.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#FFC8A3";
-    optionChecker[1].textContent = "1N1 아이보리 누드";
+/*     optionChecker[0].style.backgroundColor = "#FFC8A3";
+    optionChecker[1].textContent = "1N1 아이보리 누드"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
     optionResultName.textContent = "1N1 아이보리 누드";
 })
 option2c0.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#CBA284";
-    optionChecker[1].textContent = "2C0 쿨바닐라";
+/*     optionChecker[0].style.backgroundColor = "#CBA284";
+    optionChecker[1].textContent = "2C0 쿨바닐라"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
     optionResultName.textContent = "2C0 쿨바닐라";
 })
 option2w0.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#C19D7D";
-    optionChecker[1].textContent = "2W0 웜바닐라";
+/*     optionChecker[0].style.backgroundColor = "#C19D7D";
+    optionChecker[1].textContent = "2W0 웜바닐라"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
     optionResultName.textContent = "2W0 웜바닐라";
 })
 option3w1.addEventListener('click',()=>{
-    optionChecker[0].style.backgroundColor = "#C0966E";
-    optionChecker[1].textContent = "3W1 토니";
+/*     optionChecker[0].style.backgroundColor = "#C0966E";
+    optionChecker[1].textContent = "3W1 토니"; */
     colorList.classList.toggle('active');
     colorSelectArrow.classList.toggle('active');
     optionResult.style.display = "block";
@@ -321,6 +321,7 @@ const optionMinus = document.querySelector('#option_minus');
 const optionMinusImg = document.querySelector('#option_minus > img');
 const optionPlus = document.querySelector('#option_plus');
 const optionNumber = document.querySelector('#option_number');
+
 let optionChangeNum = Number(optionNumber.textContent);
 const finalPrice = document.querySelector('.final_price');
 
@@ -328,9 +329,6 @@ const price = 90000;
 
 console.log(typeof optionChangeNum);
 
-function priceUpdate() {
-    finalPrice.textContent = 'KRW ' + (price * optionChangeNum).toLocaleString();
-}
 
 optionPlus.addEventListener('click',()=>{
     optionChangeNum++;
@@ -351,10 +349,20 @@ optionMinus.addEventListener('click',()=>{
     }
 })
 
+colorList.addEventListener('click',()=>{
+    optionChangeNum = 1;
+    optionNumber.textContent = optionChangeNum;
+    iconUpdate();
+    priceUpdate();
+})
+
 function iconUpdate(){
     if (optionChangeNum > 1) {
         optionMinusImg.src = "./images/minus_active_icon.svg";
     } else {
         optionMinusImg.src = "./images/option_minus.svg";
     }
+}
+function priceUpdate() {
+    finalPrice.textContent = 'KRW ' + (price * optionChangeNum).toLocaleString();
 }

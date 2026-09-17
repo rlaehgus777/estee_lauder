@@ -1,3 +1,42 @@
+@media screen and (max-width:1708px){
+        footer {height:486px; gap:250px; padding:60px 60px;}
+    }
+
+@media screen and (max-width:1368px){
+    footer > .left > .slogan > .first,
+    footer > .left > .slogan > .second,
+    footer > .left > .slogan > .third {
+        font-family:var(--optima-fonts); font-size:var(--pc-font-title-26);
+    }
+    footer > .left > .slogan > .copyright {
+    font-size:var(--pc-font-body-12);
+    }
+    footer > .left > .slogan > .point_dot1 {
+    top:-12px; left:4px;
+    }
+
+    footer > .left > .slogan > .point_dot2 {
+        top:48px; left:4px;
+    }
+    footer > .left > .slogan > .point_dot3 {
+        left:4px; bottom:80px;
+    }
+    footer > address > .right > a {
+    font-size:var(--pc-font-body-14); color:var(--estee-gray);
+    }
+    footer > address > .right > p {
+    font-size:var(--pc-font-body-14); color:var(--estee-gray);
+    }
+    footer > address > .left > p {
+    font-size:var(--pc-font-body-14); color:var(--estee-gray); line-height:var(--estee-line-height-150);
+}
+    footer > .biglogo {
+    width:1150px; left:60px; bottom:-70px;
+}
+footer > .biglogo > img {
+    width:100%;
+}
+}
 @media screen and (max-width:1580px){
     .every_wrap header {padding:0 60px;}
     /* 사이즈 축소시 메뉴버튼 사라지고 햄버거 버튼으로 대체 */
@@ -11,7 +50,6 @@
 @media screen and (max-width:1280px){
     /* 헤더부분 내용변경======================================== */
     .every_wrap header h1 > .logo > img {display:none;}
-    .every_wrap header {position:relative; background-color:yellow;}
     .every_wrap header p > .mobile_back {display:block;}
     .every_wrap header p > .mobile_back > img {width:12px; height:24px; position:absolute; top:20px; left:30px;}
     /* =================================================================== */
@@ -22,12 +60,48 @@
     /* =========================================================== */
 }
 
+@media screen and (max-width:1250px) {
+    footer {
+    background-color:var(--estee-black); display:flex; flex-flow:row nowrap; height:486px; gap:350px;
+    position:relative; padding:60px 30px; overflow:hidden;
+}
+    footer > .left > .slogan > .first,
+    footer > .left > .slogan > .second,
+    footer > .left > .slogan > .third {
+        font-family:var(--optima-fonts); font-size:var(--pc-font-title-22);
+    }
+    footer > .left > .slogan > .copyright {
+    font-size:var(--pc-font-micro-10);
+    }
+    footer > .left > .slogan > .point_dot1 {
+    top:-15px; left:4px;
+    }
+
+    footer > .left > .slogan > .point_dot2 {
+        top:42px; left:4px;
+    }
+    footer > .left > .slogan > .point_dot3 {
+        left:4px; bottom:75px;
+    }
+    footer > address > .left > p {
+    font-size:var(--pc-font-body-12); color:var(--estee-gray); line-height:var(--estee-line-height-150);}
+    footer > address > .right > a {
+    font-size:var(--pc-font-body-12); color:var(--estee-gray);
+    }
+    footer > address > .right > p {
+    font-size:var(--pc-font-body-12); color:var(--estee-gray);
+    }
+}
+
 @media screen and (max-width:1220px){
     /* ==================smallthum 위치 변경 */
     .every_wrap .product_details .product_area .thumnail {position:relative;}
     .every_wrap .product_details .product_area .thumnail .small_thum {
         flex-flow:row nowrap; position:absolute; bottom:12px; left:50%; transform:translateX(-50%);
     }
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap h2 {font-size:var(--pc-font-body-16);}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dt {width:170px; font-size:var(--pc-font-body-14);}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dd {width:calc(100% - 170px); font-size:var(--pc-font-body-14);}
 }
 @media screen and (max-width:1190px){
     .every_wrap .product_details {width:100%; padding:180px 15px;}
@@ -38,9 +112,143 @@
 
     .every_wrap .product_details .product_info_area .info_btn {gap:30px;}
     .every_wrap .product_details .product_info_area .info_btn button {font-size:var(--pc-font-body-14); height:45px;}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image1,
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image2,
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image3,
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image4 {
+        height:450px; background-size:cover;
+    }
 }
 @media screen and (max-width:1110px){
     .every_wrap .product_details .product_area {flex-flow:column nowrap;}
     .every_wrap .product_details .product_area .thumnail {}
+    footer {
+    background-color:var(--estee-black); display:flex; flex-flow:row nowrap; height:486px; gap:80px;
+    position:relative; padding:60px 30px; overflow:hidden;}
+    footer > .biglogo {width:820px; bottom:-40px;}
+    footer > .biglogo img{width:100%;}
+
 }
 @media screen and (max-width:1024px){}
+@media screen and (max-width:850px){
+    footer > .left > .slogan > .first,
+    footer > .left > .slogan > .second,
+    footer > .left > .slogan > .third {
+    font-family:var(--optima-fonts); font-size:var(--mobile-font-body-16);
+}
+    footer > .left > .slogan > .point_dot1, 
+    footer > .left > .slogan > .point_dot2, 
+    footer > .left > .slogan > .point_dot3 {width:4px; height:4px;}
+    footer > .left > .slogan > .copyright {font-size:var(--mobile-font-caption-10); white-space:nowrap;}
+
+    footer > address {
+    display:flex; flex-flow:row nowrap; gap:30px;}
+    footer > address > .left > p {
+    font-size:var(--mobile-font-caption-10); white-space:nowrap;
+}
+    footer > address > .right > a {
+        font-size:var(--mobile-font-caption-10);
+    }
+    footer > address > .right > p {
+        font-size:var(--mobile-font-caption-10);
+    }
+    footer {gap:50px;}
+}
+@media screen and (max-width:700px){
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image1,
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image2,
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image3,
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_image_wrap .product_image4 {
+        height:300px;
+    }
+    .every_wrap .product_details .product_area .thumnail .big_thum {
+    background-size:cover; width:440px; height:400px;
+}
+    .every_wrap .product_details .product_area .thumnail .small_thum p {width:50px; height:50px;}
+
+    footer {height:486px; gap:50px;}
+    footer > address {flex-flow:column nowrap; gap:6px;}
+    footer > address > .left > p {
+    font-size:var(--mobile-font-caption-9);}
+
+    footer > address > .right > a {
+    font-size:var(--mobile-font-caption-9);
+}
+    footer > address > .right > p {
+    font-size:var(--mobile-font-caption-9);
+}
+    footer > .left > .slogan > .first::before,
+    footer > .left > .slogan > .second::before,
+    footer > .left > .slogan > .third::before {width:4px; height:4px;} 
+    footer {height:486px; gap:50px;}
+    footer > address {flex-flow:column nowrap; gap:6px;}
+    footer > address > .left > p {
+    font-size:var(--mobile-font-caption-9);}
+
+    footer > address > .right > a {
+    font-size:var(--mobile-font-caption-9);
+}
+    footer > address > .right > p {
+    font-size:var(--mobile-font-caption-9);
+}
+    footer > .biglogo {width:580px; left:50%; transform:translateX(-50%); bottom:-40px;}
+    footer > .biglogo img{width:100%;}
+    .every_wrap .product_details .product_info_area .info_btn {gap:15px;}
+    .every_wrap .product_details .product_info_area .info_btn button {font-size:var(--pc-font-body-12);}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap h2 {font-size:var(--pc-font-body-14);}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dt {width:170px; font-size:var(--pc-font-micro-10);}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dd {width:calc(100% - 170px); font-size:var(--pc-font-micro-10);}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dd:nth-child(4){white-space:wrap;}
+    .every_wrap .product_details .product_info_area .product_details_wrap .product_warning_wrap .product_warning_info dd:nth-child(4) p:nth-child(1){line-height:1.6;}
+    
+}
+
+@media screen and (max-width:440px){
+    footer {height:486px; gap:20px;}
+    footer > .left > .slogan {gap:10px;
+}
+    footer > .left > .slogan > .point_dot1, 
+    footer > .left > .slogan > .point_dot2, 
+    footer > .left > .slogan > .point_dot3 {
+    width:3px; height:3px;}
+
+    footer > .left > .slogan > .first,
+    footer > .left > .slogan > .second,
+    footer > .left > .slogan > .third {
+    font-size:var(--mobile-font-caption-10);}
+
+    footer > .left > .slogan > .point_dot1 {
+    top:-8px; left:2px;
+}
+
+    footer > .left > .slogan > .point_dot2 {
+    top:14px; left:2px;
+}
+    footer > .left > .slogan > .point_dot3 {
+    left:2px; bottom:30px;
+}
+    footer > .left > .slogan > .copyright {
+    font-size:var(--mobile-font-caption-6); color:var(--estee-gray);
+}
+    footer {height:486px; gap:20px;}
+    footer > .left > .slogan {gap:10px;
+}
+    footer > .left > .slogan > .point_dot1, 
+    footer > .left > .slogan > .point_dot2, 
+    footer > .left > .slogan > .point_dot3 {
+    width:3px; height:3px;}
+
+    footer > .left > .slogan > .first,
+    footer > .left > .slogan > .second,
+    footer > .left > .slogan > .third {
+    font-size:var(--mobile-font-caption-10);}
+
+    footer > .left > .slogan > .first::before{width:3px; height:3px; top:-10px; left:2px;}
+    footer > .left > .slogan > .second::before{width:3px; height:3px; top:-10px; left:2px;}
+    footer > .left > .slogan > .third::before {width:3px; height:3px; top:-10px; left:2px;} 
+
+    footer > .left > .slogan > .copyright {
+    font-size:var(--mobile-font-caption-6); color:var(--estee-gray);
+}
+footer > .biglogo {width:390px;}
+}

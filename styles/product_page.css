@@ -297,6 +297,7 @@ footer > .biglogo {
 
 .every_wrap {}
 .every_wrap .product_details {padding:180px 0; width:1193px; margin:0 auto; display:flex; flex-flow:column nowrap; gap:60px;}
+.every_wrap .product_details  * {user-select:none;}
 .every_wrap .product_details .product_area {display:flex; flex-flow:row nowrap; gap:60px;}
 
 
@@ -359,7 +360,7 @@ footer > .biglogo {
 /* ------------------------------기본 박스영역 */
 .every_wrap .product_details .product_area .product_info #color_select_form .middle .color_select {}
 .every_wrap .product_details .product_area .product_info #color_select_form .middle .color_select #color_select_btn {
-    width:455px; padding:10px 15px; display:flex; align-items:center; gap:20px;
+    width:455px; height:52px;padding:0 15px; display:flex; align-items:center; gap:20px;
     background-color:var(--estee-white); border:1px solid #CCCCCC;
     position:relative; margin-bottom:20px;
 }
