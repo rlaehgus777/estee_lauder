@@ -1,3 +1,9 @@
+/* 탑 버튼 */
+const top_btn = document.querySelector('#top_btn');
+top_btn.addEventListener('click',()=>{
+    window.scrollTo({top:0, behavior:'smooth'});
+})
+
 /* 히어로배너 스와이퍼 */
 const swiper = new Swiper('.hero_wrap',{
     direction:'horizontal',
