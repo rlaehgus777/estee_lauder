@@ -15,6 +15,12 @@ const swiper = new Swiper('.hero_wrap',{
     }
 );
 
+/* top버튼 클릭 시 맨위로 이동 */
+const topBtn = document.querySelector('#top_btn');
+topBtn.addEventListener('click',()=>{
+    window.scrollTo({top:0, behavior:'smooth'});
+});
+
 /* 변수모음 */
 /* 띠배너 변수 */
 const tapeBanner = document.querySelector('.banner');

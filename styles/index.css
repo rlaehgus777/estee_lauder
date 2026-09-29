@@ -7,6 +7,12 @@ body {min-width:320px;}
     background:rgba(0,0,0,0.5); display:none; z-index:500;
 }
 
+/* TOP 버튼 */
+.gototop_btn {position:fixed; bottom:115px; right:10px; z-index:400;}
+.gototop_btn #top_btn {display:flex; flex-flow:column nowrap; width:90px; height:90px; background-color:#eee; align-items:center; justify-content: center; border-radius:50px; opacity:0.5;}
+.gototop_btn #top_btn span {color:#888;}
+.gototop_btn #top_btn img {width:30px; height:30px;}
+
 /* CTA버튼 */
 .cta_btn {
     position:fixed; bottom:10px; right:10px; z-index:var(--z-index-400);
